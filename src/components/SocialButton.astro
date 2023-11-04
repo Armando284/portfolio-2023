@@ -1,0 +1,14 @@
+---
+interface Props {
+  url: string
+}
+
+const url = Astro.props.url
+---
+
+<a
+  class="w-10 h-10 flex items-center justify-center rounded-md shadow-md bg-slate-50 hover:bg-slate-300 text-slate-700 hover:text-slate-900"
+  href={`https://${url}`}
+  target="_blank">
+  <slot />
+</a>
