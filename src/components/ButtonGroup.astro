@@ -1,0 +1,30 @@
+---
+import SocialButton from './SocialButton.astro'
+import Linkedin from '../components/icons/Linkedin.astro'
+import Facebook from './icons/Facebook.astro'
+import Github from './icons/Github.astro'
+import Instagram from './icons/Instagram.astro'
+import Medium from './icons/Medium.astro'
+import Twitter from './icons/Twitter.astro'
+
+interface Props {
+  orientation?: 'horizontal' | 'vertical'
+}
+
+const orientation = Astro.props.orientation ?? 'horizontal'
+---
+
+<section
+  class:list={[
+    'w-full max-w-xs flex items-center justify-between gap-2',
+    {
+      'flex-col': orientation === 'vertical',
+    },
+  ]}>
+  <SocialButton url="www.google.com"><Linkedin /></SocialButton>
+  <SocialButton url="www.google.com"><Github /></SocialButton>
+  <SocialButton url="www.google.com"><Twitter /></SocialButton>
+  <SocialButton url="www.google.com"><Medium /></SocialButton>
+  <SocialButton url="www.google.com"><Instagram /></SocialButton>
+  <SocialButton url="www.google.com"><Facebook /></SocialButton>
+</section>
