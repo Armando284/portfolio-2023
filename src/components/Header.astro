@@ -1,0 +1,23 @@
+---
+import ButtonGroup from './ButtonGroup.astro'
+const experience = () => new Date().getFullYear() - 2019
+---
+
+<header
+  class="max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-4 mx-4 md:mx-auto my-8 p-4 md:p-8 rounded-md shadow-md bg-gradient-to-br from-slate-100 to-slate-200">
+  <div class="relative">
+    <img
+      class="mx-auto object-cover rounded-lg w-80 shadow-md transition-shadow hover:shadow-2xl"
+      src="/public/picture.png"
+      alt=""
+      loading="lazy"
+    />
+  </div>
+  <div class="flex flex-col space-y-8 items-start justify-center col-span-2">
+    <h1 class="text-4xl md:text-8xl text-slate-700 font-bold">Armando Dev.</h1>
+    <span class="text-sm text-slate-500 capitalize"
+      >FrontEnd Web Developer. {experience} years of experience.</span
+    >
+    <ButtonGroup />
+  </div>
+</header>
