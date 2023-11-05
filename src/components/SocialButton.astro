@@ -10,11 +10,11 @@ const { url, description, style = 'elevated' } = Astro.props
 
 <a
   class:list={[
-    'w-10 h-10 flex items-center justify-center hover:scale-110 transition-transform rounded-md text-slate-100',
+    'flex items-center justify-center hover:scale-110 transition-transform rounded-md text-slate-100',
     {
-      'shadow-purple-900 shadow-md bg-purple-600 hover:bg-purple-500':
+      'w-10 h-10 shadow-purple-900 shadow-md bg-purple-600 hover:bg-purple-500':
         style === 'elevated',
-      'border border-slate-700 text-slate-700': style === 'flat',
+      'w-7 h-7 text-slate-600': style === 'flat',
     },
   ]}
   href={`https://${url}`}
