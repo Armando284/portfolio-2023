@@ -1,14 +1,16 @@
 ---
 interface Props {
   url: string
+  description: string
 }
 
-const url = Astro.props.url
+const { url, description } = Astro.props
 ---
 
 <a
-  class="w-10 h-10 flex items-center justify-center rounded-md shadow-md bg-slate-50 hover:bg-slate-300 text-slate-700 hover:text-slate-900"
+  class="w-10 h-10 flex items-center justify-center rounded-md shadow-purple-900 shadow-md bg-purple-600 hover:bg-purple-500 text-slate-100 hover:scale-110 transition-transform"
   href={`https://${url}`}
+  aria-label={description}
   target="_blank">
   <slot />
 </a>
