@@ -2,13 +2,21 @@
 interface Props {
   url: string
   description: string
+  style?: 'elevated' | 'flat'
 }
 
-const { url, description } = Astro.props
+const { url, description, style = 'elevated' } = Astro.props
 ---
 
 <a
-  class="w-10 h-10 flex items-center justify-center rounded-md shadow-purple-900 shadow-md bg-purple-600 hover:bg-purple-500 text-slate-100 hover:scale-110 transition-transform"
+  class:list={[
+    'w-10 h-10 flex items-center justify-center hover:scale-110 transition-transform rounded-md text-slate-100',
+    {
+      'shadow-purple-900 shadow-md bg-purple-600 hover:bg-purple-500':
+        style === 'elevated',
+      'border border-slate-700 text-slate-700': style === 'flat',
+    },
+  ]}
   href={`https://${url}`}
   aria-label={description}
   target="_blank">

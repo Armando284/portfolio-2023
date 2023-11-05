@@ -1,0 +1,55 @@
+---
+import SocialButton from './SocialButton.astro'
+import Linkedin from '../components/icons/Linkedin.astro'
+import Facebook from './icons/Facebook.astro'
+import Github from './icons/Github.astro'
+import Instagram from './icons/Instagram.astro'
+import Medium from './icons/Medium.astro'
+import Twitter from './icons/Twitter.astro'
+import ButtonGroup from './ButtonGroup.astro'
+
+interface Props {
+  style?: 'elevated' | 'flat'
+}
+
+const style = Astro.props.style ?? 'elevated'
+---
+
+<ButtonGroup>
+  <SocialButton
+    url="www.google.com"
+    description=""
+    style={style}>
+    <Linkedin />
+  </SocialButton>
+  <SocialButton
+    url="www.google.com"
+    description=""
+    style={style}>
+    <Github />
+  </SocialButton>
+  <SocialButton
+    url="www.google.com"
+    description=""
+    style={style}>
+    <Twitter />
+  </SocialButton>
+  <SocialButton
+    url="www.google.com"
+    description=""
+    style={style}>
+    <Medium />
+  </SocialButton>
+  <SocialButton
+    url="www.google.com"
+    description=""
+    style={style}>
+    <Instagram />
+  </SocialButton>
+  <SocialButton
+    url="www.google.com"
+    description=""
+    style={style}>
+    <Facebook />
+  </SocialButton>
+</ButtonGroup>
