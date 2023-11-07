@@ -1,12 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
-import Navbar from '../components/Navbar.astro'
+import AboutMe from '../components/AboutMe.astro'
+import WorkExperience from '../components/WorkExperience.astro'
+import PersonalProjects from '../components/PersonalProjects.astro'
+import Technologies from '../components/Technologies.astro'
+import BlogSample from '../components/BlogSample.astro'
 ---
 
 <!-- TODO: Create better nick name for brand -->
 <Layout title="Armando Dev.">
-  <Navbar />
   <Header />
-  <main></main>
+  <main class="flex flex-col space-y-8 my-8">
+    <!-- About Me -->
+    <AboutMe />
+    <!-- Work Experience -->
+    <WorkExperience />
+    <!-- Personal Projects -->
+    <PersonalProjects />
+    <!-- Technologies -->
+    <Technologies />
+    <!-- Blog -->
+    <BlogSample />
+  </main>
 </Layout>
