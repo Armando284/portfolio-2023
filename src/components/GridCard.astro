@@ -1,0 +1,41 @@
+---
+import SocialButton from './SocialButton.astro'
+import ExternalLinkIcon from './icons/ExternalLinkIcon.astro'
+import GithubIcon from './icons/GithubIcon.astro'
+interface Props {
+  hoverText: string
+  classList?: string
+}
+
+const { hoverText, classList = '' } = Astro.props
+---
+
+<div
+  class:list={[
+    'grid grid-cols-1 rounded-lg focus:opacity-75 focus:ring-8 ring-offset-4 ring-yellow-500',
+    classList,
+  ]}>
+  <img
+    class="w-full h-full object-cover rounded-lg col-start-1 row-start-1"
+    src="test_image.png"
+    alt="test image"
+  />
+  <div
+    class="w-full h-full flex flex-col justify-center items-center rounded-lg col-start-1 row-start-1 bg-gradient-to-br from-yellow-50 to-purple-200 text-slate-700 text-lg font-semibold transition-opacity opacity-0 hover:opacity-75 border-4 border-purple-950">
+    <span>{hoverText}</span>
+    <SocialButton
+      url=""
+      description=""
+      style="large">
+      <GithubIcon slot="start" />
+      <span>repo.git</span>
+    </SocialButton>
+    <SocialButton
+      url=""
+      description=""
+      style="large">
+      <ExternalLinkIcon slot="start" />
+      <span>repo.git</span>
+    </SocialButton>
+  </div>
+</div>
