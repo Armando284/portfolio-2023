@@ -1,7 +1,53 @@
+---
+import GridCard from './GridCard.astro'
+---
+
 <article
   id="personal-projects"
   class="flex justify-center text-slate-500">
   <div class="max-w-6xl w-full">
     <h2 class="text-slate-700 font-bold text-xl">Personal Projects</h2>
+    <section class="grid grid-cols-4 grid-rows-1 auto-rows-fr gap-1">
+      <GridCard
+        hoverText="1"
+        classList="col-start-2 col-span-2 row-start-2 row-span-2"
+      />
+      <GridCard
+        hoverText="2"
+        classList="col-start-1 row-start-1 row-span-2"
+      />
+      <GridCard
+        hoverText="3"
+        classList="col-start-2 row-start-1"
+      />
+      <GridCard
+        hoverText="4"
+        classList="col-start-3 col-span-2 row-start-1"
+      />
+      <GridCard
+        hoverText="5"
+        classList="col-start-1 row-start-3"
+      />
+      <GridCard
+        hoverText="6"
+        classList="col-start-1 col-span-2 row-start-4"
+      />
+      <GridCard
+        hoverText="7"
+        classList="col-start-4 row-start-2"
+      />
+      <GridCard
+        hoverText="8"
+        classList="col-start-4 row-start-3"
+      />
+      <GridCard
+        hoverText="9"
+        classList="col-start-3 row-start-4"
+      />
+      <GridCard
+        hoverText="10"
+        classList="col-start-4 row-start-4"
+      />
+    </section>
   </div>
 </article>
