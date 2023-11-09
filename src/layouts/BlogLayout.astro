@@ -1,0 +1,43 @@
+---
+import Layout from './Layout.astro'
+---
+
+<Layout title="Armando Dev. Blog">
+  <main class="flex justify-center my-8 w-full">
+    <article
+      class="max-w-3xl w-full p-5 text-lg text-slate-500 flex flex-col justify-start items-start gap-5">
+      <slot />
+    </article>
+  </main>
+</Layout>
+
+<style is:global>
+  h1 {
+    font-size: 3.75rem /* 60px */;
+    line-height: 1;
+    color: rgb(15 23 42);
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 1.875rem /* 30px */;
+    line-height: 2.25rem /* 36px */;
+    color: rgb(51 65 85);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
+    color: rgb(51 65 85);
+    font-weight: 600;
+  }
+
+  p:has(img) {
+    max-width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+</style>

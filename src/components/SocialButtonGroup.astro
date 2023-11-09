@@ -1,11 +1,11 @@
 ---
 import SocialButton from './SocialButton.astro'
-import Linkedin from '../components/icons/Linkedin.astro'
-import Facebook from './icons/Facebook.astro'
-import Github from './icons/Github.astro'
-import Instagram from './icons/Instagram.astro'
-import Medium from './icons/Medium.astro'
-import Twitter from './icons/Twitter.astro'
+import LinkedinIcon from '../components/icons/LinkedinIcon.astro'
+import FacebookIcon from './icons/FacebookIcon.astro'
+import GithubIcon from './icons/GithubIcon.astro'
+import InstagramIcon from './icons/InstagramIcon.astro'
+import MediumIcon from './icons/MediumIcon.astro'
+import TwitterIcon from './icons/TwitterIcon.astro'
 import ButtonGroup from './ButtonGroup.astro'
 
 interface Props {
@@ -20,36 +20,36 @@ const style = Astro.props.style ?? 'elevated'
     url="www.google.com"
     description=""
     style={style}>
-    <Linkedin />
+    <LinkedinIcon slot="start" />
   </SocialButton>
   <SocialButton
     url="www.google.com"
     description=""
     style={style}>
-    <Github />
+    <GithubIcon slot="start" />
   </SocialButton>
   <SocialButton
     url="www.google.com"
     description=""
     style={style}>
-    <Twitter />
+    <TwitterIcon slot="start" />
   </SocialButton>
   <SocialButton
     url="www.google.com"
     description=""
     style={style}>
-    <Medium />
+    <MediumIcon slot="start" />
   </SocialButton>
   <SocialButton
     url="www.google.com"
     description=""
     style={style}>
-    <Instagram />
+    <InstagramIcon slot="start" />
   </SocialButton>
   <SocialButton
     url="www.google.com"
     description=""
     style={style}>
-    <Facebook />
+    <FacebookIcon slot="start" />
   </SocialButton>
 </ButtonGroup>

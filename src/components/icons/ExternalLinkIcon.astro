@@ -1,5 +1,13 @@
+---
+interface Props {
+  classList?: string
+}
+
+const { classList = 'w-6 h-6' } = Astro.props
+---
+
 <svg
-  class="icon icon-tabler icon-tabler-external-link w-full h-full"
+  class:list={[classList]}
   width="24"
   height="24"
   viewBox="0 0 24 24"
