@@ -1,22 +1,17 @@
 ---
-import CopyrightYear from './CopyrightYear.astro'
-import SocialButtonGroup from './SocialButtonGroup.astro'
+import SocialButtonGroup from './utilities/SocialButtonGroup.astro'
 ---
 
-<footer class="border-t w-full bg-purple-50 p-5">
+<footer class="border-t w-full bg-purple-900 p-5">
   <div
-    class="max-w-6xl mx-auto text-slate-600 flex justify-between items-center">
+    class="max-w-6xl mx-auto text-slate-100 flex justify-between items-center">
     <section class="flex flex-col items-start space-y-2">
-      <span class="font-bold">
-        <CopyrightYear />
-      </span>
-      <span class="">Armando Peña Tamayo</span>
+      <span>Armando Peña Tamayo</span>
     </section>
     <section>
       <span>Coded with💓.</span>
     </section>
     <section class="flex flex-col items-start space-y-2">
-      <span class="font-bold">Social</span>
       <SocialButtonGroup style="flat" />
     </section>
   </div>
