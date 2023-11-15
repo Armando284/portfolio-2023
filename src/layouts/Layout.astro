@@ -1,6 +1,6 @@
 ---
 import Footer from '../components/Footer.astro'
-import Navbar from '../components/Navbar.astro'
+import Navbar from '../components/Navbar.tsx'
 
 interface Props {
   title: string
@@ -10,7 +10,9 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  class="scroll-smooth focus:scroll-auto">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -32,8 +34,12 @@ const { title } = Astro.props
     />
     <title>{title}</title>
   </head>
-  <body class="w-full min-h-screen bg-slate-50">
-    <Navbar />
+  <body class="w-full min-h-screen bg-slate-100">
+    <Navbar
+      client:load
+      transition:name="navbar"
+      transition:persist
+    />
 
     <slot />
 
