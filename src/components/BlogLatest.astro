@@ -1,0 +1,17 @@
+---
+import ArticleTitle from './utilities/ArticleTitle.astro'
+import BlogCard from './utilities/BlogCard.astro'
+---
+
+<article
+  id="blog-latest"
+  class="flex justify-center text-slate-500 py-10 bg-gradient-to-r from-yellow-100 via-yrllow-50 to-yellow-100 snap-start">
+  <div class="max-w-6xl w-full bg-white px-5 pb-5 rounded-md">
+    <ArticleTitle>Blog</ArticleTitle>
+    <section class="flex flex-col gap-5">
+      <BlogCard />
+      <BlogCard />
+      <BlogCard />
+    </section>
+  </div>
+</article>
