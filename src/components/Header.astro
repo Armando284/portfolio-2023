@@ -1,34 +1,47 @@
 ---
-import Experience from './Experience.tsx'
-import SocialButtonGroup from './SocialButtonGroup.astro'
+import BackgroundCircle from './utilities/BackgroundCircle.astro'
+import Experience from './utilities/Experience.tsx'
+import SocialButtonGroup from './utilities/SocialButtonGroup.astro'
+
+const nickName = 'armando dev.'
 ---
 
-<header
-  class="w-full bg-gradient-to-br from-slate-100 to-purple-200 flex justify-center shadow-purple-300 shadow-md">
-  <div
-    class="max-w-6xl w-full min-h-screen grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-    <div class="flex flex-col items-start justify-center col-span-2">
-      <div class="mb-12">
-        <h1 class="text-4xl md:text-8xl text-slate-700 font-bold mb-4">
-          Armando Dev.
-        </h1>
-        <p class="text-sm text-slate-500 capitalize max-w-lg">
-          FrontEnd Web Developer. <Experience client:load /> Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Modi architecto facilis
-          recusandae ratione tempora incidunt odio nam repellendus qui laborum.
-          Maiores iste nostrum doloribus eos voluptate accusantium esse fugit
-          sit et omnis?
-        </p>
-      </div>
-      <SocialButtonGroup />
+<article id="top">
+  <header
+    id="header"
+    class="w-full bg-gradient-to-br from-slate-100 to-purple-200 flex justify-center shadow-purple-300 shadow-md -z-10 snap-start">
+    <BackgroundCircle />
+    <BackgroundCircle
+      bg="bg-yellow-500"
+      top="top-48"
+      left="left-64"
+    />
+    <div
+      class="max-w-6xl w-full min-h-screen flex flex-col justify-center items-center gap-5 p-5 z-10">
+      <h1
+        class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl text-slate-700 font-bold mb-4 capitalize">
+        {
+          nickName.split('').map((ch, i) => (
+            <span
+              class:list={[
+                'transition-all drop-shadow-md hover:drop-shadow-xl',
+                {
+                  'hover:text-purple-700': i === 0,
+                  'hover:text-yellow-500': i !== 0,
+                },
+              ]}>
+              {ch}
+            </span>
+          ))
+        }
+      </h1>
+      <p class="text-sm text-slate-500 text-center capitalize mx-auto">
+        FrontEnd Web Developer. <Experience client:load /> Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Modi architecto facilis recusandae
+        ratione tempora incidunt odio nam repellendus qui laborum. Maiores iste
+        nostrum doloribus eos voluptate accusantium esse fugit sit et omnis?
+      </p>
+      <SocialButtonGroup classList="justify-center" />
     </div>
-    <div class="flex justify-end items-center">
-      <img
-        class="object-cover rounded-lg w-80 max-w-xs max-h-96 shadow-purple-700 border-slate-50 border-8 shadow-md transition-picture hover:shadow-purple-500 hover:shadow-xl"
-        src="/picture.png"
-        alt=""
-        loading="lazy"
-      />
-    </div>
-  </div>
-</header>
+  </header>
+</article>
