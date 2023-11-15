@@ -5,22 +5,23 @@ import AboutMe from '../components/AboutMe.astro'
 import WorkExperience from '../components/WorkExperience.astro'
 import PersonalProjects from '../components/PersonalProjects.astro'
 import Technologies from '../components/Technologies.astro'
-import BlogSample from '../components/BlogSample.astro'
+import Bloglatest from '../components/BlogLatest.astro'
 ---
 
 <!-- TODO: Create better nick name for brand -->
 <Layout title="Armando Dev.">
   <Header />
-  <main class="flex flex-col space-y-8 my-20">
-    <!-- About Me -->
-    <AboutMe />
+
+  <main class="flex flex-col">
+    <!-- Technologies -->
+    <Technologies />
     <!-- Work Experience -->
     <WorkExperience />
     <!-- Personal Projects -->
     <PersonalProjects />
-    <!-- Technologies -->
-    <Technologies />
     <!-- Blog -->
-    <BlogSample />
+    <Bloglatest />
+    <!-- About Me -->
+    <AboutMe />
   </main>
 </Layout>
