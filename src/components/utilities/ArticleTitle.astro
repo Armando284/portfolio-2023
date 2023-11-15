@@ -1,0 +1,20 @@
+---
+interface Props {
+  textColor?: string
+}
+
+const { textColor = 'text-slate-700' } = Astro.props
+---
+
+<h2
+  class:list={[
+    'my-5 font-semibold text-4xl drop-shadow-2xl uppercase',
+    textColor,
+  ]}>
+  <span class="text-yellow-500">
+    {'<'}
+  </span>
+  <slot />
+  <span class="text-purple-400">{'/'}</span>
+  <span class="text-yellow-500">{'>'}</span>
+</h2>

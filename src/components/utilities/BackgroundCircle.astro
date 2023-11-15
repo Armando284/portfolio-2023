@@ -1,0 +1,28 @@
+---
+interface Props {
+  bg?: string
+  width?: string
+  height?: string
+  top?: string
+  left?: string
+}
+
+const {
+  bg = 'bg-purple-500',
+  width = 'w-64',
+  height = 'h-64',
+  top = 'top-80',
+  left = 'left-96',
+} = Astro.props
+---
+
+<div class:list={['circle-effect', bg, width, height, top, left]}></div>
+
+<style>
+  .circle-effect {
+    border-radius: 50%;
+    opacity: 0.25;
+    filter: blur(30px);
+    position: absolute;
+  }
+</style>

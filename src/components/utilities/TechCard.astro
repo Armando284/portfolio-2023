@@ -1,0 +1,15 @@
+---
+interface Props {
+  tag: string
+}
+
+const { tag = '' } = Astro.props
+---
+
+<div class="w-24 h-24 flex flex-col justify-between items-center">
+  <slot />
+  <span
+    class="w-full rounded-md bg-yellow-500 text-slate-700 text-sm uppercase text-center"
+    >{tag}</span
+  >
+</div>

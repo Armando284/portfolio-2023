@@ -1,7 +1,7 @@
 ---
 import SocialButton from './SocialButton.astro'
-import ExternalLinkIcon from './icons/ExternalLinkIcon.astro'
-import GithubIcon from './icons/GithubIcon.astro'
+import ExternalLinkIcon from '../icons/ExternalLinkIcon.astro'
+import GithubIcon from '../icons/GithubIcon.astro'
 interface Props {
   hoverText: string
   classList?: string
@@ -12,16 +12,16 @@ const { hoverText, classList = '' } = Astro.props
 
 <div
   class:list={[
-    'grid grid-cols-1 rounded-lg focus:opacity-75 focus:ring-8 ring-offset-4 ring-yellow-500',
+    'grid grid-cols-1 rounded-2xl focus:ring-8 ring-offset-4 ring-yellow-500 overflow-hidden shadow-md shadow-slate-500 border-purple-100 border-b-2',
     classList,
   ]}>
   <img
-    class="w-full h-full object-cover rounded-lg col-start-1 row-start-1"
+    class="w-full h-full object-cover col-start-1 row-start-1"
     src="test_image.png"
     alt="test image"
   />
   <div
-    class="w-full h-full flex flex-col justify-center items-center rounded-lg col-start-1 row-start-1 bg-gradient-to-br from-yellow-50 to-purple-200 text-slate-700 text-lg font-semibold transition-opacity opacity-0 hover:opacity-75 border-4 border-purple-950">
+    class="w-full h-full flex flex-col justify-center items-center col-start-1 row-start-1 bg-gradient-to-br from-purple-300 via-purple-700 to-purple-500 text-slate-100 text-lg font-semibold transition-opacity opacity-0 hover:opacity-100 border-1 border-purple-700">
     <span>{hoverText}</span>
     <SocialButton
       url=""

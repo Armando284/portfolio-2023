@@ -1,14 +1,16 @@
 ---
 interface Props {
   orientation?: 'horizontal' | 'vertical'
+  classList?: string
 }
 
-const orientation = Astro.props.orientation ?? 'horizontal'
+const { orientation = 'horizontal', classList = '' } = Astro.props
 ---
 
 <section
   class:list={[
-    'w-full max-w-xs flex items-center space-x-2',
+    'w-full max-w-xs flex items-center gap-2',
+    classList,
     {
       'flex-col': orientation === 'vertical',
     },

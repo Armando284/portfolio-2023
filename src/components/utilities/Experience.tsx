@@ -1,5 +1,3 @@
-import React from "react";
-
 const YEAR_I_STARTED_PROGRAMMING = 2019
 
 export default function Experience(){
