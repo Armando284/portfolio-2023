@@ -1,13 +1,17 @@
+---
+import ArticleTitle from './utilities/ArticleTitle.astro'
+---
+
 <article
   id="about-me"
-  class="flex justify-center text-slate-500">
+  class="flex justify-center items-center text-slate-200 bg-purple-900 px-5 py-32 snap-start">
   <div class="max-w-6xl w-full">
-    <h2 class="text-slate-700 font-bold text-xl">About Me</h2>
+    <ArticleTitle textColor="text-slate-50">About Me</ArticleTitle>
     <div class="grid grid-cols-2">
       <section class="flex flex-col justify-center items-start">
         <p>
           Welcome to my personal website! I'm <span
-            class="italic text-purple-700 font-bold"
+            class="italic text-yellow-500 font-bold"
             >Armando José Peña Tamayo</span
           >, a passionate developer with experience in web development and a
           focus on creating engaging and user-friendly web applications.
@@ -26,9 +30,10 @@
       </section>
       <section class="flex justify-end items-center">
         <img
-          class="max-w-md"
-          src="programming.svg"
-          alt="Programming image from undraw.co"
+          class="object-cover rounded-lg w-80 max-w-xs max-h-96 shadow-yellow-500 border-slate-50 border-8 shadow-md transition-picture hover:shadow-yellow-300 hover:shadow-xl"
+          src="/picture.png"
+          alt=""
+          loading="lazy"
         />
       </section>
     </div>
