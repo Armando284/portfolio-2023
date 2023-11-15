@@ -1,4 +1,5 @@
 ---
+import ArticleTitle from './utilities/ArticleTitle.astro'
 import AngularIcon from './icons/AngularIcon.astro'
 import AppStoreIcon from './icons/AppStoreIcon.astro'
 import AstroIcon from './icons/AstroIcon.astro'
@@ -19,84 +20,122 @@ import TailwindIcon from './icons/TailwindIcon.astro'
 import TsIcon from './icons/TsIcon.astro'
 import UnityIcon from './icons/UnityIcon.astro'
 import VercelIcon from './icons/VercelIcon.astro'
+import TechCard from './utilities/TechCard.astro'
 ---
 
 <article
   id="technologies"
-  class="flex justify-center text-slate-400">
+  class="flex justify-center text-slate-100 bg-purple-700 py-10 snap-start">
   <div class="max-w-6xl w-full">
-    <h2 class="text-slate-700 font-bold text-xl capitalize">
-      Some technologies I use
-    </h2>
-
-    <div class="flex flex-col items-center space-y-4">
-      <div class="flex justify-between w-full items-center space-x-4">
-        <HtmlIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <Css3Icon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <JsIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <TsIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <GolangIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
+    <ArticleTitle textColor="text-slate-50">technologies</ArticleTitle>
+    <div class="flex flex-col items-center gap-10">
+      <div class="flex justify-center w-full items-center gap-10">
+        <TechCard tag="html">
+          <HtmlIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="css">
+          <Css3Icon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="javascript">
+          <JsIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="typescript">
+          <TsIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="golang">
+          <GolangIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
       </div>
-      <div class="flex justify-between w-full items-center space-x-4">
-        <BootstrapIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <TailwindIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <AngularIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <AstroIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <UnityIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
+      <div class="flex justify-center w-full items-center gap-10">
+        <TechCard tag="bootstrap">
+          <BootstrapIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="tailwind">
+          <TailwindIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="Angular">
+          <AngularIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="Astro">
+          <AstroIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="unity">
+          <UnityIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
       </div>
-      <div class="flex justify-between w-full items-center space-x-4">
-        <FirebaseIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <NodeJsIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <MongoDbIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <NpmIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <SqlIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <GitIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
+      <div class="flex justify-center w-full items-center gap-10">
+        <TechCard tag="firebase">
+          <FirebaseIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="nodejs">
+          <NodeJsIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="npm">
+          <NpmIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="mongodb">
+          <MongoDbIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="sql">
+          <SqlIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="git">
+          <GitIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
       </div>
-      <div class="flex justify-between w-full items-center space-x-4">
-        <GithubIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <GooglePlayIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <AppStoreIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
-        <VercelIcon
-          classList="w-28 h-28 hover:text-purple-500 hover:animate-spin"
-        />
+      <div class="flex justify-center w-full items-center gap-10">
+        <TechCard tag="github">
+          <GithubIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="google play">
+          <GooglePlayIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="app store">
+          <AppStoreIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
+        <TechCard tag="vercel">
+          <VercelIcon
+            classList="w-20 h-20 hover:text-yellow-500 hover:animate-pulse"
+          />
+        </TechCard>
       </div>
     </div>
   </div>
