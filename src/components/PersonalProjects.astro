@@ -1,52 +1,49 @@
 ---
-import GridCard from './GridCard.astro'
+import ArticleTitle from './utilities/ArticleTitle.astro'
+import GridCard from './utilities/GridCard.astro'
 ---
 
 <article
   id="personal-projects"
-  class="flex justify-center text-slate-500">
+  class="flex justify-center text-slate-500 py-10 snap-start">
   <div class="max-w-6xl w-full">
-    <h2 class="text-slate-700 font-bold text-xl">Personal Projects</h2>
-    <section class="grid grid-cols-4 grid-rows-1 auto-rows-fr gap-1">
+    <ArticleTitle>Personal Projects</ArticleTitle>
+    <section class="grid grid-cols-3 auto-rows-fr gap-2">
       <GridCard
         hoverText="1"
-        classList="col-start-2 col-span-2 row-start-2 row-span-2"
+        classList="col-span-2"
       />
       <GridCard
         hoverText="2"
-        classList="col-start-1 row-start-1 row-span-2"
+        classList=""
       />
       <GridCard
         hoverText="3"
-        classList="col-start-2 row-start-1"
+        classList=""
       />
       <GridCard
         hoverText="4"
-        classList="col-start-3 col-span-2 row-start-1"
+        classList="col-span-2"
       />
       <GridCard
         hoverText="5"
-        classList="col-start-1 row-start-3"
+        classList="col-span-2"
       />
       <GridCard
         hoverText="6"
-        classList="col-start-1 col-span-2 row-start-4"
+        classList=""
       />
       <GridCard
         hoverText="7"
-        classList="col-start-4 row-start-2"
+        classList=""
       />
       <GridCard
         hoverText="8"
-        classList="col-start-4 row-start-3"
+        classList=""
       />
       <GridCard
         hoverText="9"
-        classList="col-start-3 row-start-4"
-      />
-      <GridCard
-        hoverText="10"
-        classList="col-start-4 row-start-4"
+        classList=""
       />
     </section>
   </div>
