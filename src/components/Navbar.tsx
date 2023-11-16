@@ -15,7 +15,8 @@ export default function Navbar() {
 
         if (
           scrollPosition >= articleTop - vHeight / 2 &&
-          scrollPosition < articleTop + articleHeight - vHeight / 2
+          scrollPosition < articleTop + articleHeight - vHeight / 2 &&
+          activeLink !== article.id
         ) {
           setActiveLink(article.id)
         }
@@ -29,12 +30,13 @@ export default function Navbar() {
     }
   }, [])
 
+
   const NavLink = ({ text, url }: { text: string, url: string }) => (
     <li >
       <a
         href={`/${url}`}
         onClick={() => setActiveLink(url)}
-        className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-purple-500 hover:border-slate-300 ${`#${activeLink}` === url ? 'text-purple-700 border-purple-700' : ''}`}>
+        className={`inline-block p-4 border-b-2 rounded-t-lg hover:text-purple-500 hover:border-purple-500 transition-colors duration-300 ${`#${activeLink}` === url ? 'bg-purple-100/80 text-purple-700 border-purple-700' : ''}`}>
         {text}
       </a>
     </li >
@@ -47,7 +49,7 @@ export default function Navbar() {
         <li>
           <a
             href="/#top"
-            className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-purple-500 hover:border-purple-700 text-purple-700 uppercase">
+            className="inline-block p-4 border-b-2 rounded-t-lg hover:text-purple-700 hover:border-purple-700 text-purple-700 uppercase">
             Home
           </a>
         </li>
