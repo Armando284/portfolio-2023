@@ -1,0 +1,91 @@
+---
+import ExternalLinkIcon from '../icons/ExternalLinkIcon.astro'
+import SocialButton from './SocialButton.astro'
+
+interface ExternalLink {
+  url: string
+  description: string
+}
+
+interface Props {
+  imgUrl: string
+  imgDescription: string
+  title: string
+  startAt: Date
+  finishAt: Date
+  description: string
+  features: string[]
+  links: ExternalLink[]
+  direction?: 'right' | 'left'
+}
+
+const {
+  imgUrl,
+  imgDescription,
+  title,
+  startAt,
+  finishAt,
+  description,
+  features,
+  links,
+  direction = 'right',
+} = Astro.props
+
+function formatDate(date: Date): string {
+  const response = date.toLocaleDateString()
+  return response
+}
+---
+
+<section
+  class:list={[
+    'grid grid-cols-2 place-items-center from-purple-400 via-purple-700 to-purple-800 p-5 rounded-lg shadow-purple-900 shadow transition-shadow hover:shadow-purple-900 hover:shadow-lg border-purple-100 border-b-2',
+    { 'bg-gradient-to-r': direction === 'right' },
+    { 'bg-gradient-to-l': direction === 'left' },
+  ]}>
+  <div class:list={[{ 'col-start-2': direction === 'left' }]}>
+    <img
+      class="max-w-lg rounded-md"
+      src={imgUrl}
+      alt={imgDescription}
+    />
+  </div>
+  <div
+    class:list={[
+      'w-full h-max flex flex-col items-start bg-white p-5 rounded-md shadow-lg shadow-purple-900',
+      { 'col-start-1 row-start-1': direction === 'left' },
+    ]}>
+    <h3 class="text-slate-900 text-xl font-semibold">{title}</h3>
+    <p class="italic text-sm">
+      From {formatDate(startAt)} to {formatDate(finishAt)}
+    </p>
+    <p class="flex justify-start items-center gap-1">
+      {description}
+    </p>
+    <div class="">
+      <h5 class="font-semibold">Main features:</h5>
+      {
+        features.map((feature) => (
+          <span class="bg-yellow-300 px-2 italic rounded-md capitalize mr-2">
+            #{feature}
+          </span>
+        ))
+      }
+    </div>
+    <div
+      id="mylinks"
+      class="flex gap-1 text-purple-700">
+      {
+        links.map((link) => (
+          <SocialButton
+            url={link.url}
+            description={link.description}
+            style="large">
+            {link.description}
+            <ExternalLinkIcon slot="end" />
+          </SocialButton>
+        ))
+      }
+    </div>
+  </div>
+</section>

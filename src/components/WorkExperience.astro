@@ -1,7 +1,6 @@
 ---
-import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.astro'
-import SocialButton from './utilities/SocialButton.astro'
 import ArticleTitle from './utilities/ArticleTitle.astro'
+import JobCard from './utilities/JobCard.astro'
 ---
 
 <article
@@ -10,141 +9,54 @@ import ArticleTitle from './utilities/ArticleTitle.astro'
   <div class="max-w-6xl w-full">
     <ArticleTitle>Work Experience</ArticleTitle>
     <div class="flex flex-col gap-5">
-      <section
-        class="flex justify-between items-center bg-gradient-to-r from-purple-500 to-purple-700 p-5 rounded-lg shadow-purple-900 shadow transition-shadow hover:shadow-purple-900 hover:shadow-lg border-purple-100 border-b-2">
-        <div>
-          <img
-            class="max-w-lg rounded-md"
-            src="imagined_earth.png"
-            alt="Imagined earth website"
-          />
-        </div>
-        <div class="bg-white p-5 rounded-md shadow-lg shadow-purple-900">
-          <h3 class="text-slate-900 text-lg font-semibold">Imagined Earth</h3>
-
-          <span class="flex justify-start items-center gap-1">
-            Development of a mobile application for Android and iOS using Ionic
-            and Angular.
-          </span>
-          <p>
-            Main features included Google Maps integrations, rewards systems and
-            shoping system.
-          </p>
-          <div class="flex gap-1 text-purple-700">
-            <SocialButton
-              url="www.imaginedearth.com"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Imagined Earth
-            </SocialButton>
-            <SocialButton
-              url="ionicframework.com"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Ionic
-            </SocialButton>
-            <SocialButton
-              url="angular.io"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Angular
-            </SocialButton>
-          </div>
-        </div>
-      </section>
-      <section
-        class="flex justify-between items-center bg-gradient-to-l from-purple-500 to-purple-700 p-5 rounded-lg shadow-purple-900 shadow transition-shadow hover:shadow-purple-900 hover:shadow-lg border-purple-100 border-b-2">
-        <div class="bg-white p-5 rounded-md shadow-lg shadow-purple-900">
-          <h3 class="text-slate-900 text-lg font-semibold">Cuban Engineer</h3>
-
-          <span class="flex justify-start items-center gap-1">
-            Development of a mobile application for Android and iOS using Ionic
-            and Angular.
-          </span>
-          <p>
-            Main features included Google Maps integrations, rewards systems and
-            shoping system.
-          </p>
-          <div class="flex gap-1 text-purple-700">
-            <SocialButton
-              url="www.imaginedearth.com"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Imagined Earth
-            </SocialButton>
-            <SocialButton
-              url="ionicframework.com"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Ionic
-            </SocialButton>
-            <SocialButton
-              url="angular.io"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Angular
-            </SocialButton>
-          </div>
-        </div>
-        <div>
-          <img
-            class="max-w-lg rounded-md"
-            src="cuban_engineer.png"
-            alt="Imagined earth website"
-          />
-        </div>
-      </section>
-      <section
-        class="flex justify-between items-center bg-gradient-to-r from-purple-500 to-purple-700 p-5 rounded-lg shadow-purple-900 shadow transition-shadow hover:shadow-purple-900 hover:shadow-lg border-purple-100 border-b-2">
-        <div>
-          <img
-            class="max-w-lg rounded-md"
-            src="wassermeloni.png"
-            alt="Imagined earth website"
-          />
-        </div>
-        <div class="bg-white p-5 rounded-md shadow-lg shadow-purple-900">
-          <h3 class="text-slate-900 text-lg font-semibold">Wassermeloni</h3>
-
-          <span class="flex justify-start items-center gap-1">
-            Development of a mobile application for Android and iOS using Ionic
-            and Angular.
-          </span>
-          <p>
-            Main features included Google Maps integrations, rewards systems and
-            shoping system.
-          </p>
-          <div class="flex gap-1 text-purple-700">
-            <SocialButton
-              url="www.imaginedearth.com"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Imagined Earth
-            </SocialButton>
-            <SocialButton
-              url="ionicframework.com"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Ionic
-            </SocialButton>
-            <SocialButton
-              url="angular.io"
-              description=""
-              style="large">
-              <ExternalLinkIcon slot="end" />
-               Angular
-            </SocialButton>
-          </div>
-        </div>
-      </section>
+      <JobCard
+        imgUrl="imagined_earth.png"
+        imgDescription="Imagined Earth Website"
+        title="Imagined Earth"
+        startAt={new Date('2019-10-1')}
+        finishAt={new Date('2023-02-1')}
+        description="Development of a mobile application for Android and iOS using Ionic and Angular."
+        features={['Angular', 'Ionic', 'Google Maps', 'Android', 'iOS']}
+        links={[
+          {
+            url: 'www.imaginedearth.com',
+            description: 'Imagined Earth website',
+          },
+        ]}
+        direction="right"
+      />
+      <JobCard
+        imgUrl="cuban_engineer.png"
+        imgDescription="Cuban Engineer Website"
+        title="Cuban Engineer"
+        startAt={new Date('2019-10-1')}
+        finishAt={new Date('2023-02-1')}
+        description="Development of a single page aplication, SPA, with Angular."
+        features={['Angular', 'SPA']}
+        links={[
+          {
+            url: 'www.imaginedearth.com',
+            description: 'Imagined Earth website',
+          },
+        ]}
+        direction="left"
+      />
+      <JobCard
+        imgUrl="wassermeloni.png"
+        imgDescription="Wassermeloni Website"
+        title="Wassermeloni"
+        startAt={new Date('2019-10-1')}
+        finishAt={new Date('2023-02-1')}
+        description="Development of a single page aplication, SPA, with Angular."
+        features={['Angular', 'SPA']}
+        links={[
+          {
+            url: 'www.imaginedearth.com',
+            description: 'Imagined Earth website',
+          },
+        ]}
+        direction="right"
+      />
     </div>
   </div>
 </article>
