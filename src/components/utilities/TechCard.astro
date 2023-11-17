@@ -6,10 +6,11 @@ interface Props {
 const { tag = '' } = Astro.props
 ---
 
-<div class="w-24 h-24 flex flex-col justify-between items-center">
+<div
+  class="w-24 h-24 p-2 flex flex-col justify-between items-center rounded-md hover:bg-slate-700/50 hover:animate-pulse">
   <slot />
   <span
-    class="w-full rounded-md bg-yellow-500 text-slate-700 text-sm uppercase text-center"
+    class="w-full rounded-md bg-purple-100 text-slate-700 text-xs uppercase text-center"
     >{tag}</span
   >
 </div>
