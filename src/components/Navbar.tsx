@@ -44,7 +44,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="text-sm font-medium text-center text-slate-700 border-b border-slate-200 flex justify-center fixed top-0 w-full bg-white bg-opacity-70 backdrop-blur-xl z-50  tracking-widest">
+      className="text-sm font-medium text-center text-slate-700 border-b border-slate-200 flex justify-center sticky top-0 w-full bg-white bg-opacity-70 backdrop-blur-xl z-50  tracking-widest">
       <ul className="flex flex-wrap -mb-px space-x-2">
         <li>
           <a
@@ -57,7 +57,7 @@ export default function Navbar() {
         <NavLink text="Work Experience" url="#work-experience" />
         <NavLink text="Personal Projects" url="#personal-projects" />
         <NavLink text="Blog Latest" url="#blog-latest" />
-        <NavLink text="About Me" url="#about-me" />
+        <NavLink text="About Me" url="about-me" />
       </ul>
     </nav>)
 }
