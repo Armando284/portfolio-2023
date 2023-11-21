@@ -1,6 +1,7 @@
 ---
 import ArticleTitle from '@/components/shared/ArticleTitle.astro'
-import GridCard from '@/components/shared/GridCard.astro'
+import JobCard from '@/components/shared/JobCard.astro'
+import { projects } from '@/lib/projects'
 ---
 
 <article
@@ -9,42 +10,20 @@ import GridCard from '@/components/shared/GridCard.astro'
   <div class="max-w-6xl w-full">
     <ArticleTitle>Personal Projects</ArticleTitle>
     <section class="grid grid-cols-3 auto-rows-fr gap-2">
-      <GridCard
-        hoverText="1"
-        classList="col-span-2"
-      />
-      <GridCard
-        hoverText="2"
-        classList=""
-      />
-      <GridCard
-        hoverText="3"
-        classList=""
-      />
-      <GridCard
-        hoverText="4"
-        classList="col-span-2"
-      />
-      <GridCard
-        hoverText="5"
-        classList="col-span-2"
-      />
-      <GridCard
-        hoverText="6"
-        classList=""
-      />
-      <GridCard
-        hoverText="7"
-        classList=""
-      />
-      <GridCard
-        hoverText="8"
-        classList=""
-      />
-      <GridCard
-        hoverText="9"
-        classList=""
-      />
+      {
+        projects.map((project, i) => (
+          <JobCard
+            id={project.id}
+            type="projects"
+            imgUrl={project.imgUrl}
+            imgDescription={project.imgDescription}
+            title={project.title}
+            description={project.description}
+            features={project.features}
+            classList={`${i === 0 || i === 3 ? 'col-span-2' : ''}`}
+          />
+        ))
+      }
     </section>
   </div>
 </article>
