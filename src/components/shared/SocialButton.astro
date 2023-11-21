@@ -20,7 +20,8 @@ const { url, description, style = 'elevated' } = Astro.props
         'w-10 h-10 shadow-purple-900 shadow-md text-slate-100 bg-purple-600 hover:bg-purple-500 ':
           style === 'elevated',
         'w-7 h-7': style === 'flat',
-        'w-full max-w-max h-10 hover:underline': style === 'large',
+        'w-full max-w-max h-10 text-blue-500 hover:text-blue-700 hover:underline':
+          style === 'large',
         'transition-up': style !== 'large',
       },
     ]}>
