@@ -1,0 +1,60 @@
+---
+import LinkIcon from '@/components/icons/LinkIcon.astro'
+import SocialButton from '@/components/shared/SocialButton.astro'
+import Layout from '@/layouts/Layout.astro'
+import { jobs, type Job } from '@/lib/jobs'
+import { formatDate } from '@/utilities/formats'
+
+const { id } = Astro.params
+const job = jobs.find((_job) => _job.id === id)
+---
+
+<Layout title="Armando Dev.">
+  <main class="flex flex-col">
+    <article
+      id="about-me"
+      class="min-h-[calc(100dvh-54px-69px)] flex justify-center items-center text-slate-500 bg-slate-100 snap-start"
+      transition:name=`job ${id} box`>
+      <div
+        class="max-w-6xl w-full bg-slate-50 p-10 flex flex-col justify-center items-start gap-5">
+        <h1
+          class="text-6xl text-slate-700"
+          transition:name=`job ${id} title`>
+          {job?.title}
+        </h1>
+        <img
+          class="w-full h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
+          src={`/${job?.imgUrl}`}
+          alt={job?.imgDescription}
+          transition:name=`job ${id} img`
+        />
+        <i class="text-sm"
+          >From {formatDate(job?.startAt)} to {formatDate(job?.finishAt)}.</i
+        >
+        <p>{job?.description}</p>
+        <div class="w-full flex justify-start items-center gap-2">
+          {
+            job?.features.map((feature) => (
+              <span class="bg-yellow-300 px-2 italic rounded-md capitalize">
+                #{feature}
+              </span>
+            ))
+          }
+        </div>
+        <div class="w-full flex justify-start items-center gap-2">
+          {
+            job?.links.map((link) => (
+              <SocialButton
+                url={link.url}
+                description={link.description}
+                style="large">
+                <LinkIcon slot="start" />
+                {link.description}
+              </SocialButton>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>
