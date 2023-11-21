@@ -1,33 +1,47 @@
 ---
 interface Props {
   id: string
+  type: string
   imgUrl: string
   imgDescription: string
   title: string
   description: string
   features: string[]
+  classList?: string
 }
 
-const { id, imgUrl, imgDescription, title, description, features } = Astro.props
+const {
+  id,
+  type,
+  imgUrl,
+  imgDescription,
+  title,
+  description,
+  features,
+  classList = '',
+} = Astro.props
 ---
 
 <a
-  class="flex flex-col justify-between items-center bg-gradient-to-r from-purple-400 via-purple-700 to-purple-800 p-2 rounded-lg shadow-purple-900 shadow transition-shadow hover:shadow-purple-900 hover:shadow-lg border-purple-100 border-b-2"
-  href={`/work-experience/${id}`}
-  transition:name=`job ${id} box`>
+  class:list={[
+    'flex flex-col justify-between items-center gap-2 bg-gradient-to-r from-purple-400 via-purple-700 to-purple-800 p-2 rounded-lg shadow-purple-900 shadow transition-shadow hover:shadow-purple-900 hover:shadow-lg border-purple-100 border-b-2',
+    classList,
+  ]}
+  href={`/${type}/${id}`}
+  transition:name=`${type} ${id} box`>
   <div>
     <img
-      class="w-full h-full rounded-md"
+      class="w-full max-w-sm h-full rounded-md"
       src={imgUrl}
       alt={imgDescription}
-      transition:name=`job ${id} img`
+      transition:name=`${type} ${id} img`
     />
   </div>
   <div
     class="w-full h-max flex flex-col items-start bg-white p-5 rounded-md shadow-lg shadow-purple-900">
     <h3
       class="text-slate-900 text-lg font-semibold"
-      transition:name=`job ${id} title`>
+      transition:name=`${type} ${id} title`>
       {title}
     </h3>
     <div class="w-full h-16 text-ellipsis overflow-hidden">
