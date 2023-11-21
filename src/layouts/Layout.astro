@@ -1,6 +1,7 @@
 ---
-import Footer from '../components/Footer.astro'
-import Navbar from '../components/Navbar.tsx'
+import Footer from '@/components/Footer.astro'
+import Navbar from '@/components/Navbar.tsx'
+import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
   title: string
@@ -33,6 +34,7 @@ const { title } = Astro.props
       content={Astro.generator}
     />
     <title>{title}</title>
+    <ViewTransitions fallback="none" />
   </head>
   <body class="w-full min-h-screen bg-slate-100">
     <Navbar
@@ -44,40 +46,40 @@ const { title } = Astro.props
     <slot />
 
     <Footer />
+    <style is:global>
+      body {
+        color-scheme: light dark;
+      }
+
+      .transition-picture {
+        transition:
+          shadow 0.3s ease,
+          transform 0.3s cubic-bezier(0.37, -0.3, 0.55, 1.65);
+      }
+
+      p {
+        max-width: 75ch;
+      }
+
+      pre.astro-code {
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  body {
-    color-scheme: light dark;
-  }
-
-  .transition-picture {
-    transition:
-      shadow 0.3s ease,
-      transform 0.3s cubic-bezier(0.37, -0.3, 0.55, 1.65);
-  }
-
-  p {
-    max-width: 75ch;
-  }
-
-  pre.astro-code {
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-  }
-
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-    font-size: 0.8rem;
-    line-height: 1.25rem;
-  }
-</style>
