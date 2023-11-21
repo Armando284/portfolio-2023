@@ -1,0 +1,62 @@
+---
+import LinkIcon from '@/components/icons/LinkIcon.astro'
+import SocialButton from '@/components/shared/SocialButton.astro'
+import Layout from '@/layouts/Layout.astro'
+import { projects } from '@/lib/projects'
+import { formatDate } from '@/utilities/formats'
+
+const { id } = Astro.params
+const project = projects.find((_project) => _project.id === id)
+---
+
+<Layout title="Armando Dev.">
+  <main class="flex flex-col">
+    <article
+      id="about-me"
+      class="min-h-[calc(100dvh-54px-69px)] flex justify-center items-center text-slate-500 bg-slate-100 snap-start"
+      transition:name=`projects ${id} box`>
+      <div
+        class="max-w-6xl w-full bg-slate-50 p-10 flex flex-col justify-center items-start gap-5">
+        <h1
+          class="text-6xl text-slate-700"
+          transition:name=`projects ${id} title`>
+          {project?.title}
+        </h1>
+        <img
+          class="w-full h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
+          src={`/${project?.imgUrl}`}
+          alt={project?.imgDescription}
+          transition:name=`projects ${id} img`
+        />
+        <i class="text-sm"
+          >From {formatDate(project?.startAt)} to {
+            formatDate(project?.finishAt)
+          }.</i
+        >
+        <p>{project?.description}</p>
+        <div class="w-full flex justify-start items-center gap-2">
+          {
+            project?.features.map((feature) => (
+              <span class="bg-yellow-300 px-2 italic rounded-md capitalize">
+                #{feature}
+              </span>
+            ))
+          }
+        </div>
+        <div class="w-full flex justify-start items-center gap-2">
+          {
+            project?.links.map((link) => (
+              <SocialButton
+                url={link.url}
+                description={link.description}
+                style="large">
+                <LinkIcon slot="start" />
+                {link.description}
+              </SocialButton>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>
