@@ -48,12 +48,11 @@ export default function Navbar() {
       <ul className="flex flex-wrap -mb-px space-x-2">
         <li>
           <a
-            href="/#top"
+            href="/"
             className="inline-block p-4 border-b-2 rounded-t-lg hover:text-purple-700 hover:border-purple-700 text-purple-700 uppercase">
             Home
           </a>
         </li>
-        <NavLink text="Technologies" url="#technologies" />
         <NavLink text="Work Experience" url="#work-experience" />
         <NavLink text="Personal Projects" url="#personal-projects" />
         <NavLink text="Blog Latest" url="#blog-latest" />
