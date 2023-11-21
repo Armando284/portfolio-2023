@@ -24,42 +24,54 @@ const {
 
 <a
   class:list={[
-    'flex flex-col justify-between items-center gap-2 bg-gradient-to-r from-purple-400 via-purple-700 to-purple-800 p-2 rounded-lg shadow-purple-900 shadow transition-shadow hover:shadow-purple-900 hover:shadow-lg border-purple-100 border-b-2',
+    'card relative flex flex-col justify-start items-center gap-2 max-h-96 overflow-hidden bg-gradient-to-r from-purple-400 via-purple-700 to-purple-800 p-2 rounded-lg shadow-purple-900 shadow transition-shadow hover:shadow-purple-900 hover:shadow-lg border-purple-100 border-b-2',
     classList,
   ]}
   href={`/${type}/${id}`}
   transition:name=`${type} ${id} box`>
-  <div>
-    <img
-      class="w-full max-w-sm h-full rounded-md"
-      src={imgUrl}
-      alt={imgDescription}
-      transition:name=`${type} ${id} img`
-    />
-  </div>
   <div
-    class="w-full h-max flex flex-col items-start bg-white p-5 rounded-md shadow-lg shadow-purple-900">
+    class="card-title absolute top-0 left-0 right-0 bottom-0 z-10 p-5 bg-gradient-to-b from-slate-900/80 via-slate-300/25 transition-all ease-linear">
     <h3
-      class="text-slate-900 text-lg font-semibold"
+      class="text-white text-6xl font-semibold drop-shadow-md"
       transition:name=`${type} ${id} title`>
       {title}
     </h3>
-    <div class="w-full h-16 text-ellipsis overflow-hidden">
-      <p class="text-sm">
-        {description}
-      </p>
-    </div>
-    <div>
-      <h5>Main features:</h5>
+  </div>
+  <img
+    class="w-full h-full object-none rounded-md"
+    src={imgUrl}
+    alt={imgDescription}
+    transition:name=`${type} ${id} img`
+  />
+  <div
+    class="card-body absolute -bottom-96 left-2 right-2 flex flex-col items-start bg-white p-5 rounded-md transition-all ease-in-out duration-300">
+    <h3 class="text-slate-900 text-lg font-semibold">
+      {title}
+    </h3>
+    <p class="text-sm line-clamp-3">
+      {description}
+    </p>
+    <div class="flex items-center gap-2">
       {
         features
           .slice(0, 3)
           .map((feature) => (
-            <span class="bg-yellow-300 px-2 italic rounded-md capitalize mr-2">
-              #{feature}
+            <span class="bg-yellow-300 px-2 italic rounded-md text-sm">
+              {feature}
             </span>
           ))
       }
     </div>
   </div>
 </a>
+
+<style>
+  .card:hover {
+    .card-title {
+      opacity: 0.5;
+    }
+    .card-body {
+      bottom: 0.5rem;
+    }
+  }
+</style>
