@@ -1,27 +1,14 @@
 ---
-import { formatDate } from '../../utilities/formats'
-
 interface Props {
   id: string
   imgUrl: string
   imgDescription: string
   title: string
-  startAt: Date
-  finishAt: Date
   description: string
   features: string[]
 }
 
-const {
-  id,
-  imgUrl,
-  imgDescription,
-  title,
-  startAt,
-  finishAt,
-  description,
-  features,
-} = Astro.props
+const { id, imgUrl, imgDescription, title, description, features } = Astro.props
 ---
 
 <a
@@ -33,19 +20,23 @@ const {
       class="w-full h-full rounded-md"
       src={imgUrl}
       alt={imgDescription}
+      transition:name=`job ${id} img`
     />
   </div>
   <div
     class="w-full h-max flex flex-col items-start bg-white p-5 rounded-md shadow-lg shadow-purple-900">
-    <h3 class="text-slate-900 text-xl font-semibold">{title}</h3>
-    <p class="italic text-sm">
-      From {formatDate(startAt)} to {formatDate(finishAt)}
-    </p>
-    <p class="w-full max-h-12 truncate">
-      {description}
-    </p>
-    <div class="">
-      <h5 class="font-semibold">Main features:</h5>
+    <h3
+      class="text-slate-900 text-lg font-semibold"
+      transition:name=`job ${id} title`>
+      {title}
+    </h3>
+    <div class="w-full h-16 text-ellipsis overflow-hidden">
+      <p class="text-sm">
+        {description}
+      </p>
+    </div>
+    <div>
+      <h5>Main features:</h5>
       {
         features
           .slice(0, 3)
