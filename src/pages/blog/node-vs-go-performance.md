@@ -2,9 +2,9 @@
 layout: '../../layouts/BlogLayout.astro'
 ---
 
-# Node.Js vs Go Which Has Better Performance
+# Node.Js vs Go Which Has The Best Performance
 
-## Comparing sorting algorithms, Bubble Sort and Merge Sort, using Node.js and Go
+## Benchmarking sorting algorithms, Bubble Sort and Merge Sort, using Node.js and Go
 
 ![Visual Studio Code with the sorting project open, Node.js on the left, Go on the right.](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ry9YZ2HJl-HFrfKDWILXZg.png)
 
@@ -142,7 +142,4 @@ Here we have all the results of sorting the ten 10000 numbers arrays. All the ti
 
 Here you have the project on GitHub if you want to check the entire code and play around with it to change the tests.
 
-[Github Node Js Vs Go Sorting Algorithms](https://github.com/Armando284/nodejs-vs-go-sorting-algorithms)
-
-<!-- TODO: Add support for comments -->
-So, what do you think? Is this a good example? Is there anything I should change? Is it worth changing your code to Go for this level of improvement in performance? I would love to see your comments. (Comments are still not supported on this blog)
+[Github Node Js Vs Go Sorting Algorithms](https://github.com/Armando284/nodejs-vs-go-sorting-algorithms/)
