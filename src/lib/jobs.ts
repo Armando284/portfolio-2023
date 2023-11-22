@@ -1,7 +1,5 @@
 import type { Job } from '@/models/types'
 
-
-
 export const jobs: Job[] = [
   {
     id: '1',
