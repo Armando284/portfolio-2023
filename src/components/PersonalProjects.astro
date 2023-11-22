@@ -7,9 +7,9 @@ import { projects } from '@/lib/projects'
 <article
   id="personal-projects"
   class="flex justify-center text-slate-500 py-10 snap-start">
-  <div class="max-w-6xl w-full">
+  <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
     <ArticleTitle>Personal Projects</ArticleTitle>
-    <section class="grid grid-cols-3 auto-rows-fr gap-2">
+    <section class="grid md:grid-cols-3 auto-rows-fr gap-2">
       {
         projects.map((project, i) => (
           <JobCard
@@ -20,7 +20,7 @@ import { projects } from '@/lib/projects'
             title={project.title}
             description={project.description}
             features={project.features}
-            classList={`${i === 0 || i === 3 ? 'col-span-2' : ''}`}
+            classList={`${i === 0 || i === 3 ? 'md:col-span-2' : ''}`}
           />
         ))
       }
