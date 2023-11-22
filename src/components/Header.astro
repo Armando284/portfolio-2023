@@ -2,6 +2,7 @@
 import BackgroundCircle from '@/components/shared/BackgroundCircle.astro'
 import Experience from '@/components/shared/Experience.tsx'
 import SocialButtonGroup from '@/components/shared/SocialButtonGroup.astro'
+import ArrowDownIcon from './icons/ArrowDownIcon.astro'
 
 const nickName = 'armando dev.'
 ---
@@ -9,18 +10,19 @@ const nickName = 'armando dev.'
 <article id="top">
   <header
     id="header"
-    class="w-full magicpattern flex justify-center shadow-purple-300 shadow-md -z-10 snap-start">
-    <BackgroundCircle />
+    class="w-full h-[calc(100dvh-73px)] magicpattern flex flex-col justify-center items-center shadow-purple-300 shadow-md -z-10 snap-start">
     <BackgroundCircle
-      bg="bg-yellow-500"
-      top="top-48"
-      left="left-64"
+      classList={`hidden md:block w-64 h-64 bg-purple-500 top-84 left-72`}
+    />
+    <BackgroundCircle
+      classList={`hidden md:block w-64 h-64 bg-yellow-500 top-48 left-64`}
     />
     <div
-      class="max-w-6xl w-full min-h-[calc(100dvh-56px)] grid grid-cols-2 gap-5 place-items-center">
-      <div class="flex flex-col justify-center items-start">
+      class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full h-full grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 md:gap-5 place-items-center">
+      <div
+        class="flex flex-col justify-start md:justify-center items-center md:items-start">
         <h1
-          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-700 font-bold mb-4 capitalize">
+          class="text-5xl md:text-6xl lg:text-7xl text-slate-700 font-bold mb-4 capitalize">
           {
             nickName.split('').map((ch, i) => (
               <span
@@ -37,35 +39,38 @@ const nickName = 'armando dev.'
           }
         </h1>
         <div
-          class="max-w-prose flex flex-col justify-center items-start mb-4 text-slate-700 bg-slate-50 rounded-md p-2 z-10">
+          class="max-w-prose flex flex-col justify-center items-start mb-4 text-slate-900 rounded-md mx-5 md:mx-0 z-10">
           <p class="text-lg">Welcome to my website 👋.</p>
           <p>
-            I am a FrontEnd Web Developer with
-            <Experience client:load />. Feel free to contact me if you find
-            something interesting here or have a nice idea that needs to be
-            developed.
+            I am a <Experience client:load /> FrontEnd Web Developer.
           </p>
         </div>
-        <SocialButtonGroup classList="justify-start" />
+        <SocialButtonGroup classList="justify-center md:justify-start" />
       </div>
-      <div class="w-full h-full flex justify-end items-center">
+      <div
+        class="w-full flex justify-center md:justify-end items-center row-start-1 md:col-start-2">
         <div
-          class="w-full h-full flex justify-center items-center bg-blob -mr-2">
+          class="w-64 h-64 md:w-[496px] md:h-[496px] flex justify-center items-center bg-blob md:-mr-2">
           <img
-            class="w-96 h-96 rounded-full saturate-150"
+            class="w-52 h-52 md:w-96 md:h-96 rounded-full saturate-150"
             src="recortado.webp"
             alt=""
           />
         </div>
       </div>
     </div>
+    <a
+      href="#work-experience"
+      class="w-full h-12 flex flex-col justify-center items-center text-slate-50 go-down">
+      <div class="w-2 h-[2px] bg-slate-100 mb-1"></div>
+      <div class="w-2 h-1 bg-slate-100"></div>
+      <div><ArrowDownIcon /></div>
+    </a>
   </header>
 </article>
 
 <style>
   .bg-blob {
-    width: 496px;
-    height: 496px;
     background-size: cover;
     background-position: center center;
     background-repeat: repeat;
@@ -73,11 +78,33 @@ const nickName = 'armando dev.'
   }
 
   .magicpattern {
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: repeat;
     background-image: url('data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22a%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%239bd9db%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23b4e2e4%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient id=%22b%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23c9e0d1%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23d6e7dc%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23e8be8e%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23edceaa%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient id=%22d%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23f48026%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23f69f5c%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient id=%22e%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23fa6900%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23fb8e3f%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath fill=%22%2369d2e7%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cpath d=%22M0 233c79.661 5.76 159.323 11.52 233 8 73.677-3.52 141.37-16.318 210-18 68.63-1.682 138.198 7.753 211 4 72.802-3.753 148.838-20.693 222-12 73.162 8.693 143.448 43.02 223 46 79.552 2.98 168.369-25.384 241-41s129.076-18.485 203-20c73.924-1.515 165.326-1.677 249 5s159.621 20.193 193 26c33.379 5.807 24.19 3.903 55 2l-40 1167H0Z%22 fill=%22url(%23a)%22%2F%3E%3Cpath d=%22M0 466c80.841 16.839 161.683 33.677 231 31 69.317-2.677 127.11-24.87 199-38 71.89-13.13 157.877-17.196 241-18 83.123-.804 163.38 1.656 231 5 67.62 3.344 122.601 7.574 194 4s159.215-14.952 241-4 157.54 44.235 227 46c69.46 1.765 132.624-27.986 216-39s186.965-3.29 227 2 16.518 8.145 33 11l-40 934H0Z%22 fill=%22url(%23b)%22%2F%3E%3Cpath d=%22M0 700c74.856 9.129 149.713 18.258 218 23 68.287 4.742 130.006 5.098 209 7 78.994 1.902 175.264 5.35 254-8 78.736-13.35 139.94-43.5 210-46s148.98 22.65 226 31c77.02 8.35 152.144-.103 223-6s137.446-9.24 206-9c68.554.24 139.072 4.065 221 9s175.265 10.981 216 11c40.735.019 28.867-5.99 57-12l-40 700H0Z%22 fill=%22url(%23c)%22%2F%3E%3Cpath d=%22M0 933c80.509 12.717 161.017 25.434 230 29 68.983 3.566 126.44-2.018 201-13s166.225-27.363 245-23c78.775 4.363 144.66 29.471 216 37s148.137-2.522 223-4c74.863-1.478 147.792 5.615 218 5 70.208-.615 137.695-8.938 207-12 69.305-3.062 140.428-.863 228 1s191.592 3.39 233 0c41.408-3.39 20.204-11.695 39-20l-40 467H0Z%22 fill=%22url(%23d)%22%2F%3E%3Cpath d=%22M0 1166c66.63-5.267 133.261-10.534 211-14 77.739-3.466 166.586-5.133 241 4 74.414 9.133 134.397 29.064 209 37 74.603 7.936 163.828 3.878 240-2s139.29-13.574 214-11c74.71 2.574 161.01 15.419 233 9 71.99-6.419 129.667-32.102 199-30 69.333 2.102 150.32 31.989 240 32 89.68.011 188.051-29.854 225-39 36.949-9.146 12.474 2.427 28 14l-40 234H0Z%22 fill=%22url(%23e)%22%2F%3E%3C%2Fsvg%3E');
+  }
+
+  .go-down div {
+    animation-name: loading;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  .go-down div:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .go-down div:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes loading {
+    from {
+      opacity: 0.25;
+    }
+    to {
+      opacity: 1;
+    }
   }
 </style>

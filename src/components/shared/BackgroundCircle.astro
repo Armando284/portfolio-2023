@@ -1,22 +1,12 @@
 ---
 interface Props {
-  bg?: string
-  width?: string
-  height?: string
-  top?: string
-  left?: string
+  classList?: string
 }
 
-const {
-  bg = 'bg-purple-500',
-  width = 'w-64',
-  height = 'h-64',
-  top = 'top-80',
-  left = 'left-96',
-} = Astro.props
+const { classList = 'bg-purple-500 w-64 h-64' } = Astro.props
 ---
 
-<div class:list={['circle-effect', bg, width, height, top, left]}></div>
+<div class:list={['circle-effect', classList]}></div>
 
 <style>
   .circle-effect {
