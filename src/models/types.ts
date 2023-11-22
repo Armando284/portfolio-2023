@@ -14,3 +14,11 @@ export interface Job {
   features: string[]
   links: ExternalLink[]
 }
+
+export interface Blog {
+  slug: string
+  title: string
+  imgUrl: string
+  imgDescription: string
+  description: string
+}
