@@ -30,7 +30,7 @@ const {
   href={`/${type}/${id}`}
   transition:name=`${type} ${id} box`>
   <div
-    class="card-title absolute top-0 left-0 right-0 bottom-0 z-10 p-5 bg-gradient-to-b from-slate-900/80 via-slate-300/25 transition-all ease-linear">
+    class="card-title absolute top-0 left-0 right-0 bottom-0 z-10 p-5 backdrop-saturate-150 bg-gradient-to-b from-slate-900/80 via-slate-300/25 transition-all ease-linear">
     <h3
       class="text-white text-xl md:text-6xl font-semibold drop-shadow-md"
       transition:name=`${type} ${id} title`>
@@ -66,12 +66,15 @@ const {
 </a>
 
 <style>
-  .card:hover {
-    .card-title {
-      opacity: 0.5;
-    }
-    .card-body {
-      bottom: 0.5rem;
-    }
+  .card:hover .card-title {
+    opacity: 0;
+  }
+
+  .card:hover .card-body {
+    bottom: 0.5rem;
+  }
+
+  .card:hover img {
+    object-fit: cover;
   }
 </style>
