@@ -4,14 +4,15 @@ import SocialButtonGroup from '@/components/shared/SocialButtonGroup.astro'
 
 <footer class="border-t w-full bg-purple-900 p-5">
   <div
-    class="max-w-6xl mx-auto text-slate-100 flex justify-between items-center">
-    <section class="flex flex-col items-start space-y-2">
+    class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4 mx-auto text-slate-100 grid place-items-center grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-2">
+    <section class="flex flex-col items-start gap-2 text-lg tracking-widest">
       <span>Armando Peña Tamayo</span>
     </section>
-    <section>
-      <span>Thanks for stopping by💓.</span>
+    <section class="text-slate-300">
+      <span>Thanks for stopping by. 💓</span>
     </section>
-    <section class="flex flex-col items-start space-y-2">
+    <section
+      class="flex flex-col items-start gap-2 row-start-2 md:row-start-1 md:col-start-3">
       <SocialButtonGroup style="flat" />
     </section>
   </div>
