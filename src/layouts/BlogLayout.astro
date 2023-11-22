@@ -40,4 +40,25 @@ import Layout from '@/layouts/Layout.astro'
     height: auto;
     border-radius: 10px;
   }
+
+  p > a {
+    font-weight: 500;
+    color: rgb(135, 33, 207);
+    transition: color 0.15s ease;
+    &:hover,
+    &:active,
+    &:focus {
+      color: indigo;
+    }
+    &:focus {
+      outline: indigo;
+    }
+  }
+
+  blockquote {
+    border-left: 2px solid gray;
+    background: lightgray;
+    padding-left: 8px;
+    font-style: italic;
+  }
 </style>
