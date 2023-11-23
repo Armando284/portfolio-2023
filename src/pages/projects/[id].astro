@@ -1,6 +1,7 @@
 ---
 import LinkIcon from '@/components/icons/LinkIcon.astro'
 import SocialButton from '@/components/shared/SocialButton.astro'
+import TechTag from '@/components/shared/TechTag.astro'
 import Layout from '@/layouts/Layout.astro'
 import { projects } from '@/lib/projects'
 import { formatDate } from '@/utilities/formats'
@@ -16,11 +17,11 @@ const project = projects.find((_project) => _project.id === id)
       class="min-h-[calc(100dvh-54px-69px)] flex justify-center items-center text-slate-500 bg-slate-100 snap-start"
       transition:name=`work-experience ${id} box`>
       <div
-        class="max-w-6xl w-full bg-slate-50 p-6 flex justify-center items-center">
+        class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full bg-slate-50 p-6 flex justify-center items-center">
         <div
           class="max-w-prose w-full flex flex-col justify-center items-start gap-5">
           <h1
-            class="text-6xl text-slate-700 mb-6 uppercase"
+            class="text-2xl md:text-6xl text-slate-700 uppercase"
             transition:name=`work-experience ${id} title`>
             {project?.title}
           </h1>
@@ -35,15 +36,7 @@ const project = projects.find((_project) => _project.id === id)
               formatDate(project?.finishAt)
             }.</i
           >
-          <div class="flex justify-start items-center gap-2">
-            {
-              project?.features.map((feature) => (
-                <span class="bg-yellow-300 px-2 italic rounded-md capitalize">
-                  {feature}
-                </span>
-              ))
-            }
-          </div>
+          <TechTag tags={project?.features} />
           <div class="flex justify-start items-center gap-2">
             {
               project?.links.map((link) => (
