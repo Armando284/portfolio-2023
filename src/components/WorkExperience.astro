@@ -2,6 +2,8 @@
 import ArticleTitle from '@/components/shared/ArticleTitle.astro'
 import { jobs } from '@/lib/jobs'
 import { formatDate } from '@/utilities/formats'
+import TechTag from './shared/TechTag.astro'
+import TechCard from './shared/TechCard.astro'
 ---
 
 <article
@@ -34,13 +36,7 @@ import { formatDate } from '@/utilities/formats'
                 transition:name={`work-experience ${job.id} title`}>
                 {job.title}
               </h3>
-              <h5 class="flex items-center gap-2">
-                {job.features.slice(0, 3).map((feature) => (
-                  <span class="bg-yellow-300 px-2 italic rounded-md capitalize text-sm">
-                    {feature}
-                  </span>
-                ))}
-              </h5>
+              <TechTag tags={job.features.slice(0, 3)} />
               <p class="mb-4 text-base font-normal text-slate-500 line-clamp-4">
                 {job.description}
               </p>
