@@ -1,0 +1,31 @@
+---
+import ArticleTitle from '@/components/shared/ArticleTitle.astro'
+import BlogCard from '@/components/shared/BlogCard.astro'
+import Layout from '@/layouts/Layout.astro'
+import { blogs } from '@/lib/blogs'
+---
+
+<Layout title="Armando Dev. | Blog">
+  <main class="flex flex-col">
+    <article
+      id="about-me"
+      class="min-h-[calc(100dvh-54px-69px)] flex justify-center items-start text-slate-200 magicpattern px-5 snap-start">
+      <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
+        <ArticleTitle>Blog</ArticleTitle>
+        <section class="flex flex-col gap-5">
+          {
+            blogs.map((blog) => (
+              <BlogCard
+                slug={blog.slug}
+                title={blog.title}
+                imgUrl={blog.imgUrl}
+                imgDescription={blog.imgDescription}
+                description={blog.description}
+              />
+            ))
+          }
+        </section>
+      </div>
+    </article>
+  </main>
+</Layout>
