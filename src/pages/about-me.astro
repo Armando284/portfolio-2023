@@ -7,14 +7,15 @@ import ArticleTitle from '@/components/shared/ArticleTitle.astro'
   <main class="flex flex-col">
     <article
       id="about-me"
-      class="min-h-[calc(100dvh-54px-69px)] flex justify-center items-center text-slate-200 magicpattern px-5 py-32 snap-start">
-      <div class="max-w-6xl w-full">
+      class="min-h-[calc(100dvh-54px-69px)] flex justify-center items-center text-slate-200 magicpattern px-5 snap-start">
+      <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
         <ArticleTitle textColor="text-slate-50">About Me</ArticleTitle>
-        <div class="grid grid-cols-2">
-          <section class="flex flex-col justify-center items-start">
+        <div
+          class="w-full h-full grid md:grid-rows-1 md:grid-cols-2 md:gap-5 place-items-center">
+          <section
+            class="flex flex-col justify-center items-start my-5 md:my-0">
             <p>
-              Welcome to my personal website! I'm <span
-                class="italic text-yellow-500 font-bold"
+              Hello! I'm <span class="italic text-yellow-500 font-bold"
                 >Armando José Peña Tamayo</span
               >, a passionate developer with experience in web development and a
               focus on creating engaging and user-friendly web applications.
@@ -31,9 +32,10 @@ import ArticleTitle from '@/components/shared/ArticleTitle.astro'
               something amazing together!
             </p>
           </section>
-          <section class="flex justify-end items-center">
+          <section
+            class="h-min flex justify-end items-center row-start-1 md:col-start-2">
             <img
-              class="rounded-full w-80 max-w-xs max-h-96 shadow-yellow-500 border-slate-50 border-8 shadow-md transition-picture hover:rounded-sm hover:shadow-yellow-300 hover:shadow-xl hover:rotate-6 hover:scale-125"
+              class="w-52 h-52 md:w-96 md:h-96 rounded-full shadow-yellow-500 border-slate-50 border-8 shadow-md transition-picture hover:rounded-sm hover:shadow-yellow-300 hover:shadow-xl hover:rotate-6 hover:scale-125"
               src="/picture.webp"
               alt=""
               loading="lazy"
