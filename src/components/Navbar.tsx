@@ -8,14 +8,14 @@ export default function Navbar() {
     <li >
       <a
         href={`/${url}`}
-        className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
+        className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
         {text}
       </a>
     </li >
   )
 
   return (
-    <nav className="sticky top-0 z-50 bg-slate-50/50 border-white border-b shadow-md dark:bg-gray-900 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 bg-slate-50/50 border-white border-b shadow-md backdrop-blur-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <svg
@@ -63,7 +63,7 @@ export default function Navbar() {
             </g>
           </svg>
         </a>
-        <button onClick={() => setShowMenu(!showMenu)} type="button" className={`btn-burger ${showMenu ? 'open' : ''} p-2 w-10 h-10 flex flex-col items-center justify-center gap-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600`} aria-controls="navbar-default" aria-expanded="false">
+        <button onClick={() => setShowMenu(!showMenu)} type="button" className={`btn-burger ${showMenu ? 'open' : ''} p-2 w-10 h-10 flex flex-col items-center justify-center gap-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  `} aria-controls="navbar-default" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           <span className="burger-line border-slate-700 border-b w-full "></span>
           <span className="burger-line border-slate-700 border-b w-full "></span>
