@@ -34,6 +34,7 @@ const achievments = job?.description.substring(divitionIdx)
             src={`/${job?.imgUrl}`}
             alt={job?.imgDescription}
             transition:name=`work-experience ${id} img`
+            loading="lazy"
           />
           <i class="text-sm"
             >From {formatDate(job?.startAt)} to {formatDate(job?.finishAt)}.</i

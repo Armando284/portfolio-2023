@@ -30,6 +30,7 @@ const project = projects.find((_project) => _project.id === id)
             src={`/${project?.imgUrl}`}
             alt={project?.imgDescription}
             transition:name=`work-experience ${id} img`
+            loading="lazy"
           />
           <i class="text-sm"
             >From {formatDate(project?.startAt)} to {
