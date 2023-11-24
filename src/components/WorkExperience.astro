@@ -3,7 +3,6 @@ import ArticleTitle from '@/components/shared/ArticleTitle.astro'
 import { jobs } from '@/lib/jobs'
 import { formatDate } from '@/utilities/formats'
 import TechTag from './shared/TechTag.astro'
-import TechCard from './shared/TechCard.astro'
 ---
 
 <article
@@ -32,17 +31,17 @@ import TechCard from './shared/TechCard.astro'
                 {`${formatDate(job.startAt)} - ${formatDate(job.finishAt)}`}
               </time>
               <h3
-                class="text-lg font-semibold text-gray-900"
+                class="text-lg font-semibold text-slate-300"
                 transition:name={`work-experience ${job.id} title`}>
                 {job.title}
               </h3>
               <TechTag tags={job.features.slice(0, 3)} />
-              <p class="mb-4 text-base font-normal text-slate-500 line-clamp-4">
+              <p class="mb-4 text-base font-normal text-slate-400 line-clamp-4">
                 {job.description}
               </p>
               <a
                 href={`/work-experience/${job.id}`}
-                class="px-5 py-2 mt-5 bg-purple-600 hover:bg-purple-500 rounded-md text-slate-50 shadow-purple-900 shadow-md">
+                class="max-w-max h-11 px-4 text-yellow-500 transition-colors ease-in-out duration-300 flex items-center gap-1 border-yellow-500/50 hover:border-yellow-500 border-2 rounded-md">
                 Learn more
               </a>
             </li>
