@@ -14,18 +14,18 @@ const responsabilities = job?.description.substring(0, divitionIdx)
 const achievments = job?.description.substring(divitionIdx)
 ---
 
-<Layout title="Armando Dev.">
+<Layout title="Armando Dev. | Work Experience">
   <main class="flex flex-col">
     <article
       id="about-me"
-      class="min-h-[calc(100dvh-54px-69px)] flex justify-center items-center text-slate-500 bg-slate-100 snap-start"
+      class="min-h-screen flex justify-center items-center text-slate-400 snap-start"
       transition:name=`work-experience ${id} box`>
       <div
-        class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full bg-slate-50 p-6 flex justify-center items-center">
+        class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full flex justify-center items-center">
         <div
           class="max-w-prose w-full flex flex-col justify-center items-start gap-5">
           <h1
-            class="text-2xl md:text-6xl text-slate-700 uppercase"
+            class="text-2xl md:text-6xl text-slate-100 uppercase"
             transition:name=`work-experience ${id} title`>
             {job?.title}
           </h1>
