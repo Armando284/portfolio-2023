@@ -63,11 +63,11 @@ export default function Navbar() {
             </g>
           </svg>
         </a>
-        <button onClick={() => setShowMenu(!showMenu)} type="button" className={`btn-burger ${showMenu ? 'open' : ''} p-2 w-10 h-10 flex flex-col items-center justify-center gap-2 text-sm text-slate-500 rounded-lg md:hidden hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-200  `} aria-controls="navbar-default" aria-expanded="false">
+        <button onClick={() => setShowMenu(!showMenu)} type="button" className={`btn-burger ${showMenu ? 'open' : ''} p-2 w-10 h-10 flex flex-col items-center justify-center gap-2 text-sm text-slate-400 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-slate-400  `} aria-controls="navbar-default" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
-          <span className="burger-line border-slate-700 border-b w-full "></span>
-          <span className="burger-line border-slate-700 border-b w-full "></span>
-          <span className="burger-line border-slate-700 border-b w-full "></span>
+          <span className="burger-line border-slate-300 border-b w-full "></span>
+          <span className="burger-line border-slate-300 border-b w-full "></span>
+          <span className="burger-line border-slate-300 border-b w-full "></span>
         </button>
         <div className={`${showMenu ? '' : 'hidden'} w-full md:block md:w-auto transition-all ease-out duration-300`}>
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
