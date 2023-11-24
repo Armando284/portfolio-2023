@@ -8,14 +8,14 @@ export default function Navbar() {
     <li >
       <a
         href={`/${url}`}
-        className={`block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:hover:bg-slate-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
+        className={`block py-2 px-3 text-slate-400 rounded transition-colors ease-in-out hover:bg-purple-900/30 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0`}>
         {text}
       </a>
     </li >
   )
 
   return (
-    <nav className="sticky top-0 z-50 bg-slate-50/50 border-white border-b shadow-md backdrop-blur-md">
+    <nav className="sticky top-0 z-50 bg-purple-950/80 shadow-md backdrop-blur-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <svg
@@ -28,7 +28,7 @@ export default function Navbar() {
             <g
               id="SvgjsG2212"
               transform="matrix(0.7920075685449823,0,0,0.7920075685449823,-7.192925700805121,-0.6399410518976204)"
-              fill="#3b0c69"
+              fill="rgb(234,179,8)"
             >
               <g xmlns="http://www.w3.org/2000/svg"
               >
@@ -54,7 +54,7 @@ export default function Navbar() {
             <g
               id="SvgjsG2213"
               transform="matrix(1.65843902099701,0,0,1.65843902099701,84.27028752667002,-3.3705635265284)"
-              fill="#3b0c69"
+              fill="rgb(234,179,8)"
             >
               <path
                 d="M11.36 12 l4.48 28 l-4.44 0 l-0.76 -5.08 l-5.4 0 l-0.76 5.08 l-4.04 0 l4.48 -28 l6.44 0 z M7.88 16.96 l-2.08 14.16 l4.24 0 l-2.08 -14.16 l-0.08 0 z M31.560000000000002 40 l-4.48 0 c-0.24 -0.72 -0.4 -1.16 -0.4 -3.44 l0 -4.4 c0 -2.6 -0.88 -3.56 -2.88 -3.56 l-1.52 0 l0 11.4 l-4.4 0 l0 -28 l6.64 0 c4.56 0 6.52 2.12 6.52 6.44 l0 2.2 c0 2.88 -0.92 4.72 -2.88 5.64 l0 0.08 c2.2 0.92 2.92 3 2.92 5.92 l0 4.32 c0 1.36 0.04 2.36 0.48 3.4 z M24.4 16 l-2.12 0 l0 8.6 l1.72 0 c1.64 0 2.64 -0.72 2.64 -2.96 l0 -2.76 c0 -2 -0.68 -2.88 -2.24 -2.88 z M40.04 12 l3.2 19.88 l0.08 0 l2.96 -19.88 l6.12 0 l0 28 l-4.16 0 l0 -20.08 l-0.08 0 l-2.96 20.08 l-4.16 0 l-3.2 -19.8 l-0.08 0 l0 19.8 l-3.84 0 l0 -28 l6.12 0 z M65.36 12 l4.48 28 l-4.44 0 l-0.76 -5.08 l-5.4 0 l-0.76 5.08 l-4.04 0 l4.48 -28 l6.44 0 z M61.88 16.96 l-2.08 14.16 l4.24 0 l-2.08 -14.16 l-0.08 0 z M81.28 40 l-5.4 -20.28 l-0.08 0 l0 20.28 l-3.96 0 l0 -28 l5.52 0 l4.44 16.76 l0.08 0 l0 -16.76 l3.92 0 l0 28 l-4.52 0 z M88.96 40 l0 -28 l6.96 0 c4.4 0 6.56 2.44 6.56 6.92 l0 14.16 c0 4.48 -2.16 6.92 -6.56 6.92 l-6.96 0 z M95.84 16 l-2.48 0 l0 20 l2.48 0 c1.4 0 2.24 -0.72 2.24 -2.72 l0 -14.56 c0 -2 -0.84 -2.72 -2.24 -2.72 z M109.32000000000001 18.44 l0 15.12 c0 2 0.88 2.76 2.28 2.76 s2.28 -0.76 2.28 -2.76 l0 -15.12 c0 -2 -0.88 -2.76 -2.28 -2.76 s-2.28 0.76 -2.28 2.76 z M104.92 33.28 l0 -14.56 c0 -4.48 2.36 -7.04 6.68 -7.04 s6.68 2.56 6.68 7.04 l0 14.56 c0 4.48 -2.36 7.04 -6.68 7.04 s-6.68 -2.56 -6.68 -7.04 z M127.32000000000001 40 l0 -28 l6.96 0 c4.4 0 6.56 2.44 6.56 6.92 l0 14.16 c0 4.48 -2.16 6.92 -6.56 6.92 l-6.96 0 z M134.20000000000002 16 l-2.48 0 l0 20 l2.48 0 c1.4 0 2.24 -0.72 2.24 -2.72 l0 -14.56 c0 -2 -0.84 -2.72 -2.24 -2.72 z M148.04000000000002 16 l0 7.8 l6.04 0 l0 4 l-6.04 0 l0 8.2 l7.6 0 l0 4 l-12 0 l0 -28 l12 0 l0 4 l-7.6 0 z M161.64000000000001 12 l3.32 22.84 l0.08 0 l3.32 -22.84 l4.04 0 l-4.32 28 l-6.56 0 l-4.32 -28 l4.44 0 z"
