@@ -2,10 +2,10 @@
 interface Props {
   url: string
   description: string
-  style?: 'elevated' | 'flat' | 'large'
+  style?: 'small' | 'large'
 }
 
-const { url, description, style = 'elevated' } = Astro.props
+const { url, description, style = 'small' } = Astro.props
 ---
 
 <a
@@ -17,12 +17,9 @@ const { url, description, style = 'elevated' } = Astro.props
     class:list={[
       'flex items-center justify-center rounded-md',
       {
-        'w-10 h-10 shadow-purple-900 shadow-md text-slate-100 bg-purple-600 hover:bg-purple-500 ':
-          style === 'elevated',
-        'w-7 h-7': style === 'flat',
-        'w-full max-w-max h-10 text-blue-500 hover:text-blue-700 hover:underline':
+        'w-10 h-10 transition-up hover:text-yellow-500': style === 'small',
+        'w-full max-w-max h-10 text-sky-500 hover:text-sky-700 hover:underline':
           style === 'large',
-        'transition-up': style !== 'large',
       },
     ]}>
     <slot name="start" />
