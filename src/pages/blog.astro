@@ -1,31 +1,18 @@
 ---
 import ArticleTitle from '@/components/shared/ArticleTitle.astro'
-import BlogCard from '@/components/shared/BlogCard.astro'
+import BlogList from '@/components/shared/BlogList'
 import Layout from '@/layouts/Layout.astro'
-import { blogs } from '@/lib/blogs'
 ---
 
 <Layout title="Armando Dev. | Blog">
   <main class="flex flex-col">
     <article
-      id="about-me"
+      id="blog"
       class="min-h-screen flex justify-center items-start text-slate-400 px-5 snap-start">
       <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
-        <ArticleTitle>Blog</ArticleTitle>
-        <!-- TODO: Add a search functionality -->
-        <section class="flex flex-col gap-5">
-          {
-            blogs.map((blog) => (
-              <BlogCard
-                slug={blog.slug}
-                title={blog.title}
-                imgUrl={blog.imgUrl}
-                imgDescription={blog.imgDescription}
-                description={blog.description}
-              />
-            ))
-          }
-        </section>
+        <BlogList client:visible>
+          <ArticleTitle>Blog</ArticleTitle>
+        </BlogList>
       </div>
     </article>
   </main>
