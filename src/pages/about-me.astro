@@ -1,41 +1,56 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import ArticleTitle from '@/components/shared/ArticleTitle.astro'
 ---
 
 <Layout title="Armando Dev. | About Me">
   <main class="flex flex-col">
     <article
       id="about-me"
-      class="min-h-screen flex justify-center items-center text-slate-400 px-5 snap-start">
-      <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
-        <ArticleTitle textColor="text-slate-50">About Me</ArticleTitle>
-        <div
-          class="w-full h-full grid md:grid-rows-1 md:grid-cols-2 md:gap-5 place-items-center">
+      class="min-h-[calc(100dvh-150px)] flex justify-center items-center text-slate-400 px-5 snap-start">
+      <div
+        class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4 h-full">
+        <div class="w-full h-full grid md:gap-5 place-items-center">
           <section
-            class="flex flex-col justify-center items-start my-5 md:my-0">
+            class="max-w-prose flex flex-col justify-center items-start my-5 md:my-0 md:text-xl space-y-2">
             <p>
-              Hello! I'm <span class="italic text-yellow-500 font-bold"
+              Hi 👋! I'm <span class="italic text-yellow-500 font-semibold"
                 >Armando José Peña Tamayo</span
-              >, a passionate developer with experience in web development and a
-              focus on creating engaging and user-friendly web applications.
+              >, a passionate <span class="text-slate-200"
+                >Software Engineer</span
+              > with experience in <span class="text-slate-200"
+                >web development</span
+              > and a focus on creating engaging and <span
+                class="text-slate-200">user-friendly web applications</span
+              >.
             </p>
             <p>
-              I have expertise in front-end frameworks like Angular and back-end
-              technologies such as Node.js. I enjoy collaborating with teams and
-              strive to write clean and efficient code.
+              I have expertise in front-end frameworks like <span
+                class="text-slate-200">Angular</span
+              > and back-end technologies such as <span class="text-slate-200"
+                >Node.js</span
+              >. I enjoy collaborating with teams and strive to write clean and
+              efficient code.
             </p>
             <p>
-              I'm constantly learning and staying up-to-date with the latest
-              trends in web development. If you're interested in collaborating
-              or have any questions, feel free to reach out. Let's create
-              something amazing together!
+              I am also quite interested in <span class="text-slate-200"
+                >Game Development</span
+              > mainly with <span class="text-slate-200">Unity</span> and enjoy
+              creatiyn intriguing digital experiences.
+            </p>
+            <p>
+              I love to <span class="text-slate-200">stay up-to-date</span> with
+              the latest trends in web development and sharing what I learn on
+              my <span class="text-slate-200">blog</span>. If you're interested
+              in collaborating or have any questions, feel free to reach out. <span
+                class="text-slate-200"
+                >Let's create something amazing together!</span
+              >
             </p>
           </section>
           <section
             class="h-min flex justify-end items-center row-start-1 md:col-start-2">
             <img
-              class="w-52 h-52 md:w-60 md:h-60 xl:w-96 xl:h-96 rounded-full shadow-yellow-500 border-slate-50 border-8 shadow-md transition-picture hover:rounded-sm hover:shadow-yellow-300 hover:shadow-xl hover:rotate-6 hover:scale-125"
+              class="w-52 h-52 md:w-60 md:h-60 xl:w-72 xl:h-72 rounded-full shadow-yellow-500 border-slate-50 border-8 shadow-md transition-picture hover:rounded-sm hover:shadow-yellow-300 hover:shadow-xl hover:rotate-6 hover:scale-125"
               src="/picture.webp"
               alt="Personal picture at night"
               loading="lazy"
