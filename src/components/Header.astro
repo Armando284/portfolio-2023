@@ -1,10 +1,7 @@
 ---
-import BackgroundCircle from '@/components/shared/BackgroundCircle.astro'
 import Experience from '@/components/shared/Experience.tsx'
 import SocialButtonGroup from '@/components/shared/SocialButtonGroup.astro'
 import ArrowDownIcon from './icons/ArrowDownIcon.astro'
-
-const nickName = 'armando peña.'
 ---
 
 <article id="top">
@@ -17,25 +14,14 @@ const nickName = 'armando peña.'
         class="flex flex-col justify-start md:justify-center items-center md:items-start">
         <p class="text-yellow-500">Hi 👋, my name is</p>
 
-        <h1
-          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-slate-50 font-bold mb-4 capitalize">
-          {
-            nickName
-              .split('')
-              .map((ch, i) => (
-                <span
-                  class:list={[
-                    'transition-all drop-shadow-md hover:drop-shadow-xl hover:text-yellow-500',
-                  ]}>
-                  {ch}
-                </span>
-              ))
-          }
-        </h1>
         <h2
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-slate-400 font-bold mb-4">
-          I build web apps.
+          class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-slate-400 font-bold mb-4 capitalize">
+          Armando Peña.
         </h2>
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center sm:text-left text-slate-50 font-bold mb-4">
+          Solving business problems through digital solutions.
+        </h1>
         <p class="max-w-prose text-sm text-center sm:text-lg sm:text-left">
           <Experience client:load /> developing customer centered web
           applications.
@@ -73,7 +59,7 @@ const nickName = 'armando peña.'
     </div>
     <a
       href="#work-experience"
-      class="w-full h-12 flex flex-col justify-center items-center text-slate-50 go-down">
+      class="w-full h-12 hidden sm:flex flex-col justify-center items-center text-slate-50 go-down">
       <div class="w-2 h-[2px] bg-slate-100 mb-1"></div>
       <div class="w-2 h-1 bg-slate-100"></div>
       <div><ArrowDownIcon /></div>
