@@ -20,7 +20,7 @@ export default function BlogCard(props: Blog) {
             {props.description}
           </p>
           <div className="w-full flex flex-wrap justify-end items-center gap-1">
-            {props.tags?.map(tag => <span className="px-2 bg-purple-700 text-slate-300 rounded-md">{tag}</span>)}
+            {props.tags?.map(tag => <span className="px-2 bg-purple-700 text-slate-300 rounded-md uppercase">{tag}</span>)}
           </div>
         </div>
         <div className="w-full flex justify-end">

@@ -1,4 +1,5 @@
 import { blogs } from "@/lib/blogs";
+import type { Blog } from "@/models/types"
 import { useState, type ChangeEvent, type ReactNode } from "react";
 import BlogCard from "./BlogCard";
 
@@ -7,7 +8,7 @@ type MyBlogComponent = {
 }
 
 export default function BlogList(props: MyBlogComponent) {
-  const [blogsArray, setBlogsArray] = useState(blogs)
+  const [blogsArray, setBlogsArray] = useState<Blog[]>(blogs)
 
 
   function debouncer() {
@@ -27,8 +28,7 @@ export default function BlogList(props: MyBlogComponent) {
       return
     }
     const searchParam = param.toLowerCase()
-    const arr = blogsArray.filter(b => b.title.toLowerCase().includes(searchParam) || b.description.toLowerCase().includes(searchParam))
-    // TODO: Include tags search
+    const arr = blogsArray.filter(b => b.title.toLowerCase().includes(searchParam) || b.description.toLowerCase().includes(searchParam) || b.tags?.includes(searchParam))
     setBlogsArray(arr)
   }
 
