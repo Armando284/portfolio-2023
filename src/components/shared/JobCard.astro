@@ -1,5 +1,6 @@
 ---
-import TechTag from './TechTag.astro'
+import ArrowUpRightIcon from '@/components/icons/ArrowUpRightIcon.astro'
+import TechTag from '@/components/shared/TechTag.astro'
 interface Props {
   id: string
   type: string
@@ -25,22 +26,26 @@ const {
 
 <a
   class:list={[
-    'relative flex flex-col justify-start items-center gap-2 max-h-96 overflow-hidden bg-gradient-to-r from-purple-400 via-purple-700 to-purple-800 p-2 rounded-lg border-purple-100 border-b-2 transition-all hover:ring-4 hover:ring-yellow-500',
+    'flex flex-col justify-start items-center gap-2 max-h-max overflow-hidden bg-gradient-to-r from-purple-400 via-purple-700 to-purple-800 rounded-lg transition-shadow easy-in-out duration-300 shadow-slate-950 shadow-xl hover:shadow-md',
     classList,
   ]}
   href={`/${type}/${id}`}
   transition:name=`${type} ${id} box`>
   <img
-    class="w-full h-full object-none rounded-md"
+    class="w-full h-full object-contain"
     src={imgUrl}
     alt={imgDescription}
     transition:name=`${type} ${id} img`
     loading="lazy"
   />
   <div
-    class="h-44 absolute bottom-2 left-2 right-2 flex flex-col items-start justify-between bg-purple-950 p-5 rounded-md text-slate-400">
-    <div>
-      <h3 class="text-slate-300 text-lg font-semibold">
+    class="relative h-full flex flex-col items-start justify-between bg-purple-950 p-5 rounded-md text-slate-400">
+    <ArrowUpRightIcon classList="absolute -top-8 right-4 z-10" />
+    <div
+      class="absolute w-full h-20 bg-purple-950 skew-y-3 -top-14 left-0 right-0">
+    </div>
+    <div class="-mt-14 mb-10 z-10">
+      <h3 class="text-slate-300 text-lg font-semibold mb-5">
         {title}
       </h3>
       <p class="text-sm line-clamp-3 mb-5">
