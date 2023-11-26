@@ -1,5 +1,6 @@
 ---
 import SocialButtonGroup from '@/components/shared/SocialButtonGroup.astro'
+import HeartIcon from '@/components/icons/HeartIcon.astro'
 ---
 
 <footer class="border-t w-full bg-purple-950 p-5">
@@ -9,7 +10,11 @@ import SocialButtonGroup from '@/components/shared/SocialButtonGroup.astro'
       <span>Armando Peña Tamayo</span>
     </section>
     <section class="text-slate-300">
-      <span>Thanks for stopping by. 💓</span>
+      <span class="flex items-center gap-1"
+        >Thanks for stopping by <HeartIcon
+          classList="w-4 h-4 text-rose-700 animate-pulse"
+        /></span
+      >
     </section>
     <section
       class="flex flex-col items-start gap-2 row-start-2 md:row-start-1 md:col-start-3">
