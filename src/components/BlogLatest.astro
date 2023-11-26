@@ -14,11 +14,12 @@ import { blogs } from '@/lib/blogs'
       {
         blogs.slice(0, 3).map((blog) => (
           <BlogCard
-            slug={blog.slug}
-            title={blog.title}
-            imgUrl={blog.imgUrl}
-            imgDescription={blog.imgDescription}
-            description={blog.description}
+            slug={blog?.slug}
+            title={blog?.title}
+            imgUrl={blog?.imgUrl}
+            imgDescription={blog?.imgDescription}
+            description={blog?.description}
+            tags={blog?.tags}
           />
         ))
       }

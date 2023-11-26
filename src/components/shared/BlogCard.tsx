@@ -2,23 +2,31 @@ import type { Blog } from "@/models/types"
 
 export default function BlogCard(props: Blog) {
   return (
-    <a
-      href={`/blog/${props.slug}`}
-      className="w-full max-h-36 p-2 text-slate-400 flex justify-start items-center gap-5 border border-spacing-5 border-slate-400 rounded-md bg-purple-950 transition-colors ease-linear hover:bg-gradient-to-r hover:from-slate-900 hover:shadow-md">
+    <div
+      className="relative w-full h-full rounded-lg overflow-hidden flex flex-col md:flex-row justify-center items-center md:text-right transition-all ease-in-out shadow-slate-950 shadow-md md:shadow-none border-purple-700 border md:border-0">
       <img
-        className="object-contain w-16 h-16 md:w-64 md:h-32 rounded-md bg-slate-900"
+        className="object-cover w-full h-full md:w-1/2 rounded-lg bg-slate-900 md:-mr-12 transition-opacity opacity-80 hover:opacity-100 hue-rotate-30 hover:hue-rotate-0"
         src={props.imgUrl}
         alt={props.imgDescription}
         loading="lazy"
       />
-      <div>
-        <h1 className="text-slate-300 md:font-bold text-lg md:text-2xl capitalize">
+      <div className="absolute md:relative w-full h-full p-4 flex flex-col justify-between items-start md:items-end md:gap-5 bg-purple-950/80 backdrop-blur-sm md:backdrop-blur-0 md:bg-transparent">
+        <h1 className="text-slate-300 md:text-lg xl:font-bold xl:text-xl capitalize">
           {props.title}
         </h1>
-        <p className="line-clamp-3 hidden md:inline-block">
-          {props.description}
-        </p>
+        <div
+          className="w-full h-24 md:h-32 flex flex-col justify-between items-start gap-2 md:p-5 rounded-lg md:bg-purple-950 text-slate-400 z-10 shadow-lg">
+          <p className="line-clamp-3">
+            {props.description}
+          </p>
+          <div className="w-full flex flex-wrap justify-end items-center gap-1">
+            {props.tags?.map(tag => <span className="px-2 bg-purple-700 text-slate-300 rounded-md">{tag}</span>)}
+          </div>
+        </div>
+        <div className="w-full flex justify-end">
+          <a href={`/blog/${props.slug}`} className="w-max h-max md:h-11 px-4 text-yellow-500 transition-colors ease-in-out duration-300 flex items-center gap-1 md:border-yellow-500/50 md:hover:border-yellow-500 md:border-2 md:rounded-lg">Read more</a>
+        </div>
       </div>
-    </a>
+    </div>
   )
 }

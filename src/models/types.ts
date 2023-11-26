@@ -21,4 +21,5 @@ export interface Blog {
   imgUrl: string
   imgDescription: string
   description: string
+  tags?: string[]
 }
