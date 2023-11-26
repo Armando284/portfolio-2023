@@ -48,14 +48,13 @@ import Layout from '@/layouts/Layout.astro'
     font-weight: 500;
     color: #0ea5e9;
     transition: color 0.15s ease;
-    &:hover,
-    &:active,
-    &:focus {
-      color: #0369a1;
-    }
-    &:focus {
-      outline: #0369a1;
-    }
+  }
+
+  p > a:hover,
+  p > a:active,
+  p > a:focus {
+    color: #0369a1;
+    outline: #0369a1;
   }
 
   pre {
