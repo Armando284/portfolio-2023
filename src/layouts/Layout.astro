@@ -1,6 +1,7 @@
 ---
 import Footer from '@/components/Footer.astro'
 import Navbar from '@/components/Navbar.tsx'
+import WhirlPool from '@/components/shared/WhirlPool.astro'
 import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
@@ -43,6 +44,8 @@ const { title } = Astro.props
       transition:name="navbar"
       transition:persist
     />
+
+    <WhirlPool />
 
     <slot />
 
