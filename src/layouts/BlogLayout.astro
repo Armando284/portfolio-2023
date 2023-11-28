@@ -5,9 +5,9 @@ import Layout from '@/layouts/Layout.astro'
 <Layout title="Armando Dev. Blog">
   <main class="flex justify-center my-5 w-full">
     <article
-      class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-6 flex justify-center items-center">
+      class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full flex justify-center items-center">
       <div
-        class="text-slate-400 text-lg max-w-prose w-full flex flex-col justify-center items-start gap-5">
+        class="post-content text-slate-400 text-lg max-w-prose w-full flex flex-col justify-center items-start gap-5 bg-purple-950 rounded-md p-6">
         <slot />
       </div>
     </article>
@@ -24,13 +24,13 @@ import Layout from '@/layouts/Layout.astro'
   h2 {
     font-size: 1.3rem /* 30px */;
     line-height: 2.25rem /* 36px */;
-    color: #94a3b8;
+    color: #e2e8f0;
     font-weight: 600;
   }
   h3 {
     font-size: 1.15rem /* 20px */;
     line-height: 1.75rem /* 28px */;
-    color: #94a3b8;
+    color: #e2e8f0;
     font-weight: 600;
   }
 
@@ -44,17 +44,17 @@ import Layout from '@/layouts/Layout.astro'
     border-radius: 10px;
   }
 
-  p > a {
+  .post-content a {
     font-weight: 500;
-    color: #0ea5e9;
+    color: #eab308;
     transition: color 0.15s ease;
   }
 
-  p > a:hover,
-  p > a:active,
-  p > a:focus {
-    color: #0369a1;
-    outline: #0369a1;
+  .post-content a:hover,
+  .post-content a:active,
+  .post-content a:focus {
+    color: #a16207;
+    outline: #a16207;
   }
 
   pre {
@@ -66,5 +66,10 @@ import Layout from '@/layouts/Layout.astro'
     background: #3b0764;
     padding-left: 8px;
     font-style: italic;
+  }
+
+  .post-content ul {
+    list-style: disc;
+    list-style-position: inside;
   }
 </style>
