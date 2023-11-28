@@ -33,4 +33,12 @@ export const blogs: Blog[] = [
     description: 'Testing the performance of a Node Js API vs a Golang API, which language is better for what and when to use it to get the best performance.',
     tags: ['javascript', 'node.js', 'go', 'backend', 'express', 'gin', 'benchmark'],
   },
+  {
+    slug: 'start-indie-game-development',
+    title: 'How to Start as an Indie Game Developer',
+    imgUrl: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*uQ0m3aB9k6xg6bdJ1hi0mg.png',
+    imgDescription: 'Zablek’s Path, one of the games I am making.',
+    description: 'What I\'ve learnt of the industry, tools, resources and best practices to actually finish your ideas and make progress',
+    tags: ['unity', 'c#', 'gamedev', 'indie'],
+  },
 ]
