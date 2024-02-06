@@ -10,7 +10,7 @@ export default function BlogCard(props?: Blog) {
         alt={props?.imgDescription}
         loading="lazy"
       />
-      <div className="absolute md:relative w-full h-full p-4 flex flex-col justify-between items-start md:items-end md:gap-5 bg-purple-950/80 backdrop-blur-sm md:backdrop-blur-0 md:bg-transparent">
+      <div className="absolute md:relative w-full h-full p-4 pr-0 flex flex-col justify-between items-start md:items-end md:gap-5 bg-purple-950/80 backdrop-blur-sm md:backdrop-blur-0 md:bg-transparent">
         <h1 className="text-slate-300 md:text-lg xl:font-bold xl:text-xl capitalize">
           {props?.title}
         </h1>

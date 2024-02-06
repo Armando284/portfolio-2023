@@ -3,17 +3,21 @@ import type { Job } from '@/models/types'
 export const projects: Job[] = [
   {
     id: '1',
-    imgUrl: 'workspace_go.webp',
-    imgDescription: 'CLI tool',
-    title: 'Workspace Go',
-    startAt: new Date('2019-10-1'),
+    imgUrl: 'buzz_quest.webp',
+    imgDescription: 'Buzz Quest screenshot',
+    title: 'Buzz Quest',
+    startAt: new Date('2024-1-1'),
     finishAt: 'Current',
-    description: `CLI tool for project loading, it allows to config projects with an opening command, when executed automatically finds the project folder, navigates to it's root folder, opens Visual Studio Code and launches the starting script. Automates a daily task. I choose Go since it's an easy to learn language and have an incredible performance great for searching in the file tree.`,
-    features: ['Go', 'Bash'],
+    description: `"Buzz Up", a charming little game in the making! Take on the role of a determined bee on a sweet mission—collect as much honey as you can and zip back to the hive in record time.
+
+    Embark on a vertical flight, navigating the skies while dodging obstacles and outsmarting pesky bugs that stand between you and the golden nectar. It's a race against the clock to gather the most honey and secure your place as the hive's top pollinator!
+    
+    "Buzz Up" offers a brief but exhilarating experience, perfect for a quick gaming session lasting less than 5 minutes. Dive into this delightful adventure, and let the buzz-worthy journey begin! 🐝🍯`,
+    features: ['Unity', 'Game', '3D', 'C#', 'Blender', 'Itch.io'],
     links: [
       {
-        url: 'github.com/Armando284/WorkspaceGo',
-        description: 'Workspace Go repository.',
+        url: 'armandojpt.itch.io/buzz-quest',
+        description: 'Buzz Quest store page.',
       },
     ],
   },
@@ -35,17 +39,17 @@ export const projects: Job[] = [
   },
   {
     id: '3',
-    imgUrl: 'bullet_hell.webp',
-    imgDescription: 'Grid based game',
-    title: 'Bullet Hell Unnamed Game',
-    startAt: new Date('2019-10-1'),
+    imgUrl: 'format_logs.webp',
+    imgDescription: 'Terminal logs formatter',
+    title: 'Format logs',
+    startAt: new Date('2023-10-1'),
     finishAt: 'Current',
-    description: `Bullet Hell 2D Game with procedural generated levels. I started this project to learn about grid procedural algorithms, pathfinding algorithms and NPC Ai.`,
-    features: ['Unity', 'C#'],
+    description: `It is a flexible and light formatter for terminal logs for Node.js projects.`,
+    features: ['JavaScript', 'NPM', 'Node.js', 'Jest', 'Cli'],
     links: [
       {
-        url: 'github.com/Armando284/BulletHell-Microgame',
-        description: 'Bullet Hell Game repository.',
+        url: 'www.npmjs.com/package/format-logs',
+        description: 'Format logs page at npm registry.',
       },
     ],
   },
