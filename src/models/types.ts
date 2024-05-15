@@ -24,7 +24,4 @@ export interface Blog {
   tags?: string[]
 }
 
-export interface Toast {
-  type: 'success' | 'warn' | 'alert'
-  message: string
-}
+export type ToastType = 'success' | 'warn' | 'alert'
