@@ -1,7 +1,12 @@
 import { useState } from 'react'
+import Toast from './shared/Toast'
 
 export default function ContactSection() {
   const [isCopying, setIsCopying] = useState(false)
+  const [activeToast, setActiveToast] = useState<
+    null | 'successCopy' | 'errorCopy' | 'successEmail' | 'errorEmail'
+  >(null)
+
   const email = 'arman2p284@gmail.com'
 
   const handleEmailClick = () => {
@@ -17,19 +22,38 @@ export default function ContactSection() {
     navigator.clipboard
       .writeText(email)
       .then(() => {
+        setActiveToast('successCopy')
         setTimeout(() => {
           setIsCopying(false)
         }, 600)
-        // alert('Email address copied to clipboard!')
       })
       .catch((error) => {
         setIsCopying(false)
+        setActiveToast('errorCopy')
         console.error('Error copying email address:', error)
       })
   }
 
+  const handleToastHide = () => {
+    setActiveToast(null)
+  }
+
   return (
     <section className="w-auto flex items-center justify-center">
+      {activeToast === 'successCopy' && (
+        <Toast
+          type="success"
+          message="Copied to clipboard"
+          onHide={handleToastHide}
+        />
+      )}
+      {activeToast === 'errorCopy' && (
+        <Toast
+          type="warn"
+          message="Error copying email address"
+          onHide={handleToastHide}
+        />
+      )}
       <div className="w-auto h-11 border border-slate-400/50 bg-purple-950 rounded-md flex items-center gap-4 px-4 text-slate-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -38,9 +62,9 @@ export default function ContactSection() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="icon icon-tabler icons-tabler-outline icon-tabler-mailbox">
           <path
             stroke="none"
@@ -64,9 +88,9 @@ export default function ContactSection() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-check text-green-500">
             <path
               stroke="none"
@@ -91,9 +115,9 @@ export default function ContactSection() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="icon icon-tabler icons-tabler-outline icon-tabler-copy">
             <path
               stroke="none"
@@ -115,9 +139,9 @@ export default function ContactSection() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="icon icon-tabler icons-tabler-outline icon-tabler-send">
           <path
             stroke="none"
