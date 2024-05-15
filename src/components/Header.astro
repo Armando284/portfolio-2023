@@ -2,6 +2,7 @@
 import SocialButtonGroup from '@/components/shared/SocialButtonGroup.astro'
 import ArrowDownIcon from './icons/ArrowDownIcon.astro'
 import Experience from '@/components/shared/Experience'
+import ContactSection from '@/components/ContactSection'
 import DownloadButton from '@/components/shared/DownloadButton'
 ---
 
@@ -26,17 +27,13 @@ import DownloadButton from '@/components/shared/DownloadButton'
         </p>
         <div
           class="w-full flex flex-wrap justify-center sm:justify-start items-center gap-1 mt-2 sm:mt-20">
-          <DownloadButton client:visible />
-          <a
-            class="h-11 px-4 bg-yellow-500 text-slate-700 font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-slate-50 active:bg-slate-50 active:ring-2 active:ring-slate-50 flex items-center gap-1 border-yellow-500 border-2 rounded-md"
-            href="mailto:arman2p284@gmail.com"
-            >Lets work together!</a
-          >
+          <ContactSection client:visible />
         </div>
-        <SocialButtonGroup
-          classList="justify-center sm:justify-start mt-2 sm:mt-5"
-          style="small"
-        />
+        <div
+          class="flex item-center gap-2 w-full justify-center sm:justify-start mt-2 sm:mt-5">
+          <DownloadButton client:visible />
+          <SocialButtonGroup style="small" />
+        </div>
       </div>
       <div
         class="w-full flex justify-center md:justify-end items-center row-start-1 md:col-start-2">
