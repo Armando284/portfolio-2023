@@ -4,8 +4,6 @@ export default function DownloadButton() {
   const [isDownloading, setIsDownloading] = useState(false)
 
   const handleDownload = async () => {
-    console.log('handle download')
-
     try {
       setIsDownloading(true)
 
@@ -36,7 +34,7 @@ export default function DownloadButton() {
     <button
       onClick={handleDownload}
       disabled={isDownloading}
-      className="w-24 h-11 text-slate-400 transition-colors ease-in-out duration-300 flex items-center justify-center">
+      className="w-24 h-11 text-slate-400 rounded-md transition-colors ease-in-out duration-600 flex items-center justify-center hover:text-yellow-500 hover:bg-slate-50/10 hover:backdrop-blur-sm">
       ---
       {isDownloading ? (
         <svg
