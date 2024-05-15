@@ -46,9 +46,9 @@ export default function DownloadButton() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="w-8 h-8 icon icon-tabler icons-tabler-outline icon-tabler-loader animate-spin">
           <path
             stroke="none"
@@ -72,9 +72,9 @@ export default function DownloadButton() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="w-8 h-8 icon icon-tabler icons-tabler-outline icon-tabler-file-cv">
           <path
             stroke="none"
