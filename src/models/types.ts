@@ -23,3 +23,8 @@ export interface Blog {
   description: string
   tags?: string[]
 }
+
+export interface Toast {
+  type: 'success' | 'warn' | 'alert'
+  message: string
+}
