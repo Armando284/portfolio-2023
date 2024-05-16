@@ -8,11 +8,23 @@ export const projects: Job[] = [
     title: 'Buzz Quest',
     startAt: new Date('2024-1-1'),
     finishAt: 'Current',
-    description: `"Buzz Up", a charming little game in the making! Take on the role of a determined bee on a sweet mission—collect as much honey as you can and zip back to the hive in record time.
-
-    Embark on a vertical flight, navigating the skies while dodging obstacles and outsmarting pesky bugs that stand between you and the golden nectar. It's a race against the clock to gather the most honey and secure your place as the hive's top pollinator!
-    
-    "Buzz Up" offers a brief but exhilarating experience, perfect for a quick gaming session lasting less than 5 minutes. Dive into this delightful adventure, and let the buzz-worthy journey begin! 🐝🍯`,
+    description: `
+    <p class="text-slate-400">
+  <strong class="text-slate-200">"Buzz Quest"</strong>, my first ever completed and deployed game, stands as a testament to my journey into the world of game development. This project was a sweet dive into the realm of software engineering, where I took on the role of a determined developer on a mission to bring an idea to life.
+</p>
+<p class="text-slate-400">
+  The development process was a vertical flight of learning and growth. I used <strong class="text-slate-200">Unity</strong> as the game engine, which provided a robust and flexible platform for creating this immersive game. The 3D modeling was done using <strong class="text-slate-200">Blender</strong>, a tool that I learned a great deal from during this project.
+</p>
+<p class="text-slate-400">
+  Image editing was carried out in <strong class="text-slate-200">Photoshop</strong>, and audio editing was done using <strong class="text-slate-200">Audacity</strong>. Each tool added a unique dimension to the game, enhancing its overall appeal.
+</p>
+<p class="text-slate-400">
+  Deployed on <strong class="text-slate-200">itch.io</strong>, "Buzz Quest" was more than just a game; it was a learning experience that taught me about the intricacies of game making. From conceptualization to deployment, every step was a buzz-worthy journey!
+</p>
+<p class="text-slate-200">
+  Are you ready to explore "Buzz Quest"? Let the adventure begin!
+</p>
+  `,
     features: ['Unity', 'Game', '3D', 'C#', 'Blender', 'Itch.io'],
     links: [
       {
