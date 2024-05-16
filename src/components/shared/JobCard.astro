@@ -58,14 +58,14 @@ const {
 </a>
 
 <style>
-  a:hover {
-    img {
-      transform: scale(1.1);
-    }
-    .link-icon {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
+  a:hover > img {
+    transform: scale(1.1);
   }
+
+  a:hover.link-icon {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
   @keyframes pulse {
     50% {
       opacity: 0.5;
