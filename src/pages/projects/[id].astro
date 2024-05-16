@@ -19,7 +19,7 @@ const project = projects.find((_project) => _project.id === id)
       <div
         class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-6 flex justify-center items-center">
         <div
-          class="max-w-prose w-full flex flex-col justify-center items-start gap-5">
+          class="max-w-prose w-full flex flex-col justify-center items-start gap-5 bg-purple-950 p-6 rounded-md">
           <h1
             class="text-2xl text-slate-100"
             transition:name=`work-experience ${id} title`>
@@ -51,7 +51,10 @@ const project = projects.find((_project) => _project.id === id)
               ))
             }
           </div>
-          <p class="text-lg">{project?.description}</p>
+          <p
+            class="text-lg"
+            set:html={project?.description}
+          />
         </div>
       </div>
     </article>
