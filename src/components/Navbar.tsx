@@ -14,7 +14,7 @@ export default function Navbar() {
   )
 
   return (
-    <nav className="sticky top-0 z-50 bg-purple-950 shadow-md w-screen h-16">
+    <nav className="sticky top-0 z-50 bg-purple-950 shadow-md w-full h-16">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="/"
