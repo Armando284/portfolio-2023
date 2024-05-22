@@ -14,7 +14,7 @@ export default function Navbar() {
   )
 
   return (
-    <nav className="sticky top-0 z-50 bg-purple-950 shadow-md w-full h-16">
+    <nav className="sticky top-0 z-50 bg-purple-950 shadow-md w-full h-auto">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="/"
@@ -23,7 +23,7 @@ export default function Navbar() {
             width="484.25000000000006"
             height="101.92953342059133"
             viewBox="0 0 370.18518518518516 77.9200892207354"
-            className="css-1j8o68f w-44 h-max">
+            className="css-1j8o68f w-44 max-h-10">
             <defs id="SvgjsDefs2211"></defs>
             <g
               id="SvgjsG2212"
@@ -60,7 +60,7 @@ export default function Navbar() {
           className={`${
             showMenu ? '' : 'hidden'
           } w-full md:block md:w-auto transition-all ease-out duration-300`}>
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 lg:border-0">
             <NavLink
               text="Blog"
               url="blog"
