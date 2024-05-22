@@ -10,10 +10,10 @@ export default function BlogCard(props?: Blog) {
         loading="lazy"
       />
       <div className="absolute md:relative w-full h-full p-4 pr-0 flex flex-col justify-between items-start md:items-end md:gap-5 bg-purple-950/80 backdrop-blur-sm md:backdrop-blur-0 md:bg-transparent">
-        <h1 className="text-slate-300 md:text-lg xl:font-bold xl:text-xl capitalize">
+        <h1 className="text-purple-200 md:text-lg xl:font-bold xl:text-xl capitalize">
           {props?.title}
         </h1>
-        <div className="w-full h-24 md:h-32 flex flex-col justify-between items-start gap-2 md:p-5 rounded-lg md:bg-purple-950 text-slate-400 z-10 shadow-slate-950 md:shadow-xl">
+        <div className="w-full h-24 md:h-32 flex flex-col justify-between items-start gap-2 md:p-5 rounded-lg md:bg-purple-950 text-purple-300 z-10 md:shadow-xl">
           <p className="line-clamp-3 text-sm md:text-base">
             {props?.description}
           </p>
@@ -21,7 +21,7 @@ export default function BlogCard(props?: Blog) {
             {props?.tags?.map((tag, i) => (
               <span
                 key={i}
-                className="px-2 bg-purple-700 text-slate-300 text-xs rounded-md capitalize">
+                className="px-2 bg-purple-700 text-purple-200 text-xs rounded-md capitalize">
                 {tag}
               </span>
             ))}

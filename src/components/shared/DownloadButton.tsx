@@ -34,7 +34,7 @@ export default function DownloadButton() {
     <button
       onClick={handleDownload}
       disabled={isDownloading}
-      className="w-24 h-11 text-slate-400 rounded-md transition-colors ease-in-out duration-600 flex items-center justify-center hover:text-yellow-500 hover:bg-slate-50/10 hover:backdrop-blur-sm">
+      className="w-24 h-11 text-purple-300 rounded-md transition-colors ease-in-out duration-600 flex items-center justify-center hover:text-yellow-500 hover:bg-purple-300/10 hover:backdrop-blur-sm">
       ---
       {isDownloading ? (
         <svg

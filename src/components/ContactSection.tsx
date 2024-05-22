@@ -54,7 +54,7 @@ export default function ContactSection() {
           onHide={handleToastHide}
         />
       )}
-      <div className="w-auto h-11 border border-slate-400/50 bg-purple-950 rounded-md flex items-center gap-4 px-4 text-slate-400">
+      <div className="w-auto h-11 border border-purple-400/50 backdrop-blur-md rounded-md flex items-center gap-4 px-4 text-purple-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -130,7 +130,7 @@ export default function ContactSection() {
         )}
       </button>
       <button
-        className="w-11 h-11 bg-yellow-500 text-slate-700 font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-slate-50 active:bg-slate-50 active:ring-2 active:ring-slate-50 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md"
+        className="w-11 h-11 bg-yellow-500 text-purple-950 font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-purple-50 active:bg-purple-300 active:ring-2 active:ring-purple-300 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md"
         onClick={handleEmailClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

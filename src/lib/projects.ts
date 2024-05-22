@@ -8,23 +8,11 @@ export const projects: Job[] = [
     title: 'Buzz Quest',
     startAt: new Date('2024-1-1'),
     finishAt: 'Current',
-    description: `
-    <p class="text-slate-400">
-  <strong class="text-slate-200">"Buzz Quest"</strong>, my first ever completed and deployed game, stands as a testament to my journey into the world of game development. This project was a sweet dive into the realm of software engineering, where I took on the role of a determined developer on a mission to bring an idea to life.
-</p>
-<p class="text-slate-400">
-  The development process was a vertical flight of learning and growth. I used <strong class="text-slate-200">Unity</strong> as the game engine, which provided a robust and flexible platform for creating this immersive game. The 3D modeling was done using <strong class="text-slate-200">Blender</strong>, a tool that I learned a great deal from during this project.
-</p>
-<p class="text-slate-400">
-  Image editing was carried out in <strong class="text-slate-200">Photoshop</strong>, and audio editing was done using <strong class="text-slate-200">Audacity</strong>. Each tool added a unique dimension to the game, enhancing its overall appeal.
-</p>
-<p class="text-slate-400">
-  Deployed on <strong class="text-slate-200">itch.io</strong>, "Buzz Quest" was more than just a game; it was a learning experience that taught me about the intricacies of game making. From conceptualization to deployment, every step was a buzz-worthy journey!
-</p>
-<p class="text-slate-200">
-  Are you ready to explore "Buzz Quest"? Let the adventure begin!
-</p>
-  `,
+    description: `"Buzz Quest", my first ever completed and deployed game, stands as a testament to my journey into the world of game development. This project was a sweet dive into the realm of software engineering, where I took on the role of a determined developer on a mission to bring an idea to life.
+    The development process was a vertical flight of learning and growth. I used Unity as the game engine, which provided a robust and flexible platform for creating this immersive game. The 3D modeling was done using Blender, a tool that I learned a great deal from during this project.
+    Image editing was carried out in Photoshop, and audio editing was done using Audacity. Each tool added a unique dimension to the game, enhancing its overall appeal.
+    Deployed on itch.io, "Buzz Quest" was more than just a game; it was a learning experience that taught me about the intricacies of game making. From conceptualization to deployment, every step was a buzz-worthy journey!
+    Are you ready to explore "Buzz Quest"? Let the adventure begin!`,
     features: ['Unity', 'Game', '3D', 'C#', 'Blender', 'Itch.io'],
     links: [
       {

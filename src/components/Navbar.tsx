@@ -7,7 +7,7 @@ export default function Navbar() {
     <li>
       <a
         href={`/${url}`}
-        className={`block py-2 px-3 text-slate-400 rounded transition-colors ease-in-out hover:bg-purple-900/30 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0`}>
+        className={`block py-2 px-3 text-purple-300 rounded transition-colors ease-in-out hover:bg-purple-900/30 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0`}>
         {text}
       </a>
     </li>

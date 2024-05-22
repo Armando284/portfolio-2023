@@ -4,7 +4,7 @@ import SocialButton from '@/components/shared/SocialButton.astro'
 import TechTag from '@/components/shared/TechTag.astro'
 import Layout from '@/layouts/Layout.astro'
 import { projects } from '@/lib/projects'
-import { formatDate } from '@/utilities/formats'
+import { formatDate, toISO } from '@/utilities/formats'
 
 const { id } = Astro.params
 const project = projects.find((_project) => _project.id === id)
@@ -14,14 +14,14 @@ const project = projects.find((_project) => _project.id === id)
   <main class="flex flex-col">
     <article
       id="about-me"
-      class="min-h-screen flex justify-center items-start text-slate-400 snap-start"
+      class="min-h-screen flex justify-center items-start text-purple-300 snap-start"
       transition:name=`work-experience ${id} box`>
       <div
         class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-6 flex justify-center items-center">
         <div
           class="max-w-prose w-full flex flex-col justify-center items-start gap-5 bg-purple-950 p-6 rounded-md">
           <h1
-            class="text-2xl text-slate-100"
+            class="text-2xl text-purple-200"
             transition:name=`work-experience ${id} title`>
             {project?.title}
           </h1>
@@ -32,20 +32,29 @@ const project = projects.find((_project) => _project.id === id)
             transition:name=`work-experience ${id} img`
             loading="lazy"
           />
-          <i class="text-sm"
-            >From {formatDate(project?.startAt)} to {
-              formatDate(project?.finishAt)
-            }.</i
-          >
+          <i class="text-sm">
+            From
+            <time datetime={toISO(project?.startAt)}>
+              {formatDate(project?.startAt)}
+            </time>
+            to
+            <time datetime={toISO(project?.finishAt)}>
+              {formatDate(project?.finishAt)}
+            </time>
+            .
+          </i>
           <TechTag tags={project?.features} />
-          <div class="flex justify-start items-center gap-2">
+          <div class="flex flex-col justify-center items-start">
             {
               project?.links.map((link) => (
                 <SocialButton
                   url={link.url}
                   description={link.description}
                   style="large">
-                  <LinkIcon slot="start" />
+                  <LinkIcon
+                    slot="start"
+                    classList="w-4 h-4 mr-2"
+                  />
                   {link.description}
                 </SocialButton>
               ))
