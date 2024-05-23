@@ -7,8 +7,11 @@ import Layout from '@/layouts/Layout.astro'
     <article
       class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full flex justify-center items-center">
       <div
-        class="post-content text-slate-400 text-lg max-w-prose w-full flex flex-col justify-center items-start gap-5 bg-purple-950 rounded-md p-6">
-        <slot />
+        class="max-w-[680px] w-full bg-purple-950 rounded-md p-10 flex justify-center items-center">
+        <div
+          class="post-content text-purple-300 text-lg max-w-prose w-full flex flex-col justify-center items-start gap-5">
+          <slot />
+        </div>
       </div>
     </article>
   </main>
