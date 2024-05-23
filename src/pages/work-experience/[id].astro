@@ -4,7 +4,7 @@ import SocialButton from '@/components/shared/SocialButton.astro'
 import TechTag from '@/components/shared/TechTag.astro'
 import Layout from '@/layouts/Layout.astro'
 import { jobs } from '@/lib/jobs'
-import { formatDate } from '@/utilities/formats'
+import { formatDate, toISO } from '@/utilities/formats'
 
 const { id } = Astro.params
 const job = jobs.find((_job) => _job.id === id)
@@ -16,44 +16,58 @@ const tasks = job?.description.split('.') ?? []
   <main class="flex flex-col">
     <article
       id="about-me"
-      class="min-h-screen flex justify-center items-start text-slate-400 snap-start"
+      class="min-h-screen flex justify-center items-start text-purple-300 snap-start"
       transition:name=`work-experience ${id} box`>
       <div
-        class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-6 flex justify-center items-center">
+        class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-4 flex justify-center items-center">
         <div
-          class="max-w-prose w-full flex flex-col justify-center items-start gap-5">
-          <h1
-            class="text-2xl text-slate-100"
-            transition:name=`work-experience ${id} title`>
-            {job?.title}
-          </h1>
-          <img
-            class="w-full max-w-prose h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
-            src={`/${job?.imgUrl}`}
-            alt={job?.imgDescription}
-            transition:name=`work-experience ${id} img`
-            loading="lazy"
-          />
-          <i class="text-sm"
-            >From {formatDate(job?.startAt)} to {formatDate(job?.finishAt)}.</i
-          >
-          <TechTag tags={job?.features} />
-          <div class="flex justify-start items-center gap-2">
-            {
-              job?.links.map((link) => (
-                <SocialButton
-                  url={link.url}
-                  description={link.description}
-                  style="large">
-                  <LinkIcon slot="start" />
-                  {link.description}
-                </SocialButton>
-              ))
-            }
+          class="max-w-[680px] w-full p-5 bg-purple-950 rounded-md flex justify-center items-center">
+          <div
+            class="max-w-prose w-full h-full flex flex-col justify-center items-start gap-5">
+            <h1
+              class="text-2xl text-purple-200"
+              transition:name=`work-experience ${id} title`>
+              {job?.title}
+            </h1>
+            <img
+              class="w-full max-w-prose h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
+              src={`/${job?.imgUrl}`}
+              alt={job?.imgDescription}
+              transition:name=`work-experience ${id} img`
+              loading="lazy"
+            />
+            <i class="text-sm">
+              From
+              <time datetime={toISO(job?.startAt)}>
+                {formatDate(job?.startAt)}
+              </time>
+              to
+              <time datetime={toISO(job?.finishAt)}>
+                {formatDate(job?.finishAt)}
+              </time>
+              .
+            </i>
+            <TechTag tags={job?.features} />
+            <div class="flex justify-start items-center gap-2 text-base">
+              {
+                job?.links.map((link) => (
+                  <SocialButton
+                    url={link.url}
+                    description={link.description}
+                    style="large">
+                    <LinkIcon
+                      slot="start"
+                      classList="w-4 h-4 mr-2"
+                    />
+                    {link.description}
+                  </SocialButton>
+                ))
+              }
+            </div>
+            <ul class="text-lg space-y-2 list-inside list-disc mb-5">
+              {tasks.map((task) => <li>{task}.</li>)}
+            </ul>
           </div>
-          <ul class="text-lg space-y-2 list-inside list-disc">
-            {tasks.map((task) => <li>{task}.</li>)}
-          </ul>
         </div>
       </div>
     </article>
