@@ -79,7 +79,8 @@ export default function ContactSection() {
       </div>
       <button
         className="w-11 h-11 text-yellow-500 transition-colors ease-in-out duration-300 flex items-center justify-center gap-1 border-yellow-500/50 hover:border-yellow-500 active:bg-green-50 active:ring-2 active:ring-green-500/50 border-2 rounded-md"
-        onClick={handleCopyClick}>
+        onClick={handleCopyClick}
+        aria-label="Copy email to clipboard">
         {isCopying ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +132,8 @@ export default function ContactSection() {
       </button>
       <button
         className="w-11 h-11 bg-yellow-500 text-purple-950 font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-purple-50 active:bg-purple-300 active:ring-2 active:ring-purple-300 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md"
-        onClick={handleEmailClick}>
+        onClick={handleEmailClick}
+        aria-label="Send me an email!">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

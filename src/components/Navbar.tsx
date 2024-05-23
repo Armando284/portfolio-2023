@@ -18,7 +18,8 @@ export default function Navbar() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse">
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+          aria-label="Armando Dev. home page.">
           <svg
             width="484.25000000000006"
             height="101.92953342059133"
