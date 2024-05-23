@@ -16,7 +16,7 @@ import TechTag from './shared/TechTag.astro'
         {
           jobs.map((job) => (
             <li
-              class="mb-10 ms-6 bg-purple-950 p-4 rounded-md shadow-lg"
+              class="mb-10 ms-6 bg-purple-950 rounded-md shadow-lg"
               transition:name={`work-experience ${job.id} box`}>
               <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-transparent dark:ring-purple-900 dark:bg-purple-900">
                 <svg
@@ -28,29 +28,37 @@ import TechTag from './shared/TechTag.astro'
                   <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                 </svg>
               </span>
-              <p class="text-sm font-thin leading-none text-purple-300 mb-2">
-                <time datetime={toISO(job.startAt)}>
-                  {`${formatDate(job.startAt)}`}
-                </time>{' '}
-                -
-                <time datetime={toISO(job.finishAt)}>
-                  {`${formatDate(job.finishAt)}`}
-                </time>
-              </p>
-              <h3
-                class="text-lg font-semibold text-purple-200 mb-2"
-                transition:name={`work-experience ${job.id} title`}>
-                {job.title}
-              </h3>
-              <TechTag tags={job.features.slice(0, 3)} />
-              <p class="mt-2 mb-4 text-base font-normal text-purple-300 line-clamp-4">
-                {job.description}
-              </p>
-              <a
-                href={`/work-experience/${job.id}`}
-                class="max-w-max h-11 px-4 text-yellow-500 transition-colors ease-in-out duration-300 flex items-center gap-1 border-yellow-500/50 hover:border-yellow-500 border-2 rounded-md">
-                Learn more
-              </a>
+              <section class="rounded-md overflow-hidden">
+                <header class="p-4 pb-0">
+                  <p class="text-sm leading-none text-purple-300 mb-2">
+                    <time datetime={toISO(job.startAt)}>
+                      {`${formatDate(job.startAt)}`}
+                    </time>{' '}
+                    -
+                    <time datetime={toISO(job.finishAt)}>
+                      {`${formatDate(job.finishAt)}`}
+                    </time>
+                  </p>
+                  <h3
+                    class="text-lg font-semibold text-purple-200 mb-2"
+                    transition:name={`work-experience ${job.id} title`}>
+                    {job.title}
+                  </h3>
+                </header>
+                <div class="px-4">
+                  <TechTag tags={job.features.slice(0, 3)} />
+                  <p class="mt-2 mb-4 text-base font-normal text-purple-300 line-clamp-4">
+                    {job.description}
+                  </p>
+                </div>
+                <footer class="bg-purple-900/80 p-4">
+                  <a
+                    href={`/work-experience/${job.id}`}
+                    class="max-w-max h-11 px-4 text-yellow-500 transition-colors ease-in-out duration-300 flex items-center gap-1 border-yellow-500/50 hover:border-yellow-500 border-2 rounded-md">
+                    Learn more
+                  </a>
+                </footer>
+              </section>
             </li>
           ))
         }
