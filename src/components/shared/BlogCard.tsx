@@ -19,11 +19,11 @@ export default function BlogCard(props?: Blog) {
           </h1>
         </header>
         <div className="w-full h-24 md:h-32 flex flex-col justify-between items-start gap-1 px-4 md:p-5 rounded-lg md:bg-purple-950 text-purple-300 z-10 md:shadow-xl">
-          <p className="line-clamp-3 text-sm md:text-base">
+          <p className="line-clamp-2 text-sm md:text-base">
             {props?.description}
           </p>
           <div className="w-full flex flex-wrap md:justify-end items-center gap-1">
-            {props?.tags?.map((tag, i) => (
+            {props?.tags?.slice(0, 3).map((tag, i) => (
               <span
                 key={i}
                 className="bg-purple-700 text-purple-300 px-2 rounded-md capitalize text-sm shadow-md">
