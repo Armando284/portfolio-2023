@@ -27,7 +27,7 @@ export default function BlogCard(props?: Blog) {
           {props?.tags?.slice(0, 3).map((tag, i) => (
             <span
               key={i}
-              className="bg-purple-700 text-purple-100 px-2 rounded-md capitalize text-sm shadow-md">
+              className="bg-purple-700 text-purple-100 px-2 rounded-md uppercase text-sm shadow-md">
               {tag}
             </span>
           ))}
