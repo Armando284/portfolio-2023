@@ -16,7 +16,7 @@ export default function BlogCard(props?: Blog) {
 
       <div className="absolute md:relative w-full h-full flex flex-col justify-between items-start md:items-end md:gap-5 bg-gradient-to-b from-purple-950 to-transparent md:from-transparent">
         <header className="p-4 pb-0">
-          <h3 className="text-purple-200 font-semibold text-lg lg:font-bold lg:text-xl capitalize">
+          <h3 className="text-purple-200 text-lg font-semibold mb-5">
             {props?.title}
           </h3>
         </header>
