@@ -1,0 +1,81 @@
+---
+import ArticleTitle from './shared/ArticleTitle.astro'
+---
+
+<article
+  id="about-me"
+  class="flex justify-center text-purple-300 py-10 scroll-m-12">
+  <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
+    <ArticleTitle>About me</ArticleTitle>
+    <div
+      class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4 h-full">
+      <div class="w-full h-full grid gap-4 place-items-center sm:grid-cols-2">
+        <section
+          class="max-w-prose flex flex-col justify-center items-start my-5 md:my-0 text-lg space-y-2">
+          <p>
+            Hi 👋! I'm <span class="text-yellow-500 font-semibold"
+              >Armando José Peña Tamayo</span
+            >, a passionate <span class="text-purple-100"
+              >Software Engineer</span
+            > with experience in <span class="text-purple-100"
+              >web development</span
+            > and a focus on creating engaging and <span class="text-purple-100"
+              >user-friendly web applications</span
+            >.
+          </p>
+          <p>
+            I have expertise in front-end frameworks like <span
+              class="text-purple-100">Angular</span
+            > and back-end technologies such as <span class="text-purple-100"
+              >Node.js</span
+            >. I enjoy collaborating with teams and strive to write clean and
+            efficient code.
+          </p>
+          <p>
+            I am also quite interested in <span class="text-purple-100"
+              >Game Development</span
+            > mainly with <span class="text-purple-100">Unity</span> and enjoy creatiyn
+            intriguing digital experiences.
+          </p>
+          <p>
+            I love to <span class="text-purple-100">stay up-to-date</span> with the
+            latest trends in web development and sharing what I learn on my
+            <span class="text-purple-100">blog</span>. If you're interested in
+            collaborating or have any questions, feel free to reach out. <span
+              class="text-purple-100"
+              >Let's create something amazing together!</span
+            >
+          </p>
+        </section>
+        <section
+          class="flex justify-center items-center flex-col gap-8 row-start-1 md:col-start-2 p-4 rounded-sm bg-yellow-50 shadow-2xl rotate-6 text-purple-950">
+          <img
+            class="w-52 h-52 md:w-60 md:h-60 xl:w-72 xl:h-72 transition-picture rounded-sm"
+            src="/picture.webp"
+            alt="Personal picture at night"
+            loading="lazy"
+          />
+          <span class="h-11 italic caveat text-lg"
+            >Armando Peña <time
+              datetime="
+            2023-04-19T00:00:00.000Z"
+              class="ml-4"
+              >2023-04-19</time
+            ></span
+          >
+        </section>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style is:inline>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+  .caveat {
+    font-family: 'Caveat', cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
