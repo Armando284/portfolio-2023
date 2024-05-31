@@ -1,0 +1,13 @@
+---
+import ArticleTitle from '@/components/shared/ArticleTitle.astro'
+import ContactSection from './ContactSection'
+---
+
+<article
+  id="contact"
+  class="flex justify-center text-purple-300 py-10 scroll-m-12">
+  <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
+    <ArticleTitle>Contact Info</ArticleTitle>
+    <ContactSection client:visible />
+  </div>
+</article>
