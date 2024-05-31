@@ -1,8 +1,6 @@
 ---
-import SocialButtonGroup from '@/components/shared/SocialButtonGroup.astro'
 import ArrowDownIcon from './icons/ArrowDownIcon.astro'
 import Experience from '@/components/shared/Experience'
-import ContactSection from '@/components/ContactSection'
 import DownloadButton from '@/components/shared/DownloadButton'
 ---
 
@@ -11,39 +9,28 @@ import DownloadButton from '@/components/shared/DownloadButton'
     id="header"
     class="w-full h-[calc(100dvh-73px)] flex flex-col justify-center items-center snap-start">
     <div
-      class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-2 sm:px-0 h-full grid grid-rows-2 md:grid-rows-1 md:gap-5 place-items-center text-purple-300 sm:text-lg">
+      class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-2 sm:px-0 h-full grid place-items-center text-purple-300 sm:text-lg">
       <div
-        class="flex flex-col justify-start md:justify-center items-center md:items-start">
+        class="flex flex-col justify-start md:justify-center items-center gap-4">
         <h2
           class="sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-purple-300 font-bold mb-4 capitalize">
           Armando Peña | Frontend Developer
         </h2>
         <h1
-          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center sm:text-left text-slate-50 font-bold mb-4">
+          class="text-4xl sm:text-5xl md:text-7xl xl:text-8xl text-center text-yellow-50 font-bold mb-4 tracking-tighter leading-10">
           Solving business problems through digital solutions.
         </h1>
-        <p class="max-w-prose text-sm text-center sm:text-lg sm:text-left">
+        <p class="max-w-prose text-center sm:text-xl">
           <Experience /> developing customer centered web applications.
         </p>
         <div
-          class="w-full flex flex-wrap justify-center sm:justify-start items-center gap-1 mt-2 sm:mt-20">
-          <ContactSection client:visible />
-        </div>
-        <div
-          class="flex item-center gap-2 w-full justify-center sm:justify-start mt-2 sm:mt-5">
-          <SocialButtonGroup style="small" />
+          class="w-full flex flex-wrap justify-center items-center gap-2 mt-16">
+          <a
+            href="#contact"
+            class="w-52 h-11 bg-yellow-500 text-purple-950 font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-purple-50 active:bg-purple-300 active:ring-2 active:ring-purple-300 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md tracking-wide mb-4 sm:mb-0">
+            Lets work together!
+          </a>
           <DownloadButton client:visible />
-        </div>
-      </div>
-      <div
-        class="w-full flex justify-center md:justify-end items-center row-start-1 md:col-start-2">
-        <div
-          class="w-64 h-64 md:w-72 md:h-72 xl:w-96 xl:h-96 flex justify-center items-center bg-blob md:-mr-2">
-          <img
-            class="w-52 h-52 md:w-60 md:h-60 xl:w-72 xl:h-72 rounded-full saturate-150"
-            src="armando_picture.webp"
-            alt="Personal picture at the beach"
-          />
         </div>
       </div>
     </div>
