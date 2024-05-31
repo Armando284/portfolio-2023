@@ -34,8 +34,8 @@ export default function DownloadButton() {
     <button
       onClick={handleDownload}
       disabled={isDownloading}
-      className="w-24 h-11 text-purple-300 rounded-md transition-colors ease-in-out duration-600 flex items-center justify-center hover:text-yellow-500 hover:bg-purple-300/10 hover:backdrop-blur-sm">
-      ---
+      className="w-52 h-11 text-purple-300 backdrop-blur-md border-2 border-purple-300/50 rounded-md transition-colors ease-in-out duration-600 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-500">
+      Get my
       {isDownloading ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,6 @@ export default function DownloadButton() {
           <path d="M13 11l1.5 6l1.5 -6" />
         </svg>
       )}
-      ---
     </button>
   )
 }
