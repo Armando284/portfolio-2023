@@ -1,0 +1,27 @@
+.nav-scroll {
+  animation: nav linear forwards;
+  animation-timeline: view();
+  animation-range-start: 100vh;
+  animation-range-end: 120vh;
+}
+
+@keyframes nav {
+  from {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+.main-icon {
+  animation: icon linear forwards;
+  animation-timeline: view();
+  animation-range-start: 90vh;
+  animation-range-end: 120vh;
+}
+
+@keyframes icon {
+  from {
+    /* width: 196px; */
+    max-height: 24px;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '@/styles/navbar.css'
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState<boolean>(false)
@@ -14,7 +15,7 @@ export default function Navbar() {
   )
 
   return (
-    <nav className="sticky top-0 z-50 bg-purple-950 shadow-md w-full h-auto">
+    <nav className="sticky top-0 z-50 bg-purple-950 shadow-md w-full h-auto nav-scroll">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="/"
@@ -24,7 +25,7 @@ export default function Navbar() {
             width="484.25000000000006"
             height="101.92953342059133"
             viewBox="0 0 370.18518518518516 77.9200892207354"
-            className="css-1j8o68f w-44 max-h-10">
+            className="css-1j8o68f w-44 max-h-8 main-icon">
             <defs id="SvgjsDefs2211"></defs>
             <g
               id="SvgjsG2212"
