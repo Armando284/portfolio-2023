@@ -4,6 +4,9 @@ import Header from '@/components/Header.astro'
 import WorkExperience from '@/components/WorkExperience.astro'
 import PersonalProjects from '@/components/PersonalProjects.astro'
 import Bloglatest from '@/components/BlogLatest.astro'
+import Technologies from '@/components/Technologies.astro'
+import Contact from '@/components/Contact.astro'
+import AboutMe from '@/components/AboutMe.astro'
 ---
 
 <!-- TODO: Create better nick name for brand -->
@@ -11,11 +14,18 @@ import Bloglatest from '@/components/BlogLatest.astro'
   <Header />
 
   <main class="flex flex-col">
+    <!-- About Me -->
+    <AboutMe />
     <!-- Work Experience -->
     <WorkExperience />
     <!-- Personal Projects -->
     <PersonalProjects />
+    <!-- Technologies -->
+    <Technologies />
     <!-- Blog -->
     <Bloglatest />
+    <!-- Opinions -->
+    <!-- Contact -->
+    <Contact />
   </main>
 </Layout>

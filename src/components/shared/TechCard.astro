@@ -7,10 +7,7 @@ const { tag = '' } = Astro.props
 ---
 
 <div
-  class="w-24 h-24 p-2 flex flex-col justify-between items-center rounded-md hover:bg-slate-700/50 hover:animate-pulse">
+  class="w-full h-full flex items-center justify-center relative"
+  data-tooltip={tag}>
   <slot />
-  <span
-    class="w-full rounded-md bg-purple-100 text-slate-700 text-xs uppercase text-center"
-    >{tag}</span
-  >
 </div>

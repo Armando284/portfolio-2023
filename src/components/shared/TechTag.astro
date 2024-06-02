@@ -6,7 +6,7 @@ interface Props {
 const { tags = [] } = Astro.props
 ---
 
-<div class="w-full flex flex-wrap gap-2">
+<div class="w-full h-5 flex flex-wrap gap-2 line-clamp-1">
   {
     tags.map((tag) => (
       <span class="bg-purple-700 text-purple-100 px-2 rounded-md uppercase text-sm shadow-md">
