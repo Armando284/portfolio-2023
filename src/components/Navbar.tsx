@@ -7,8 +7,8 @@ export default function Navbar() {
   const NavLink = ({ text, url }: { text: string; url: string }) => (
     <li className={'flex items-center'}>
       <a
-        href={`/${url}`}
-        className={`block py-2 px-3 text-purple-300 rounded transition-colors ease-in-out hover:bg-purple-900/30 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0`}>
+        href={`${url}`}
+        className={`block py-2 px-3 text-purple-300 rounded transition-colors ease-in-out hover:bg-purple-900/30 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 focus:ring-yellow-500`}>
         {text}
       </a>
     </li>
@@ -62,8 +62,39 @@ export default function Navbar() {
           } w-full md:block md:w-auto transition-all ease-out duration-300`}>
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 lg:border-0">
             <NavLink
+              text="About"
+              url="/#about-me"
+            />
+            <NavLink
+              text="Work"
+              url="/#work-experience"
+            />
+            <NavLink
+              text="Projects"
+              url="/#personal-projects"
+            />
+            <NavLink
+              text="Technologies"
+              url="/#technologies"
+            />
+            <NavLink
+              text="Featured Posts"
+              url="/#featured-posts"
+            />
+            <NavLink
+              text="Testimonies"
+              url="/#featured-posts"
+            />
+          </ul>
+        </div>
+        <div
+          className={`${
+            showMenu ? '' : 'hidden'
+          } w-full md:block md:w-auto transition-all ease-out duration-300`}>
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 lg:border-0">
+            <NavLink
               text="Blog"
-              url="blog"
+              url="/blog"
             />
             <li>
               <a
