@@ -2,7 +2,7 @@
   animation: nav linear forwards;
   animation-timeline: view();
   animation-range-start: 100vh;
-  animation-range-end: 120vh;
+  animation-range-end: 105vh;
 }
 
 @keyframes nav {
