@@ -98,7 +98,7 @@ export default function Navbar() {
             />
             <li>
               <a
-                href="#contact"
+                href="/#contact"
                 className="w-32 h-8 bg-yellow-500 text-purple-950 font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-purple-50 active:bg-purple-300 active:ring-2 active:ring-purple-300 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md">
                 Contact me
               </a>
