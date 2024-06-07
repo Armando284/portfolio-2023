@@ -96,7 +96,7 @@ export default function ContactSection() {
             onChange={handleChange}
             autoComplete="off"
             placeholder="Hey, I have a project idea ..."
-            className="h-11 rounded-md p-4 outline-none bg-purple-950 shadow-md"
+            className="h-11 rounded-md p-4 outline-none bg-purple-950 shadow-md placeholder:text-purple-400"
           />
         </div>
         <div className="w-full flex flex-col gap-2">
