@@ -96,7 +96,7 @@ export default function ContactSection() {
             onChange={handleChange}
             autoComplete="off"
             placeholder="Hey, I have a project idea ..."
-            className="h-11 rounded-md p-4 outline-none bg-purple-950 shadow-md placeholder:text-purple-400"
+            className="h-11 rounded-md p-4 outline-none bg-purple-950 border border-purple-500 shadow-md placeholder:text-purple-400"
           />
         </div>
         <div className="w-full flex flex-col gap-2">
@@ -108,7 +108,7 @@ export default function ContactSection() {
             onChange={handleChange}
             rows={3}
             autoComplete="off"
-            className="min-h-11 rounded-md p-4 outline-none bg-purple-950 shadow-md"
+            className="min-h-11 rounded-md p-4 outline-none bg-purple-950 border border-purple-500 shadow-md"
           />
         </div>
         <footer className="w-full flex flex-col sm:flex-row items-center justify-between gap-2 mt-4">
