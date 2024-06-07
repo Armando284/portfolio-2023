@@ -8,7 +8,7 @@ export default function Navbar() {
     <li className={'flex items-center'}>
       <a
         href={`${url}`}
-        className={`block py-2 px-3 text-purple-300 rounded transition-colors ease-in-out hover:bg-purple-900/30 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 focus:ring-yellow-500`}>
+        className={`block py-2 px-3 text-purple-300 text-sm rounded transition-colors ease-in-out hover:bg-purple-900/30 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 focus:ring-yellow-500`}>
         {text}
       </a>
     </li>
@@ -48,7 +48,7 @@ export default function Navbar() {
           type="button"
           className={`btn-burger ${
             showMenu ? 'open' : ''
-          } p-2 w-10 h-10 flex flex-col items-center justify-center gap-2 text-sm text-slate-400 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-slate-400  `}
+          } p-2 w-10 h-10 flex flex-col items-center justify-center gap-2 text-sm text-slate-400 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-slate-400  `}
           aria-controls="navbar-default"
           aria-expanded="false">
           <span className="sr-only">Open main menu</span>
@@ -59,8 +59,8 @@ export default function Navbar() {
         <div
           className={`${
             showMenu ? '' : 'hidden'
-          } w-full md:block md:w-auto transition-all ease-out duration-300`}>
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 lg:border-0">
+          } w-full lg:block lg:w-auto transition-all ease-out duration-300`}>
+          <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 rounded-lg lg:flex-row lg:space-x-4 rtl:space-x-reverse lg:mt-0 lg:border-0">
             <NavLink
               text="About"
               url="/#about-me"
@@ -90,8 +90,8 @@ export default function Navbar() {
         <div
           className={`${
             showMenu ? '' : 'hidden'
-          } w-full md:block md:w-auto transition-all ease-out duration-300`}>
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 lg:border-0">
+          } w-full lg:block lg:w-auto transition-all ease-out duration-300`}>
+          <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 rounded-lg lg:flex-row lg:space-x-4 rtl:space-x-reverse lg:mt-0 lg:border-0">
             <NavLink
               text="Blog"
               url="/blog"
@@ -99,7 +99,7 @@ export default function Navbar() {
             <li>
               <a
                 href="/#contact"
-                className="w-32 h-8 bg-yellow-500 text-purple-950 font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-purple-50 active:bg-purple-300 active:ring-2 active:ring-purple-300 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md">
+                className="w-28 h-6 bg-yellow-500 text-purple-950 text-sm font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-purple-50 active:bg-purple-300 active:ring-2 active:ring-purple-300 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md">
                 Contact me
               </a>
             </li>
