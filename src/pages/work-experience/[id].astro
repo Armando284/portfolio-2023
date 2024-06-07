@@ -9,14 +9,14 @@ import { formatDate, toISO } from '@/utilities/formats'
 const { id } = Astro.params
 const job = jobs.find((_job) => _job.id === id)
 
-const tasks = job?.description.split('.') ?? []
+const tasks = job?.description.split('.').slice(0, -1) ?? []
 ---
 
 <Layout title="Armando Dev. | Work Experience">
   <main class="flex flex-col">
     <article
       id="about-me"
-      class="min-h-screen flex justify-center items-start text-purple-300 snap-start"
+      class="min-h-screen flex justify-center items-start text-purple-200 snap-start"
       transition:name=`work-experience ${id} box`>
       <div
         class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-4 flex justify-center items-center">
@@ -31,8 +31,8 @@ const tasks = job?.description.split('.') ?? []
             </h1>
             <img
               class="w-full max-w-prose h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
-              src={`/${job?.imgUrl}`}
-              alt={job?.imgDescription}
+              src={`/${job?.imgUrl || 'no_image.svg'}`}
+              alt={job?.imgDescription || 'default image'}
               transition:name=`work-experience ${id} img`
               loading="lazy"
             />
@@ -50,18 +50,19 @@ const tasks = job?.description.split('.') ?? []
             <TechTag tags={job?.features} />
             <div class="flex justify-start items-center gap-2 text-base">
               {
-                job?.links.map((link) => (
-                  <SocialButton
-                    url={link.url}
-                    description={link.description}
-                    style="large">
-                    <LinkIcon
-                      slot="start"
-                      classList="w-4 h-4 mr-2"
-                    />
-                    {link.description}
-                  </SocialButton>
-                ))
+                job?.links.length !== 0 &&
+                  job?.links.map((link) => (
+                    <SocialButton
+                      url={link.url}
+                      description={link.description}
+                      style="large">
+                      <LinkIcon
+                        slot="start"
+                        classList="w-4 h-4 mr-2"
+                      />
+                      {link.description}
+                    </SocialButton>
+                  ))
               }
             </div>
             <ul class="text-lg space-y-2 list-inside list-disc mb-5">
