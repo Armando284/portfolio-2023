@@ -27,7 +27,8 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
   class="flex justify-center pt-10 scroll-m-12">
   <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
     <ArticleTitle textColor="text-slate-50">technologies</ArticleTitle>
-    <div class="w-full h-96 relative flex justify-center items-center">
+    <div
+      class="w-full h-96 relative flex justify-center items-center flex-wrap p-4 gap-2">
       <div
         id="tooltip"
         class="bg-gradient-to-br from-purple-700 to-purple-700/10 text-purple-50 font-bold text-sm tracking-wider border border-purple-50 rounded-full backdrop-blur-md z-10">
@@ -37,7 +38,7 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
         data-tooltip="JavaScript">
         <JsIcon classList="w-8 h-8" />
       </div>
-      <div class="circle">
+      <div class="circle flex gap-2 p-4 flex-wrap justify-center items-center">
         <div
           class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
           data-tooltip="HTML">
@@ -139,7 +140,10 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
 </article>
 
 <script>
-  const center = document.querySelector('.center')
+  const center: HTMLDivElement | null = document.querySelector('.center')
+  if (center !== null) {
+    center.style.position = 'absolute'
+  }
   const circle = document.querySelector('.circle')
   const items: NodeListOf<HTMLDivElement> = document.querySelectorAll('.item')
   const radius = 100 // Adjust this value as needed
@@ -148,6 +152,7 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
     const angle = (i / items.length) * 2 * Math.PI
     const x = Math.cos(angle) * radius
     const y = Math.sin(angle) * radius
+    item.style.position = 'absolute'
     item.style.left = `calc(50% + ${x}px)`
     item.style.top = `calc(50% + ${y}px)`
     circle!.appendChild(item)
@@ -203,7 +208,6 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
 
 <style>
   .center {
-    position: absolute;
     width: 64px;
     height: 64px;
     display: flex;
@@ -220,7 +224,6 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
   }
 
   .item {
-    position: absolute;
     width: 38px;
     height: 38px;
     display: flex;
