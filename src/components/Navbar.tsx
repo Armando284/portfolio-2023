@@ -8,7 +8,7 @@ export default function Navbar() {
     <li className={'flex items-center'}>
       <a
         href={`${url}`}
-        className={`block py-2 px-3 text-purple-300 text-sm rounded transition-colors ease-in-out hover:bg-purple-900/30 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 focus:ring-yellow-500`}>
+        className={`block py-2 px-3 text-purple-300 rounded transition-colors ease-in-out hover:bg-purple-900/30 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 focus:ring-yellow-500`}>
         {text}
       </a>
     </li>
@@ -99,7 +99,7 @@ export default function Navbar() {
             <li>
               <a
                 href="/#contact"
-                className="w-28 h-8 bg-yellow-500 text-purple-950 text-sm font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-purple-50 active:bg-purple-300 active:ring-2 active:ring-purple-300 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md">
+                className="w-28 h-8 bg-yellow-500 text-purple-950 font-semibold transition-colors ease-in-out duration-300 hover:bg-yellow-700 hover:text-purple-50 active:bg-purple-300 active:ring-2 active:ring-purple-300 flex justify-center items-center gap-1 border-yellow-500 border-2 rounded-md">
                 Contact me
               </a>
             </li>
