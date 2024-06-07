@@ -38,7 +38,7 @@ export default function BlogList(props: MyBlogComponent) {
 
   return (
     <>
-      <div className="w-full flex flex-wrap justify-between items-center mb-5 sm:mb-0">
+      <div className="w-full flex flex-wrap justify-between items-center my-4 sm:mb-0">
         {props.children}
         <div className="w-full sm:w-max h-11 px-4 flex justify-between items-center gap-4 rounded-full border-purple-300 text-purple-300 bg-purple-950/50 border-2">
           <input
