@@ -16,7 +16,7 @@ import TechTag from './shared/TechTag.astro'
 				{
 					jobs.map((job) => (
 						<li
-							class="mb-10 ms-6 bg-purple-950/80 rounded-md shadow-lg ease-in-out duration-150 hover:bg-purple-950 active:bg-purple-950"
+							class="mb-10 ms-6 bg-purple-950/70 rounded-md shadow-lg ease-in-out duration-150 hover:bg-purple-950 active:bg-purple-950 z-10"
 							transition:name={`work-experience ${job.id} box`}>
 							<span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-transparent dark:ring-purple-900 dark:bg-purple-900">
 								<svg
@@ -29,9 +29,9 @@ import TechTag from './shared/TechTag.astro'
 								</svg>
 							</span>
 							<a
-								class="w-full h-auto block rounded-md overflow-hidden relative card-link"
+								class="w-full h-auto block rounded-md overflow-hidden relative circle-gradient after:-top-1/3 after:-right-[5%] after:from-yellow-500 after:to-yellow-50"
 								href={`/work-experience/${job.id}`}>
-								<header class="p-4 pb-0">
+								<header class="p-4 pb-0 z-10">
 									<h3
 										class="text-purple-200 text-lg font-semibold mb-5"
 										transition:name={`work-experience ${job.id} title`}>
@@ -56,12 +56,12 @@ import TechTag from './shared/TechTag.astro'
 										</time>
 									</i>
 								</header>
-								<div class="px-4">
+								<div class="px-4 z-10">
 									<p class="mt-2 mb-4 text-base font-normal text-purple-300 line-clamp-4">
 										{job.description}
 									</p>
 								</div>
-								<footer class="bg-purple-900/80 p-4 rounded-b-md">
+								<footer class="bg-purple-900 p-4 rounded-b-md z-50">
 									<TechTag tags={job.features.slice(0, 3)} />
 								</footer>
 							</a>
@@ -72,21 +72,3 @@ import TechTag from './shared/TechTag.astro'
 		</div>
 	</div>
 </article>
-
-<style>
-	.card-link::after {
-		--size: 256px;
-		content: '';
-		width: var(--size);
-		aspect-ratio: 1;
-		position: absolute;
-		top: calc(-1 * var(--size) / 4);
-		right: calc(-1 * var(--size) / 4);
-		background: #fbda61;
-		background: radial-gradient(circle, #fbda61 0%, #ff5acd 100%);
-		border-radius: 100%;
-		z-index: 0;
-		filter: blur(3.25rem);
-		opacity: 0.15;
-	}
-</style>
