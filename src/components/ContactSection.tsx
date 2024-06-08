@@ -79,15 +79,15 @@ export default function ContactSection() {
 
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-3xl h-auto flex flex-col items-center justify-center gap-4 bg-purple-900/50 rounded-md p-4 sm:p-8 shadow-lg">
-        <div className="w-full flex flex-col gap-2">
-          <header className="w-full mb-4">
+        className="w-full max-w-3xl h-auto flex flex-col items-center justify-center gap-4 bg-purple-900 rounded-md p-4 sm:p-8 shadow-lg">
+        <div className="w-full flex flex-col gap-2 relative circle-gradient after:from-green-600 after:to-yellow-200 after:top-0 after:right-0 after:opacity-50">
+          <header className="w-full mb-4 z-10">
             <h3 className="text-purple-200 text-lg font-semibold mb-2">
               Lets get in contact!
             </h3>
             <span>Have any ideas or just want to say hello?</span>
           </header>
-          <label htmlFor="subject">Subject:</label>
+          <label htmlFor="subject" className='z-10'>Subject:</label>
           <input
             type="text"
             id="subject"
@@ -96,10 +96,10 @@ export default function ContactSection() {
             onChange={handleChange}
             autoComplete="off"
             placeholder="Hey, I have a project idea ..."
-            className="h-11 rounded-md p-4 outline-none bg-purple-950 border border-purple-500 shadow-md placeholder:text-purple-400"
+            className="h-11 rounded-md p-4 outline-none bg-purple-950 border border-purple-500 shadow-md placeholder:text-purple-400 z-10"
           />
         </div>
-        <div className="w-full flex flex-col gap-2">
+        <div className="w-full flex flex-col gap-2 z-10">
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
@@ -111,7 +111,7 @@ export default function ContactSection() {
             className="min-h-11 rounded-md p-4 outline-none bg-purple-950 border border-purple-500 shadow-md"
           />
         </div>
-        <footer className="w-full flex flex-col sm:flex-row items-center justify-between gap-2 mt-4">
+        <footer className="w-full flex flex-col sm:flex-row items-center justify-between gap-2 mt-4 z-10">
           <button
             className="w-full overflow-clip h-11 border-2 border-purple-300/50 backdrop-blur-md rounded-md flex items-center gap-4 px-4 text-purple-300 transition-colors ease-in-out duration-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-500 rounded-md"
             onClick={handleCopyClick}
