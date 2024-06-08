@@ -13,64 +13,78 @@ const tasks = job?.description.split('.').slice(0, -1) ?? []
 ---
 
 <Layout title="Armando Dev. | Work Experience">
-  <main class="flex flex-col">
-    <article
-      id="about-me"
-      class="min-h-screen flex justify-center items-start text-purple-200 snap-start"
-      transition:name=`work-experience ${id} box`>
-      <div
-        class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-4 flex justify-center items-center">
-        <div
-          class="max-w-[680px] w-full p-5 bg-purple-950 rounded-md flex justify-center items-center">
-          <div
-            class="max-w-prose w-full h-full flex flex-col justify-center items-start gap-5">
-            <h1
-              class="text-2xl text-purple-200"
-              transition:name=`work-experience ${id} title`>
-              {job?.title}
-            </h1>
-            <img
-              class="w-full max-w-prose h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
-              src={`/${job?.imgUrl || 'no_image.svg'}`}
-              alt={job?.imgDescription || 'default image'}
-              transition:name=`work-experience ${id} img`
-              loading="lazy"
-            />
-            <i class="text-sm">
-              From
-              <time datetime={toISO(job?.startAt)}>
-                {formatDate(job?.startAt)}
-              </time>
-              to
-              <time datetime={toISO(job?.finishAt)}>
-                {formatDate(job?.finishAt)}
-              </time>
-              .
-            </i>
-            <TechTag tags={job?.features} />
-            <div class="flex justify-start items-center gap-2 text-base">
-              {
-                job?.links.length !== 0 &&
-                  job?.links.map((link) => (
-                    <SocialButton
-                      url={link.url}
-                      description={link.description}
-                      style="large">
-                      <LinkIcon
-                        slot="start"
-                        classList="w-4 h-4 mr-2"
-                      />
-                      {link.description}
-                    </SocialButton>
-                  ))
-              }
-            </div>
-            <ul class="text-lg space-y-2 list-inside list-disc mb-5">
-              {tasks.map((task) => <li>{task}.</li>)}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </article>
-  </main>
+	<main class="flex flex-col">
+		<article
+			id="about-me"
+			class="min-h-screen flex justify-center items-start text-purple-300 snap-start"
+			transition:name=`work-experience ${id} box`>
+			<div
+				class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-4 flex justify-center items-center">
+				<div
+					class="max-w-3xl w-full p-5 lg:py-16 bg-purple-950 rounded-md flex justify-center items-center">
+					<div
+						class="max-w-prose w-full h-full flex flex-col justify-center items-start gap-5">
+						<h1
+							class="text-lg md:text-2xl text-purple-200"
+							transition:name=`work-experience ${id} title`>
+							{
+								job?.title
+									.split(' ')
+									.map((text) => (
+										<span
+											class={
+												text === '@'
+													? 'text-purple-400'
+													: ''
+											}>
+											{text + ' '}
+										</span>
+									))
+							}
+						</h1>
+						<img
+							class="w-full max-w-prose h-full rounded-md bg-gradient-to-b from-yellow-700 to-yellow-50"
+							src={`/${job?.imgUrl || 'not_found.svg'}`}
+							alt={job?.imgDescription || 'default image'}
+							transition:name=`work-experience ${id} img`
+							loading="lazy"
+						/>
+						<i class="text-sm">
+							From
+							<time datetime={toISO(job?.startAt)}>
+								{formatDate(job?.startAt)}
+							</time>
+							to
+							<time datetime={toISO(job?.finishAt)}>
+								{formatDate(job?.finishAt)}
+							</time>
+							.
+						</i>
+						<TechTag tags={job?.features} />
+						<div
+							class="flex flex-col justify-center items-start gap-2 text-base">
+							{
+								job?.links.length !== 0 &&
+									job?.links.map((link) => (
+										<SocialButton
+											url={link.url}
+											description={link.description}
+											style="large">
+											<LinkIcon
+												slot="start"
+												classList="w-4 h-4 mr-2"
+											/>
+											{link.description}
+										</SocialButton>
+									))
+							}
+						</div>
+						<ul class="space-y-5 list-inside list-item mb-5">
+							{tasks.map((task) => <li>{task}.</li>)}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
 </Layout>
