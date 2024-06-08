@@ -23,263 +23,225 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
 ---
 
 <article
-  id="technologies"
-  class="flex justify-center pt-10 scroll-m-12">
-  <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
-    <ArticleTitle textColor="text-slate-50">technologies</ArticleTitle>
-    <div
-      class="w-full h-96 relative flex justify-center items-center flex-wrap p-4 gap-2">
-      <div
-        id="tooltip"
-        class="bg-gradient-to-br from-purple-700 to-purple-700/10 text-purple-50 font-bold text-sm tracking-wider border border-purple-50 rounded-full backdrop-blur-md z-10">
-      </div>
-      <div
-        class="center tech-item bg-yellow-500 text-purple-50 border-2 border-purple-50 shadow-black shadow-lg hover:bg-yellow-600 hover:scale-[200%] hover:-rotate-12 transition-all linear"
-        data-tooltip="JavaScript">
-        <JsIcon classList="w-8 h-8" />
-      </div>
-      <div class="circle flex gap-2 p-4 flex-wrap justify-center items-center">
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="HTML">
-          <HtmlIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="CSS3">
-          <Css3Icon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="TypeScript">
-          <TsIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Bootstrap">
-          <BootstrapIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Tailwind">
-          <TailwindIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Angular">
-          <AngularIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Astro">
-          <AstroIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Node.js">
-          <NodeJsIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="npm">
-          <NpmIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Git">
-          <GitIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Github">
-          <GithubIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Go">
-          <GolangIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Unity">
-          <UnityIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Firebase">
-          <FirebaseIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="MongoDB">
-          <MongoDbIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="SQL">
-          <SqlIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Google Play">
-          <GooglePlayIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="App Store">
-          <AppStoreIcon classList="w-6 h-6" />
-        </div>
-        <div
-          class="item tech-item bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50"
-          data-tooltip="Vercel">
-          <VercelIcon classList="w-6 h-6" />
-        </div>
-      </div>
-    </div>
-  </div>
+	id="technologies"
+	class="flex justify-center pt-10 scroll-m-12">
+	<div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
+		<ArticleTitle textColor="text-slate-50">technologies</ArticleTitle>
+		<div
+			class="w-full h-auto relative flex justify-center items-center flex-wrap p-4 gap-2">
+			<div
+				id="tooltip"
+				class="bg-gradient-to-br from-yellow-500 to-yellow-500/10 text-purple-950 font-bold text-sm tracking-wider border border-yellow-50 rounded-full backdrop-blur-md z-10">
+			</div>
+			<div
+				class="circle flex gap-2 p-4 flex-wrap justify-center items-center">
+				<div
+					class="item tech-item"
+					data-tooltip="JavaScript">
+					<JsIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="HTML">
+					<HtmlIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="CSS3">
+					<Css3Icon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="TypeScript">
+					<TsIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Bootstrap">
+					<BootstrapIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Tailwind">
+					<TailwindIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Angular">
+					<AngularIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Astro">
+					<AstroIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Node.js">
+					<NodeJsIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="npm">
+					<NpmIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Git">
+					<GitIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Github">
+					<GithubIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Go">
+					<GolangIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Unity">
+					<UnityIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Firebase">
+					<FirebaseIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="MongoDB">
+					<MongoDbIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="SQL">
+					<SqlIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Google Play">
+					<GooglePlayIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="App Store">
+					<AppStoreIcon classList="w-8 h-8" />
+				</div>
+				<div
+					class="item tech-item"
+					data-tooltip="Vercel">
+					<VercelIcon classList="w-8 h-8" />
+				</div>
+			</div>
+		</div>
+	</div>
 </article>
 
 <script>
-  const center: HTMLDivElement | null = document.querySelector('.center')
-  if (center !== null) {
-    center.style.position = 'absolute'
-  }
-  const circle = document.querySelector('.circle')
-  const items: NodeListOf<HTMLDivElement> = document.querySelectorAll('.item')
-  const radius = 100 // Adjust this value as needed
+	const tooltip = document.getElementById('tooltip')
+	if (tooltip !== undefined || tooltip !== null) {
+		const parent = tooltip?.parentElement
+		let mouseX = 0,
+			mouseY = 0
+		let currentX = 0,
+			currentY = 0
 
-  items.forEach((item, i) => {
-    const angle = (i / items.length) * 2 * Math.PI
-    const x = Math.cos(angle) * radius
-    const y = Math.sin(angle) * radius
-    item.style.position = 'absolute'
-    item.style.left = `calc(50% + ${x}px)`
-    item.style.top = `calc(50% + ${y}px)`
-    circle!.appendChild(item)
-  })
+		let isMoving = false
 
-  const tooltip = document.getElementById('tooltip')
-  if (tooltip !== undefined || tooltip !== null) {
-    const parent = tooltip?.parentElement
-    let mouseX = 0,
-      mouseY = 0
-    let currentX = 0,
-      currentY = 0
+		parent?.addEventListener('mouseenter', (e: MouseEvent): void => {
+			tooltip?.style.setProperty('--display', 'flex')
+			isMoving = true
+		})
 
-    let isMoving = false
+		parent?.addEventListener('mousemove', (e: MouseEvent) => {
+			if (!isMoving) {
+				tooltip?.style.setProperty('--display', 'flex')
+				isMoving = true
+			}
+			const rect = parent.getBoundingClientRect()
+			mouseX = e.clientX - rect.left
+			mouseY = e.clientY - rect.top
+			const itemHover = document.querySelector('.tech-item:hover')
+			if (itemHover && itemHover.getAttribute('data-tooltip')) {
+				tooltip!.textContent = itemHover.getAttribute('data-tooltip')
+			} else {
+				tooltip!.textContent = ''
+			}
+			function animate() {
+				currentX += (mouseX - currentX) * 0.1
+				currentY += (mouseY - currentY) * 0.1
 
-    parent?.addEventListener('mouseenter', (e: MouseEvent): void => {
-      tooltip?.style.setProperty('--display', 'flex')
-      isMoving = true
-    })
+				tooltip!.style.transform = `translate(${currentX}px, ${currentY}px)`
 
-    parent?.addEventListener('mousemove', (e: MouseEvent) => {
-      if (!isMoving) {
-        tooltip?.style.setProperty('--display', 'flex')
-        isMoving = true
-      }
-      const rect = parent.getBoundingClientRect()
-      mouseX = e.clientX - rect.left
-      mouseY = e.clientY - rect.top
-      const itemHover = document.querySelector('.tech-item:hover')
-      if (itemHover && itemHover.getAttribute('data-tooltip')) {
-        tooltip!.textContent = itemHover.getAttribute('data-tooltip')
-      } else {
-        tooltip!.textContent = ''
-      }
-      function animate() {
-        currentX += (mouseX - currentX) * 0.1
-        currentY += (mouseY - currentY) * 0.1
+				requestAnimationFrame(animate)
+			}
 
-        tooltip!.style.transform = `translate(${currentX}px, ${currentY}px)`
+			animate()
+		})
 
-        requestAnimationFrame(animate)
-      }
-
-      animate()
-    })
-
-    parent?.addEventListener('mouseleave', (e: MouseEvent) => {
-      tooltip?.style.setProperty('--display', 'none')
-      isMoving = false
-    })
-  }
+		parent?.addEventListener('mouseleave', (e: MouseEvent) => {
+			tooltip?.style.setProperty('--display', 'none')
+			isMoving = false
+		})
+	}
 </script>
 
 <style>
-  .center {
-    width: 64px;
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    z-index: 2;
-  }
+	.circle {
+		width: 100%;
+		height: 100%;
+	}
 
-  .circle {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+	.item {
+		@apply w-12 h-12 md:w-24 md:h-24 rounded-md bg-purple-700 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:bg-purple-800 hover:text-yellow-50 hover:border-yellow-50;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		transition: scale 0.3s ease-in-out;
+		user-select: none;
+	}
 
-  .item {
-    width: 38px;
-    height: 38px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    z-index: 1;
-    translate: -50% -50%;
-    transition:
-      transform 0.3s ease-in-out,
-      scale 0.3s ease-in-out;
-    user-select: none;
-  }
+	.item:hover {
+		scale: 1.5;
+		z-index: 3;
+	}
 
-  .item:hover {
-    scale: 2;
-    z-index: 3;
-    transform: rotate(-8deg);
-  }
+	.item:hover + .item {
+		scale: 1.25;
+		z-index: 2;
+	}
 
-  .item:hover + .item {
-    scale: 1.5;
-    z-index: 2;
-    transform: rotate(-8deg);
-  }
+	.item:has(+ .item:hover) {
+		scale: 1.25;
+		z-index: 2;
+	}
 
-  .item:has(+ .item:hover) {
-    scale: 1.5;
-    z-index: 2;
-    transform: rotate(-8deg);
-  }
+	.item:first-child:hover ~ .item:last-child {
+		scale: 1.25;
+		z-index: 2;
+	}
 
-  .item:first-child:hover ~ .item:last-child {
-    scale: 1.5;
-    z-index: 2;
-    transform: rotate(-8deg);
-  }
+	.item:first-child:has(~ .item:last-child:hover) {
+		scale: 1.25;
+		z-index: 2;
+	}
 
-  .item:first-child:has(~ .item:last-child:hover) {
-    scale: 1.5;
-    z-index: 2;
-    transform: rotate(-8deg);
-  }
-
-  #tooltip {
-    --display: none;
-    min-width: 32px;
-    width: fit-content;
-    min-height: 32px;
-    height: auto;
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    display: var(--display);
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-  }
+	#tooltip {
+		--display: none;
+		min-width: 32px;
+		width: fit-content;
+		min-height: 32px;
+		height: auto;
+		position: absolute;
+		left: 0%;
+		top: 0%;
+		display: var(--display);
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+	}
 </style>
