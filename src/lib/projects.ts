@@ -2,17 +2,26 @@ import type { Job } from '@/models/types'
 
 export const projects: Job[] = [
   {
-    id: '1',
+    id: 'buzz-quest',
     imgUrl: 'buzz_quest.webp',
     imgDescription: 'Buzz Quest screenshot',
+    multimedia: [
+      {
+        type: 'video',
+        url: 'https://www.youtube.com/embed/Y_mDcK_rpBA?si=XwMJFxqkgqnc6nSc',
+        description: 'Buzz Quest trailer at YouTube',
+      },
+    ],
     title: 'Buzz Quest',
     startAt: new Date('2024-1-1'),
     finishAt: 'Current',
-    description: `"Buzz Quest", my first ever completed and deployed game, stands as a testament to my journey into the world of game development. This project was a sweet dive into the realm of software engineering, where I took on the role of a determined developer on a mission to bring an idea to life.
-    The development process was a vertical flight of learning and growth. I used Unity as the game engine, which provided a robust and flexible platform for creating this immersive game. The 3D modeling was done using Blender, a tool that I learned a great deal from during this project.
-    Image editing was carried out in Photoshop, and audio editing was done using Audacity. Each tool added a unique dimension to the game, enhancing its overall appeal.
-    Deployed on itch.io, "Buzz Quest" was more than just a game; it was a learning experience that taught me about the intricacies of game making. From conceptualization to deployment, every step was a buzz-worthy journey!
-    Are you ready to explore "Buzz Quest"? Let the adventure begin!`,
+    description: `"Buzz Quest" is my first completed and deployed game, marking my foray into the world of game development. This project was a rewarding dive into software engineering, where I embraced the role of a developer bringing an idea to life.
+
+Throughout the development process, I experienced significant learning and growth. Utilizing Unity as the game engine provided a robust platform for creating an immersive experience. I also ventured into 3D modeling with Blender, gaining valuable skills along the way.
+
+Image editing was accomplished with Photoshop, while audio editing was handled using Audacity. Each tool contributed uniquely to the game's overall appeal. 
+
+Deployed on itch.io, "Buzz Quest" served as an educational journey, teaching me the intricacies of game development. From conceptualization to deployment, every step was an exciting adventure. Are you ready to explore "Buzz Quest"? Let the adventure begin!`,
     features: ['Unity', 'Game', '3D', 'C#', 'Blender', 'Itch.io'],
     links: [
       {
@@ -22,45 +31,61 @@ export const projects: Job[] = [
     ],
   },
   {
-    id: '2',
+    id: 'programmer-survey',
     imgUrl: 'programmer_survey.webp',
     imgDescription: 'Programmer survey web app',
     title: 'Programmer Level Survey',
     startAt: new Date('2019-10-1'),
     finishAt: 'Current',
-    description: `Used by +100 developers. Single Page Application with a collection of random questions about programming languages, only JavaScript questions for now, each question is separated in ranges of junior to senior and has several possible answers. Users get their approximated level on the language and learn what they are missing. I used Firebase for hosting and database to get easy access to analytics. The objective is to give students or juniors a clear view of their level and what they must learn.`,
-    features: ['Angular', 'HTML/CSS', 'TypeScript', 'Firebase'],
+    description: `This project involved creating a single-page application (SPA) that quizzes users on their knowledge of JavaScript, with questions ranging from junior to senior levels. The main challenge was ensuring the integrity of the quiz by preventing users from cheating and managing data to provide accurate feedback.
+
+The application was built using Angular and Material Design, and it was deployed on Firebase, which also served as the database for analytics. The quiz helps users gauge their proficiency in JavaScript and identify areas for improvement by providing detailed feedback.
+
+The quiz has been used by over 100 developers and features a collection of random programming questions, each with several possible answers. It aims to give students and junior developers a clear understanding of their skill level and guide them on what to focus on next in their learning journey.`,
+    features: ['Angular', 'HTML/CSS', 'TypeScript', 'Firebase', 'Material Design'],
     links: [
       {
         url: 'javascript-survey.web.app/surveys',
         description: 'Programmer level survey web app.',
       },
+      {
+        url: 'github.com/Armando284/programmer-level-survey',
+        description: 'Programmer level survey Github repository.',
+      },
     ],
   },
   {
-    id: '3',
+    id: 'format-logs',
     imgUrl: 'format_logs.webp',
     imgDescription: 'Terminal logs formatter',
     title: 'Format logs',
     startAt: new Date('2023-10-1'),
     finishAt: 'Current',
-    description: `It is a flexible and light formatter for terminal logs for Node.js projects.`,
+    description: `The format-logs project is an NPM package designed to provide flexible and lightweight formatting for terminal logs in Node.js projects. The primary goal of this project was to delve into method composition, akin to the approach used by the popular NPM package chalk.
+
+To tackle this, I implemented the builder pattern, which allowed for a versatile and composable way to format console logs. This project was a significant learning experience in building and deploying a package to NPM, and it greatly enhanced my understanding of method composition and package management.
+
+The package allows developers to easily add styles to their terminal logs, making debugging and log tracking more efficient. format-logs supports various text styles and colors, offering a customizable solution for log formatting needs. The project, hosted on NPM and available on GitHub, serves as a testament to my growth in software development and my ability to create useful tools for the developer community.`,
     features: ['JavaScript', 'NPM', 'Node.js', 'Jest', 'Cli'],
     links: [
       {
         url: 'www.npmjs.com/package/format-logs',
-        description: 'Format logs page at npm registry.',
+        description: 'Format logs at npm registry.',
+      },
+      {
+        url: 'github.com/Armando284/format-logs',
+        description: 'Format logs Github repository.',
       },
     ],
   },
   {
-    id: '4',
+    id: 'zablek-siege',
     imgUrl: 'zablek_siege.webp',
     imgDescription: '2D game based on feudal alloy',
     title: `Zablek's Siege`,
     startAt: new Date('2019-10-1'),
     finishAt: 'Current',
-    description: `A 2D adventure RPG game inspired in Salt and Sanctuary and Feudal Alloy. A large game which I am developing one step at a time as Solo Indie Developer on my free time. I have created all the assets except for the music and some backgrounds sprites. I have learned a lot about game development with this project.`,
+    description: ``,
     features: ['Unity', 'C#'],
     links: [
       {
@@ -74,7 +99,7 @@ export const projects: Job[] = [
     ],
   },
   {
-    id: '5',
+    id: 'chat-vibe',
     imgUrl: 'chatvibe.webp',
     imgDescription: 'Real time web chat application',
     title: 'ChatVibe',
@@ -90,7 +115,7 @@ export const projects: Job[] = [
     ],
   },
   {
-    id: '6',
+    id: 'epic-todo',
     imgUrl: 'epic_todo.webp',
     imgDescription: 'Todo web application',
     title: 'Epic Todo App',
@@ -106,7 +131,7 @@ export const projects: Job[] = [
     ],
   },
   {
-    id: '7',
+    id: 'web-game',
     imgUrl: 'phaser_game.webp',
     imgDescription: 'Web based 2D game.',
     title: 'Unnamed Web RPG Game',

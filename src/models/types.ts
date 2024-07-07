@@ -1,4 +1,5 @@
-export interface ExternalLink {
+export interface ExternalContent {
+  type?: 'image' | 'video'
   url: string
   description: string
 }
@@ -7,12 +8,13 @@ export interface Job {
   id: string
   imgUrl: string
   imgDescription: string
+  multimedia?: ExternalContent[]
   title: string
   startAt: Date
   finishAt: Date | 'Current'
   description: string
   features: string[]
-  links: ExternalLink[]
+  links: ExternalContent[]
 }
 
 export interface Blog {
