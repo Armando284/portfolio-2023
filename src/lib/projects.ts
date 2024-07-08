@@ -39,7 +39,7 @@ Deployed on itch.io, "Buzz Quest" served as an educational journey, teaching me 
     multimedia: [
       {
         type: 'image',
-        url: '',
+        url: 'https://1drv.ms/i/c/df8b02646f2afc8d/EVsVrw1k25tHjwUpZ31ozu4BLBvn0jy1KqcN1s9paeK2-A?e=eC5Cxr',
         description: 'JavaScript quiz questions example gif.',
       },
     ],
