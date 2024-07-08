@@ -10,92 +10,98 @@ const { id } = Astro.params
 const project = projects.find((_project) => _project.id === id)
 ---
 
-<Layout title="Armando Dev. | Projects">
-	<main class="flex flex-col">
-		<article
-			id="about-me"
-			class="min-h-screen flex justify-center items-start text-purple-300 snap-start"
-			transition:name=`work-experience ${id} box`>
-			<div
-				class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-6 flex justify-center items-center">
-				<div
-					class="max-w-3xl w-full p-5 lg:py-16 bg-purple-950 rounded-md flex justify-center items-center">
-					<div
-						class="max-w-prose w-full flex flex-col justify-center items-start gap-5">
-						<h1
-							class="text-2xl text-purple-200"
-							transition:name=`work-experience ${id} title`>
-							{project?.title}
-						</h1>
-						<img
-							class="w-full max-w-prose h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
-							src={`/${project?.imgUrl}`}
-							alt={project?.imgDescription}
-							transition:name=`work-experience ${id} img`
-							loading="lazy"
-						/>
-						{
-							project?.multimedia?.map((data) => {
-								if (data.type === 'image') {
-									return (
-										<img
-											class="w-full max-w-prose h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
-											src={`/${data?.url}`}
-											alt={data?.description}
-											loading="lazy"
-										/>
-									)
-								}
-								if (data.type === 'video') {
-									return (
-										<iframe
-											class="w-full max-w-prose aspect-video rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
-											src={data.url}
-											title={data.description}
-											frameborder="0"
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-											referrerpolicy="strict-origin-when-cross-origin"
-											allowfullscreen
-										/>
-									)
-								}
-							})
-						}
-						<i class="text-sm">
-							From
-							<time datetime={toISO(project?.startAt)}>
-								{formatDate(project?.startAt)}
-							</time>
-							to
-							<time datetime={toISO(project?.finishAt)}>
-								{formatDate(project?.finishAt)}
-							</time>
-							.
-						</i>
-						<TechTag tags={project?.features} />
-						<div
-							class="flex flex-col justify-center items-start text-base">
-							{
-								project?.links.map((link) => (
-									<SocialButton
-										url={link.url}
-										description={link.description}
-										style="large">
-										<LinkIcon
-											slot="start"
-											classList="w-4 h-4 mr-2"
-										/>
-										{link.description}
-									</SocialButton>
-								))
-							}
-						</div>
-						<p class="text-lg whitespace-pre-wrap">
-							{project?.description}
-						</p>
-					</div>
-				</div>
-			</div>
-		</article>
-	</main>
+<Layout title="Armando Peña | Project">
+  <main class="flex flex-col">
+    <article
+      id="about-me"
+      class="min-h-screen flex justify-center items-start text-purple-300 snap-start"
+      transition:name=`work-experience ${id} box`>
+      <div
+        class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full p-6 flex justify-center items-center">
+        <div
+          class="max-w-6xl w-full p-5 lg:p-10 bg-purple-950 rounded-md flex flex-col lg:flex-row justify-center items-center lg:items-start gap-10">
+          <div class="w-full flex flex-col justify-center items-center gap-5">
+            <h1
+              class="text-5xl text-purple-200 font-bold lg:hidden"
+              transition:name=`work-experience ${id} title`>
+              {project?.title}
+            </h1>
+            <img
+              class="w-full max-w-prose h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
+              src={`/${project?.imgUrl}`}
+              alt={project?.imgDescription}
+              transition:name=`work-experience ${id} img`
+              loading="lazy"
+            />
+            {
+              project?.multimedia?.map((data) => {
+                if (data.type === 'image') {
+                  return (
+                    <img
+                      class="w-full max-w-prose h-full rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
+                      src={`/${data?.url}`}
+                      alt={data?.description}
+                      loading="lazy"
+                    />
+                  )
+                }
+                if (data.type === 'video') {
+                  return (
+                    <iframe
+                      class="w-full max-w-prose aspect-video rounded-md bg-gradient-to-br from-purple-700/20 to-purple-700/40"
+                      src={data.url}
+                      title={data.description}
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    />
+                  )
+                }
+              })
+            }
+          </div>
+          <div
+            class="max-w-prose w-full flex flex-col justify-center items-start gap-5">
+            <h1
+              class="text-6xl text-purple-200 font-black hidden lg:inline"
+              transition:name=`work-experience ${id} title`>
+              {project?.title}
+            </h1>
+            <i class="text-sm">
+              From
+              <time datetime={toISO(project?.startAt)}>
+                {formatDate(project?.startAt)}
+              </time>
+              to
+              <time datetime={toISO(project?.finishAt)}>
+                {formatDate(project?.finishAt)}
+              </time>
+              .
+            </i>
+            <TechTag tags={project?.features} />
+            <div class="flex flex-col justify-center items-start text-base">
+              {
+                project?.links.map((link) => (
+                  <SocialButton
+                    url={link.url}
+                    description={link.description}
+                    style="large">
+                    <LinkIcon
+                      slot="start"
+                      classList="w-4 h-4 mr-2"
+                    />
+                    {link.description}
+                  </SocialButton>
+                ))
+              }
+            </div>
+            <p class="text-lg whitespace-pre-wrap">
+              {project?.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
 </Layout>
