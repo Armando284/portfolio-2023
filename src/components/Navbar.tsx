@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '@/styles/navbar.css'
 
 export default function Navbar() {
@@ -8,10 +8,32 @@ export default function Navbar() {
     <li className={'flex items-center'}>
       <a
         href={`${url}`}
-        className={`block py-2 px-3 text-purple-300 rounded transition-colors ease-in-out hover:bg-purple-900/30 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 focus:ring-yellow-500`}>
+        className={`w-full block py-2 px-3 text-purple-300 rounded transition-colors ease-in-out hover:bg-purple-900/30 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 focus:ring-yellow-500`}>
         {text}
       </a>
     </li>
+  )
+
+  const ExpDropdown = () => (
+    <div
+      className={`z-10 bg-purple-950 rounded-lg drop-shadow-lg w-fit lg:w-44 p-2 lg:p-5 lg:absolute top-6 lg:hidden lg:group-hover:block`}
+    >
+      <ul
+        className="space-y-1 lg:space-y-3 text-sm">
+        <NavLink
+          text="Work"
+          url="/#work-experience"
+        />
+        <NavLink
+          text="Featured Projects"
+          url="/#personal-projects"
+        />
+        <NavLink
+          text="Technologies"
+          url="/#technologies"
+        />
+      </ul>
+    </div>
   )
 
   return (
@@ -46,9 +68,8 @@ export default function Navbar() {
         <button
           onClick={() => setShowMenu(!showMenu)}
           type="button"
-          className={`btn-burger ${
-            showMenu ? 'open' : ''
-          } p-2 w-10 h-10 flex flex-col items-center justify-center gap-2 text-sm text-slate-400 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-slate-400  `}
+          className={`btn-burger ${showMenu ? 'open' : ''
+            } p-2 w-10 h-10 flex flex-col items-center justify-center gap-2 text-sm text-slate-400 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-slate-400  `}
           aria-controls="navbar-default"
           aria-expanded="false">
           <span className="sr-only">Open main menu</span>
@@ -57,26 +78,35 @@ export default function Navbar() {
           <span className="burger-line border-slate-300 border-b w-full "></span>
         </button>
         <div
-          className={`${
-            showMenu ? '' : 'hidden'
-          } w-full lg:block lg:w-auto transition-all ease-out duration-300`}>
+          className={`${showMenu ? '' : 'hidden'
+            } w-full lg:block lg:w-auto transition-all ease-out duration-300`}>
           <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 rounded-lg lg:flex-row lg:space-x-4 rtl:space-x-reverse lg:mt-0 lg:border-0">
             <NavLink
               text="About"
               url="/#about-me"
             />
-            <NavLink
-              text="Work"
-              url="/#work-experience"
-            />
-            <NavLink
-              text="Projects"
-              url="/#personal-projects"
-            />
-            <NavLink
-              text="Technologies"
-              url="/#technologies"
-            />
+            <li className={'flex flex-col justify-center items-start relative group'}>
+              <span
+                className="flex items-center py-2 px-3 text-purple-300 rounded transition-colors ease-in-out hover:bg-purple-900/30 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 focus:ring-yellow-500"
+              >
+                Experience
+                <svg
+                  className="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6">
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </span>
+              <ExpDropdown />
+            </li>
             <NavLink
               text="Featured Posts"
               url="/#featured-posts"
@@ -88,10 +118,13 @@ export default function Navbar() {
           </ul>
         </div>
         <div
-          className={`${
-            showMenu ? '' : 'hidden'
-          } w-full lg:block lg:w-auto transition-all ease-out duration-300`}>
+          className={`${showMenu ? '' : 'hidden'
+            } w-full lg:block lg:w-auto transition-all ease-out duration-300`}>
           <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 rounded-lg lg:flex-row lg:space-x-4 rtl:space-x-reverse lg:mt-0 lg:border-0">
+            <NavLink
+              text="Projects"
+              url="/projects"
+            />
             <NavLink
               text="Blog"
               url="/blog"
