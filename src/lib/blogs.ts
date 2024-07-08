@@ -3,6 +3,7 @@ import type { Blog } from "@/models/types";
 export const blogs: Blog[] = [
   {
     slug: 'node-vs-go-performance',
+    featured: true,
     title: 'Node.Js vs Go Which Has The Best Performance',
     imgUrl: 'https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ry9YZ2HJl-HFrfKDWILXZg.png',
     imgDescription: 'Visual Studio Code with the sorting project open, Node.js on the left, Go on the right.',
@@ -19,6 +20,7 @@ export const blogs: Blog[] = [
   },
   {
     slug: 'modules-vs-classes',
+    featured: true,
     title: 'Module Design Pattern vs Classes in JavaScript',
     imgUrl: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*UhrszUZ_ImWyOHGpP7Y4rA.png',
     imgDescription: 'JavaScript class and Module Pattern examples side by side.',
@@ -27,6 +29,7 @@ export const blogs: Blog[] = [
   },
   {
     slug: 'node-vs-go-backend',
+    featured: true,
     title: 'Comparing Node Js vs Golang for Backend Development',
     imgUrl: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*QZjtaeDtosL5b78k_25sQQ.png',
     imgDescription: 'Express and Gin main files side by side.',

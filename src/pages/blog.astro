@@ -4,16 +4,17 @@ import BlogList from '@/components/shared/BlogList'
 import Layout from '@/layouts/Layout.astro'
 ---
 
-<Layout title="Armando Peña - Blog">
-  <main class="flex flex-col">
-    <article
-      id="blog"
-      class="min-h-screen flex justify-center items-start px-5 snap-start">
-      <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
-        <BlogList client:visible>
-          <ArticleTitle>Blog</ArticleTitle>
-        </BlogList>
-      </div>
-    </article>
-  </main>
+<Layout title="Armando Peña | Blog">
+	<main class="flex flex-col">
+		<article
+			id="blog"
+			class="min-h-screen flex justify-center items-start px-5 snap-start">
+			<div
+				class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
+				<BlogList client:visible>
+					<ArticleTitle>Blog</ArticleTitle>
+				</BlogList>
+			</div>
+		</article>
+	</main>
 </Layout>
