@@ -1,29 +1,37 @@
 ---
 import ArticleTitle from '@/components/shared/ArticleTitle.astro'
-import JobCard from '@/components/shared/JobCard.astro'
+import JobCard from '@/components/shared/JobCard'
 import { projects } from '@/lib/projects'
 ---
 
 <article
-  id="personal-projects"
-  class="flex justify-center py-10 scroll-m-12">
-  <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
-    <ArticleTitle>Personal Projects</ArticleTitle>
-    <section class="md:columns-2 xl:columns-3">
-      {
-        projects.slice(0, 6).map((project, i) => (
-          <JobCard
-            id={project.id}
-            type="projects"
-            imgUrl={project.imgUrl}
-            imgDescription={project.imgDescription}
-            title={project.title}
-            description={project.description}
-            features={project.features}
-            classList="mb-4"
-          />
-        ))
-      }
-    </section>
-  </div>
+	id="personal-projects"
+	class="flex justify-center py-10 scroll-m-12">
+	<div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
+		<ArticleTitle>featured personal projects</ArticleTitle>
+		<section class="md:columns-2 xl:columns-3">
+			{
+				projects
+					.filter((project) => project.featured)
+					.map((project, i) => (
+						<JobCard
+							id={project.id}
+							imgUrl={project.imgUrl}
+							imgDescription={project.imgDescription}
+							title={project.title}
+							description={project.description}
+							features={project.features}
+							classList="mb-4"
+						/>
+					))
+			}
+		</section>
+		<div class="w-full flex justify-end items-center my-5">
+			<a
+				class="w-fit overflow-clip h-11 border-2 border-purple-300/50 backdrop-blur-md rounded-md flex items-center gap-4 px-4 text-purple-300 transition-colors ease-in-out duration-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-500 rounded-md"
+				href="/projects">
+				More projects ...
+			</a>
+		</div>
+	</div>
 </article>

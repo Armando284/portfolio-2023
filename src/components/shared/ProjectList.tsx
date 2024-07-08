@@ -1,14 +1,10 @@
-import { blogs } from '@/lib/blogs'
-import type { Blog } from '@/models/types'
+import { projects } from '@/lib/projects'
+import type { Job } from '@/models/types'
+import JobCard from './JobCard'
 import { useState, type ChangeEvent, type ReactNode } from 'react'
-import BlogCard from './BlogCard'
 
-type MyBlogComponent = {
-  children?: ReactNode
-}
-
-export default function BlogList(props: MyBlogComponent) {
-  const [blogsArray, setBlogsArray] = useState<Blog[]>(blogs)
+export default function ProjectList(props: {children: ReactNode}) {
+  const [projectsArray, setProjectsArray] = useState<Job[]>(projects)
 
   function debouncer() {
     let timerId: number
@@ -23,17 +19,17 @@ export default function BlogList(props: MyBlogComponent) {
 
   const filterBlogs = (param: string): void => {
     if (!param || typeof param !== 'string' || param === '') {
-      setBlogsArray(blogs)
+      setProjectsArray(projects)
       return
     }
     const searchParam = param.toLowerCase()
-    const arr = blogsArray.filter(
-      (post) =>
-        post.title.toLowerCase().includes(searchParam) ||
-        post.description.toLowerCase().includes(searchParam) ||
-        post.tags?.includes(searchParam)
+    const results = projectsArray.filter(
+      (project) =>
+        project.title.toLowerCase().includes(searchParam) ||
+        project.description.toLowerCase().includes(searchParam) ||
+        project.features?.includes(searchParam)
     )
-    setBlogsArray(arr)
+    setProjectsArray(results)
   }
 
   return (
@@ -70,17 +66,18 @@ export default function BlogList(props: MyBlogComponent) {
           </svg>
         </div>
       </div>
-      <section className="flex flex-col gap-5 md:my-10">
-        {blogsArray.map((blog) => (
-          <BlogCard
-            key={blog?.slug}
-            slug={blog?.slug}
-            title={blog?.title}
-            imgUrl={blog?.imgUrl}
-            imgDescription={blog?.imgDescription}
-            description={blog?.description}
-            tags={blog?.tags}
-          />
+      <section className="flex flex-wrap justify-between gap-5 md:my-10 w-">
+        {projectsArray.map((project) => (
+          <JobCard
+          key={project.id}
+          id={project.id}
+          imgUrl={project.imgUrl}
+          imgDescription={project.imgDescription}
+          title={project.title}
+          description={project.description}
+          features={project.features}
+          classList="w-full md:w-72 lg:w-64 xl:w-80 mb-4"
+        />
         ))}
       </section>
     </>

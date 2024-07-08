@@ -3,6 +3,7 @@ import type { Job } from '@/models/types'
 export const projects: Job[] = [
   {
     id: 'buzz-quest',
+    featured: true,
     imgUrl: 'buzz_quest.webp',
     imgDescription: 'Buzz Quest screenshot',
     multimedia: [
@@ -26,15 +27,23 @@ Deployed on itch.io, "Buzz Quest" served as an educational journey, teaching me 
     links: [
       {
         url: 'armandojpt.itch.io/buzz-quest',
-        description: 'Buzz Quest store page.',
+        description: 'Store.',
       },
     ],
   },
   {
     id: 'programmer-survey',
+    featured: true,
     imgUrl: 'programmer_survey.webp',
     imgDescription: 'Programmer survey web app',
-    title: 'Programmer Level Survey',
+    multimedia: [
+      {
+        type: 'image',
+        url: '',
+        description: 'JavaScript quiz questions example gif.',
+      },
+    ],
+    title: 'JavaScript Level Quiz',
     startAt: new Date('2019-10-1'),
     finishAt: 'Current',
     description: `This project involved creating a single-page application (SPA) that quizzes users on their knowledge of JavaScript, with questions ranging from junior to senior levels. The main challenge was ensuring the integrity of the quiz by preventing users from cheating and managing data to provide accurate feedback.
@@ -42,15 +51,21 @@ Deployed on itch.io, "Buzz Quest" served as an educational journey, teaching me 
 The application was built using Angular and Material Design, and it was deployed on Firebase, which also served as the database for analytics. The quiz helps users gauge their proficiency in JavaScript and identify areas for improvement by providing detailed feedback.
 
 The quiz has been used by over 100 developers and features a collection of random programming questions, each with several possible answers. It aims to give students and junior developers a clear understanding of their skill level and guide them on what to focus on next in their learning journey.`,
-    features: ['Angular', 'HTML/CSS', 'TypeScript', 'Firebase', 'Material Design'],
+    features: [
+      'Angular',
+      'HTML/CSS',
+      'TypeScript',
+      'Firebase',
+      'Material Design',
+    ],
     links: [
       {
         url: 'javascript-survey.web.app/surveys',
-        description: 'Programmer level survey web app.',
+        description: 'JavaScript Level Quiz.',
       },
       {
         url: 'github.com/Armando284/programmer-level-survey',
-        description: 'Programmer level survey Github repository.',
+        description: 'Github repository.',
       },
     ],
   },
@@ -70,19 +85,37 @@ The package allows developers to easily add styles to their terminal logs, makin
     links: [
       {
         url: 'www.npmjs.com/package/format-logs',
-        description: 'Format logs at npm registry.',
+        description: 'NPM package.',
       },
       {
         url: 'github.com/Armando284/format-logs',
-        description: 'Format logs Github repository.',
+        description: 'Github repository.',
       },
     ],
   },
   {
     id: 'zablek-siege',
+    featured: true,
     imgUrl: 'zablek_siege.webp',
     imgDescription: '2D game based on feudal alloy',
     title: `Zablek's Siege`,
+    multimedia: [
+      {
+        type: 'video',
+        url: 'https://www.youtube.com/embed/grRDv4-5_P0?si=ayiEDI9JaWequ_t_',
+        description: `Zablek's Siege Youtube Video. - 3`,
+      },
+      {
+        type: 'video',
+        url: 'https://www.youtube.com/embed/6QAbeDbJPo8?si=Rv_iSFzoNapIyezg',
+        description: `Zablek's Siege Youtube Video. - 2`,
+      },
+      {
+        type: 'video',
+        url: 'https://www.youtube.com/embed/X5N_JRNULGQ?si=LXfvO6CCV7rVcSam',
+        description: `Zablek's Siege Youtube Video. - 1`,
+      },
+    ],
     startAt: new Date('2019-10-1'),
     finishAt: 'Current',
     description: ``,
@@ -90,11 +123,7 @@ The package allows developers to easily add styles to their terminal logs, makin
     links: [
       {
         url: 'github.com/Armando284/unnamed-soul-metroidvania',
-        description: `Zablek's Siege Game repository.`,
-      },
-      {
-        url: 'www.youtube.com/watch?v=grRDv4-5_P0',
-        description: `Zablek's Siege Youtube Video.`,
+        description: `Github repository.`,
       },
     ],
   },
@@ -110,7 +139,7 @@ The package allows developers to easily add styles to their terminal logs, makin
     links: [
       {
         url: 'chat-room-web-application.vercel.app/',
-        description: 'ChatVibe webapp.',
+        description: 'ChatVibe.',
       },
     ],
   },
@@ -118,6 +147,14 @@ The package allows developers to easily add styles to their terminal logs, makin
     id: 'epic-todo',
     imgUrl: 'epic_todo.webp',
     imgDescription: 'Todo web application',
+    multimedia: [
+      {
+        type: 'video',
+        url: 'https://www.youtube.com/embed/lG9_PVwlN_w?si=7EihYpdrvkgHH8H8',
+        description:
+          'Epic Todo App presentation at YouTube for CS50 final project.',
+      },
+    ],
     title: 'Epic Todo App',
     startAt: new Date('2019-10-1'),
     finishAt: 'Current',
@@ -126,7 +163,7 @@ The package allows developers to easily add styles to their terminal logs, makin
     links: [
       {
         url: 'cs50-final-project.vercel.app/',
-        description: 'Epic Todo webapp.',
+        description: 'Epic Todo.',
       },
     ],
   },
@@ -142,7 +179,7 @@ The package allows developers to easily add styles to their terminal logs, makin
     links: [
       {
         url: 'github.com/Armando284/phaser-typescript-webpack',
-        description: 'Unnamed Web RPG Game repository.',
+        description: 'Github repository.',
       },
     ],
   },
