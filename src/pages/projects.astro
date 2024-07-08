@@ -1,0 +1,20 @@
+---
+import ArticleTitle from '@/components/shared/ArticleTitle.astro'
+import ProjectList from '@/components/shared/ProjectList'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title="Armando Peña | Project List">
+	<main class="flex flex-col">
+		<article
+			id="project-list"
+			class="min-h-screen flex justify-center items-start px-5 snap-start">
+			<div
+				class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
+				<ProjectList client:visible>
+					<ArticleTitle>Personal Projects List</ArticleTitle>
+				</ProjectList>
+			</div>
+		</article>
+	</main>
+</Layout>

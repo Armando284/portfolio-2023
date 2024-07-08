@@ -1,0 +1,30 @@
+---
+import ArticleTitle from '@/components/shared/ArticleTitle.astro'
+import BlogCard from '@/components/shared/BlogCard.tsx'
+import { blogs } from '@/lib/blogs'
+---
+
+<article
+	id="featured-posts"
+	class="flex justify-center text-purple-300 py-10 scroll-m-12">
+	<div
+		class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4 pb-5 rounded-md">
+		<ArticleTitle>Featured Posts</ArticleTitle>
+		<section class="flex flex-col gap-5">
+			{
+				blogs
+					.filter((post) => post.featured)
+					.map((post) => (
+						<BlogCard
+							slug={post?.slug}
+							title={post?.title}
+							imgUrl={post?.imgUrl}
+							imgDescription={post?.imgDescription}
+							description={post?.description}
+							tags={post?.tags}
+						/>
+					))
+			}
+		</section>
+	</div>
+</article>
