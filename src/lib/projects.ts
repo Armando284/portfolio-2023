@@ -118,7 +118,17 @@ The package allows developers to easily add styles to their terminal logs, makin
     ],
     startAt: new Date('2019-10-1'),
     finishAt: 'Current',
-    description: ``,
+    description: `Project Overview  
+Zablek's Siege is a 2D hand-drawn platformer featuring NPCs, a dialog system, an inventory, and multiple levels. Although the project remains unfinished, it provided significant learning opportunities and skill development.
+
+Technical Skills and Tools  
+During the development of Zablek's Siege, I gained proficiency in Unity and C#, essential for game development. Additionally, I improved my skills in Photoshop and Adobe Fresco for drawing and animating sprites, as well as creating sound effects.
+
+Design Patterns and Best Practices  
+I learned and implemented key design patterns such as Singleton, Strategy, and Observer. These patterns were crucial for managing the game's architecture and improving code maintainability and scalability.
+
+Lessons Learned  
+One major takeaway from this project was understanding the challenges of solo game development, especially for RPGs. Balancing a complex project with limited free time highlighted the importance of project scope and realistic goal-setting.`,
     features: ['Unity', 'C#'],
     links: [
       {
