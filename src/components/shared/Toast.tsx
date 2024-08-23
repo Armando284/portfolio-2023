@@ -40,7 +40,7 @@ export default function Toast({
 
   return (
     <div
-      className={`w-64 ${style} border-l-4 rounded-md p-2 fixed top-5 right-5 z-50 duration-500 animate-bounce text-xs
+      className={`w-64 ${style} border-l-4 rounded-md p-2 fixed top-5 right-5 z-50 duration-500 animate-pulse text-xs
       ${visible ? 'visible' : 'hidden'} 
       `}
       role="alert">
