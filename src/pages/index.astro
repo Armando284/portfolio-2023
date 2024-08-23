@@ -7,6 +7,7 @@ import Bloglatest from '@/components/FeaturedPosts.astro'
 import Technologies from '@/components/Technologies.astro'
 import Contact from '@/components/Contact.astro'
 import AboutMe from '@/components/AboutMe.astro'
+import References from '@/components/References.astro'
 ---
 
 <!-- TODO: Create better nick name for brand -->
@@ -15,20 +16,14 @@ import AboutMe from '@/components/AboutMe.astro'
 
   <main class="flex flex-col">
     <!-- Presentation Video -->
-    <!-- About Me -->
     <AboutMe />
-    <!-- Work Experience -->
     <WorkExperience />
-    <!-- Personal Projects -->
-    <PersonalProjects />
-    <!-- Technologies -->
+    <References />
     <Technologies />
+    <PersonalProjects />
     <!-- Certifications -->
     <!-- Education -->
-    <!-- Blog -->
     <Bloglatest />
-    <!-- Testimonies -->
-    <!-- Contact -->
     <Contact />
   </main>
 </Layout>
