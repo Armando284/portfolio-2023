@@ -108,11 +108,11 @@ export default function Navbar() {
               <ExpDropdown />
             </li>
             <NavLink
-              text="Featured Posts"
-              url="/#featured-posts"
+              text="Testimonies"
+              url="/#testimonies"
             />
             <NavLink
-              text="Testimonies"
+              text="Featured Posts"
               url="/#featured-posts"
             />
           </ul>
