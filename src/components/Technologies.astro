@@ -23,235 +23,244 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
 ---
 
 <article
-	id="technologies"
-	class="flex justify-center pt-10 scroll-m-12">
-	<div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
-		<ArticleTitle textColor="text-slate-50"
-			>most used technologies</ArticleTitle
-		>
-		<div
-			class="w-full h-auto relative flex justify-center items-center flex-wrap p-4 gap-2">
-			<div
-				id="tooltip"
-				class="bg-gradient-to-br from-yellow-500 to-yellow-500/10 text-yellow-50 font-bold text-sm tracking-wider border border-yellow-50 rounded-full backdrop-blur-md z-10">
-			</div>
-			<div
-				class="circle flex gap-2 p-4 flex-wrap justify-center items-center">
-				<div
-					class="item tech-item"
-					data-tooltip="JavaScript">
-					<JsIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="HTML">
-					<HtmlIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="CSS3">
-					<Css3Icon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="TypeScript">
-					<TsIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Bootstrap">
-					<BootstrapIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Tailwind">
-					<TailwindIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Angular">
-					<AngularIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Astro">
-					<AstroIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Node.js">
-					<NodeJsIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="npm">
-					<NpmIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Git">
-					<GitIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Github">
-					<GithubIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Go">
-					<GolangIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Unity">
-					<UnityIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Firebase">
-					<FirebaseIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="MongoDB">
-					<MongoDbIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="SQL">
-					<SqlIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Google Play">
-					<GooglePlayIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="App Store">
-					<AppStoreIcon classList="w-8 h-8" />
-				</div>
-				<div
-					class="item tech-item"
-					data-tooltip="Vercel">
-					<VercelIcon classList="w-8 h-8" />
-				</div>
-			</div>
-		</div>
-	</div>
+  id="technologies"
+  class="flex justify-center pt-10 scroll-m-12">
+  <div class="max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl w-full px-4">
+    <ArticleTitle textColor="text-slate-50">
+      most used
+      <span class="bg-yellow-700 py-1 px-2 inline-block -skew-x-12">
+        technologies
+      </span>
+    </ArticleTitle>
+    <div
+      class="w-full h-auto relative flex justify-center items-center flex-wrap p-4 gap-2">
+      <div class="flex gap-2 p-4 flex-wrap justify-center items-center">
+        <div
+          class="item tech-item"
+          data-tooltip="JavaScript">
+          <JsIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >JavaScript</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="HTML">
+          <HtmlIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >HTML</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="CSS3">
+          <Css3Icon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >CSS3</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="TypeScript">
+          <TsIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >TypeScript</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Bootstrap">
+          <BootstrapIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Bootstrap</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Tailwind">
+          <TailwindIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Tailwind</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Angular">
+          <AngularIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Angular</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Astro">
+          <AstroIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Astro</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Node.js">
+          <NodeJsIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Node.js</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="npm">
+          <NpmIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >NPM</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Git">
+          <GitIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Git</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Github">
+          <GithubIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Github</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Go">
+          <GolangIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Golang</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Unity">
+          <UnityIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Unity</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Firebase">
+          <FirebaseIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Firebase</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="MongoDB">
+          <MongoDbIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >MongoDB</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="SQL">
+          <SqlIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >SQL</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Google Play">
+          <GooglePlayIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >GooglePlay</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="App Store">
+          <AppStoreIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >AppStore</span
+          >
+        </div>
+        <div
+          class="item tech-item"
+          data-tooltip="Vercel">
+          <VercelIcon classList="w-8 h-8" />
+          <span
+            class="text-purple-100 italic font-thin text-xs md:text-base hidden"
+            >Vercel</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </article>
 
-<script>
-	const tooltip = document.getElementById('tooltip')
-	if (tooltip !== undefined || tooltip !== null) {
-		const parent = tooltip?.parentElement
-		let mouseX = 0,
-			mouseY = 0
-		let currentX = 0,
-			currentY = 0
-
-		let isMoving = false
-
-		parent?.addEventListener('mouseenter', (e: MouseEvent): void => {
-			tooltip?.style.setProperty('--display', 'flex')
-			isMoving = true
-		})
-
-		parent?.addEventListener('mousemove', (e: MouseEvent) => {
-			if (!isMoving) {
-				tooltip?.style.setProperty('--display', 'flex')
-				isMoving = true
-			}
-			const rect = parent.getBoundingClientRect()
-			mouseX = e.clientX - rect.left
-			mouseY = e.clientY - rect.top
-			const itemHover = document.querySelector('.tech-item:hover')
-			if (itemHover && itemHover.getAttribute('data-tooltip')) {
-				tooltip!.textContent = itemHover.getAttribute('data-tooltip')
-			} else {
-				tooltip!.textContent = ''
-			}
-			function animate() {
-				currentX += (mouseX - currentX) * 0.1
-				currentY += (mouseY - currentY) * 0.1
-
-				tooltip!.style.transform = `translate(${currentX}px, ${currentY}px)`
-
-				requestAnimationFrame(animate)
-			}
-
-			animate()
-		})
-
-		parent?.addEventListener('mouseleave', (e: MouseEvent) => {
-			tooltip?.style.setProperty('--display', 'none')
-			isMoving = false
-		})
-	}
-</script>
-
 <style>
-	.circle {
-		width: 100%;
-		height: 100%;
-	}
+  .item {
+    @apply w-16 h-16 md:w-24 md:h-24 flex flex-col justify-center items-center rounded-md bg-purple-950 text-purple-50 border border-purple-200 shadow-black shadow-lg hover:text-yellow-50 hover:border-yellow-50;
+    z-index: 1;
+    transition:
+      scale 0.5s cubic-bezier(0.61, -0.66, 0.36, 1.65),
+      z-index 0.5s linear,
+      border-radius 0.6s ease-out;
+    user-select: none;
+  }
 
-	.item {
-		@apply w-12 h-12 md:w-24 md:h-24 rounded-md bg-purple-950 text-purple-200 border border-purple-200 shadow-black shadow-lg hover:text-yellow-50 hover:border-yellow-50;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 1;
-		transition:
-			scale 0.5s cubic-bezier(0.61, -0.66, 0.36, 1.65),
-			z-index 0.5s linear,
-			border-radius 0.6s ease-out;
-		user-select: none;
-	}
+  .item:hover {
+    @apply bg-purple-500;
+    scale: 1.5;
+    z-index: 3;
+    span {
+      @apply flex;
+    }
+  }
 
-	.item:hover {
-		@apply bg-purple-500 rounded-none;
-		scale: 1.5;
-		z-index: 3;
-	}
+  .item:hover + .item {
+    @apply bg-purple-800;
+    scale: 1.25;
+    z-index: 2;
+  }
 
-	.item:hover + .item {
-		@apply bg-purple-800;
-		scale: 1.25;
-		z-index: 2;
-	}
+  .item:has(+ .item:hover) {
+    @apply bg-purple-800;
+    scale: 1.25;
+    z-index: 2;
+  }
 
-	.item:has(+ .item:hover) {
-		@apply bg-purple-800;
-		scale: 1.25;
-		z-index: 2;
-	}
+  .item:first-child:hover ~ .item:last-child {
+    @apply bg-purple-800;
+    scale: 1.25;
+    z-index: 2;
+  }
 
-	.item:first-child:hover ~ .item:last-child {
-		@apply bg-purple-800;
-		scale: 1.25;
-		z-index: 2;
-	}
-
-	.item:first-child:has(~ .item:last-child:hover) {
-		@apply bg-purple-800;
-		scale: 1.25;
-		z-index: 2;
-	}
-
-	#tooltip {
-		--display: none;
-		min-width: 32px;
-		width: fit-content;
-		min-height: 32px;
-		height: auto;
-		position: absolute;
-		left: 0%;
-		top: 0%;
-		display: var(--display);
-		justify-content: center;
-		align-items: center;
-		padding: 8px;
-	}
+  .item:first-child:has(~ .item:last-child:hover) {
+    @apply bg-purple-800;
+    scale: 1.25;
+    z-index: 2;
+  }
 </style>
