@@ -235,9 +235,10 @@ import VercelIcon from '@/components/icons/VercelIcon.astro'
     @apply bg-purple-500;
     scale: 1.5;
     z-index: 3;
-    span {
-      @apply flex;
-    }
+  }
+
+  .item:hover > span {
+    @apply flex;
   }
 
   .item:hover + .item {

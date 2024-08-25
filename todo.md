@@ -3,7 +3,7 @@
 - [ ] Actualizar el CV
 - [ ] Migrar CV a Google Drive *Reducir cantidad de datos servidos por Vercel*
 - [ ] Migrar imágenes locales a Google Drive *Reducir cantidad de datos servidos por Vercel*
-- [ ] Añadir sección de opiniones
+- [x] Añadir sección de opiniones
 - [ ] Añadir servicios
 # Secundarias
 
