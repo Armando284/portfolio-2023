@@ -7,7 +7,7 @@ export default function DownloadButton() {
     try {
       setIsDownloading(true)
 
-      const response = await fetch('Armando_Peña_CV_2023.pdf')
+      const response = await fetch('Cv-NTSprint-Armando-P.pdf')
       if (!response.ok) {
         throw new Error('Error al descargar el archivo')
       }
@@ -17,13 +17,13 @@ export default function DownloadButton() {
 
       const link = document.createElement('a')
       link.href = url
-      link.download = 'Armando_Peña_CV_2023'
+      link.download = 'Cv-NTSprint-Armando-P'
       document.body.appendChild(link)
       link.click()
 
       setTimeout(() => {
         setIsDownloading(false)
-      }, 300)
+      }, 1000)
     } catch (error) {
       console.error('Error al descargar el archivo:', error)
       setIsDownloading(false)
